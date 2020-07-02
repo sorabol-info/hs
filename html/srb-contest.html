@@ -1,0 +1,2902 @@
+<!doctype <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>대회일정</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/keep.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/header.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/footer.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/animation.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/srb-contest.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/sidemenu-contestpage.css" />
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <script src="../js/keep.js"></script>
+  <!--공통-->
+  <script src="../js/mobilesidemenu.js"></script>
+  <script src="../js/gradeselect.js"></script>
+  <!--대회전용-학년선택버튼-->
+  <script src="../js/sidemenu-abc.js"></script>
+  <!--대회전용-pc 사이드메뉴-->
+  <script src="../js/urlmanage.js"></script>
+  <script src="../js/sidemenu.js"></script>
+  <script src="../js/clickPOPtest.js"></script>
+  <!--대회전용-팝업창
+  <script src="../js/notice.js"></script>-->
+  <script src="../js/gupsik.js"></script>
+
+</head>
+<!--메뉴&햄버거 _________________________________________________________________________ -->
+
+<body class="fadeIn">
+
+
+
+
+
+
+
+
+  <!--hamberger (menu side) code-->
+    <div class="menu-side">
+      <a class="menu-side-close" onclick="closeNav()" style="cursor: pointer;">&times;</a>
+      <a href="https://sorabol-info.github.io/hs/">메인</a>
+      <a href="../html/srb-club.html">교내 동아리</a>
+      <a href="../html/srb-contest.html">교내 대회</a>
+      <a href="../html/srb-rule.html">생활규정</a>
+      <a onclick="url_confirm_road()">로드뷰</a>
+  </div>
+    <div class="menu-side-open" onclick="openNav()">
+        <i class="fas fa-bars menu-side-open-icon" style="font-size: 32pt;"></i>
+    </div>
+
+  <div class="main-container">
+
+    <!--menu bar (임시 삭제 상단 스티키)
+        <div class="menu-bar wow fadeInDown" data-wow-duration="1s">
+            <a href="index.html">메인</a>
+            <a href="club-index.html">동아리</a>
+            <a href="contest-allgrade.html">대회</a>
+            <a href="intro.html">학교소개</a>
+            <a onclick="url_confirm_road()">로드뷰</a>
+            <a href="tip.html">학교생활 Tip</a>
+        </div>
+      -->
+
+    <!--메뉴 수정-->
+    <div id="menu-wrapper">
+      <div id="menu-top" class="container">
+        <div id="logo">
+          <a title="서라벌 길라잡이" href="https://sorabol-info.github.io/hs/">
+            <img src="sorabol%20logo.png" height="80" alt="서라벌 길라잡이"></a>
+        </div>
+        <div class="top-container">
+          <div id="menu" class="one" style="z-index:2">
+            <ul>
+              <li class="current_page_item"><a href="https://sorabol-info.github.io/hs/" accesskey="1" title="" class="button2">메인</a>
+              </li>
+              <li><a href="../html/srb-club.html" accesskey="2" title="동아리" class="button2">교내 동아리</a>
+              </li>
+              <li><a href="../html/srb-contest.html" accesskey="3" title="" class="button2">교내 대회</a>
+
+              </li>
+              <li><a href="../html/srb-rule.html" accesskey="4" title="" class="button2">생활 규정</a></li>
+              <li><a onclick="yesorno();" class="button2">서라벌 VR</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 메뉴 제외 header code_________________________________________________________________________ -->
+    <!--상단 배너-->
+    <div class="header">
+      <div class="header-title">
+        <a href="srb-contest.html">서라벌 대회일정</a>
+      </div>
+      <div class="header-sub">
+        <p>서라벌 대회 일정</p>
+      </div>
+      <div class="exsentence-title">
+        <p>학년을 선택해주세요</p>
+      </div>
+      <div class="gradeselector">
+        <a class="gradebutton" onclick="changeGrade(0)">
+          1학년
+        </a>
+        <a class="gradebutton" onclick="changeGrade(1)">
+          2학년
+        </a>
+        <a class="gradebutton" onclick="changeGrade(2)">
+          3학년
+        </a>
+      </div>
+      <div class="exsentence" id="exsentence">
+        <p>2020학년도 대회일정은 공개되는 즉시 업데이트 될 예정입니다.</p>
+      </div>
+    </div>
+
+    <!-- 랜딩페이지 하단 설명부_____________________________________________________________ -->
+
+
+    <div class="contest-main-null">
+      <div class="contest-main-intro-gr">
+        <div class="intro-pic-box">
+          <img src="../image/high-school.png" class="intro-pic-img">
+        </div>
+        <div class="intro-exp-box">
+          <h1 onclick="notice()">대회페이지, 이것만은 알고가자</h1>
+          <br>
+          <p>개최되는 대부분의 대회는 참가인원의 20%가 수상비율입니다. 주로 금,은,동으로 나뉘며 대회별로 상세한 부분은 다를 수 있습니다. </p>
+          <br>
+        </div>
+      </div>
+      <div class="contest-main-intro-wht">
+
+        <div class="intro-exp-box-wht">
+          <h1>참가신청은 지원하지 않습니다!</h1>
+          <br>
+          <p>서라벌길라잡이는 학교에서 공개한 자료를 보기 쉽게 정리한 사이트 입니다. 상세한 대회정보 와 대회신청은 서진솔을 이용해주시기 바랍니다.</p>
+          <br>
+          <a href="https://sorabol.riroschool.kr/" target="_blank" style="color:#000000;">서진솔 바로가기</a>
+        </div>
+        <div class="intro-pic-box-wht">
+          <img src="../image/calendar.png" class="intro-pic-img-wht">
+        </div>
+      </div>
+      <div class="contest-main-intro-gr">
+        <div class="intro-pic-box">
+          <img src="../image/checklist.png" class="intro-pic-img">
+        </div>
+        <div class="intro-exp-box">
+          <h1>업데이트 날짜를 확인해주세요!</h1>
+          <br>
+          <p>서라벌길라잡이에 올라오는 정보는 학교에서 공지한 자료를 학생들이 보기 쉽도록 정리한 것으로, 업데이트 날짜를 항상 확인해주시기 바랍니다.</p>
+          <br>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 1학년 페이지(PC)- 시작부 ____________________________________________________________________________ -->
+    <div class="Grade-page none-display">
+
+      <!--_______모바일 사이드 메뉴_______-->
+      <div class="mobile-side-menu-a">
+        <a class="button" onclick="changeContentA(0)">4월</a>
+        <a class="button" onclick="changeContentA(1)">5월</a>
+        <a class="button" onclick="changeContentA(2)">6월</a>
+        <a class="button" onclick="changeContentA(3)">7월</a>
+        <a class="button" onclick="changeContentA(4)">8월</a>
+        <a class="button" onclick="changeContentA(5)">9월</a>
+        <a class="button" onclick="changeContentA(6)">10월</a>
+        <a class="button" onclick="changeContentA(7)">11월</a>
+        <a class="button" onclick="changeContentA(8)">12월</a>
+      </div>
+
+      <!-- 헤더 하단 설명부-->
+
+      <div class="rule-main-box-a">
+
+        <div class="contest-main-intro-gr">
+          <div class="intro-pic-box">
+            <img src="../image/high-school.png" class="intro-pic-img">
+          </div>
+          <div class="intro-exp-box">
+            <h1 onclick="notice()">대회페이지, 이것만은 알고가자</h1>
+            <br>
+            <p>개최되는 대부분의 대회는 참가인원의 20%가 수상비율입니다. 주로 금,은,동으로 나뉘며 대회별로 상세한 부분은 다를 수 있습니다. </p>
+            <br>
+          </div>
+        </div>
+        <div class="contest-main-intro-wht">
+
+          <div class="intro-exp-box-wht">
+            <h1>참가신청은 지원하지 않습니다!</h1>
+            <br>
+            <p>서라벌길라잡이는 학교에서 공개한 자료를 보기 쉽게 정리한 사이트 입니다. 상세한 대회정보 와 대회신청은 서진솔을 이용해주시기 바랍니다.</p>
+            <br>
+            <a href="https://sorabol.riroschool.kr/" target="_blank" style="color:#000000;">서진솔 바로가기</a>
+          </div>
+          <div class="intro-pic-box-wht">
+            <img src="../image/calendar.png" class="intro-pic-img-wht">
+          </div>
+        </div>
+        <div class="contest-main-intro-gr">
+          <div class="intro-pic-box">
+            <img src="../image/checklist.png" class="intro-pic-img">
+          </div>
+          <div class="intro-exp-box">
+            <h1>업데이트 날짜를 확인해주세요!</h1>
+            <br>
+            <p>서라벌길라잡이에 올라오는 정보는 학교에서 공지한 자료를 학생들이 보기 쉽도록 정리한 것으로, 업데이트 날짜를 항상 확인해주시기 바랍니다.</p>
+            <br>
+          </div>
+        </div>
+
+        <!--
+          <div class="intro-title"><1학년 대회일정></div>
+          <p class="sub-title">대회일정 페이지에 오신걸 환영합니다!</p>
+          <p class="sub-title">
+            -월별 대회를 확인해 보세요-<br>(pc는 좌측, 모바일은 상단)
+            <br>
+          </p>
+          <div class="intro-tip-box">
+            <p id="intro-tip-text">TIP!</p>
+            <p id="intro-tip-text">계열구분: 이공, 인문, 공통</p>
+            <p id="intro-tip-text">대회신청: < <a href="https://sorabol.riroschool.kr/" target="_blank" class=intro-hyperlink>서진솔</a> 바로가기 > </p>
+            <p id="intro-tip-text">수상비율: 참가자의 20%</p>
+            <p id="intro-tip-text">※ 계열구분은 참가대상과는 관련이 없습니다</p>
+          </p>
+        </div>
+      -->
+      </div>
+
+      <!--_______ PC 사이드 메뉴_______-->
+      <div class="side-menu-a">
+        <a onclick="changeContentA(0)">4월</a>
+        <a onclick="changeContentA(1)">5월</a>
+        <a onclick="changeContentA(2)">6월</a>
+        <a onclick="changeContentA(3)">7월</a>
+        <a onclick="changeContentA(4)">8월</a>
+        <a onclick="changeContentA(5)">9월</a>
+        <a onclick="changeContentA(6)">10월</a>
+        <a onclick="changeContentA(7)">11월</a>
+        <a onclick="changeContentA(8)">12월</a>
+      </div>
+
+      <!-- 1학년 페이지 - 월별 대회목록 __________________________________________________-->
+
+
+
+
+
+
+      <!--________________________________대회페이지 친절하게 설명해드려요___________________________________________
+
+                   바로 아래에 보이는 4월 달 대회를 기준으로 설명
+                   클래스 명은 옛날에 다른거랑 안겹치게 붙인다고 지은거라 난잡한거 이해좀
+
+                   다른건 그냥 보면 될거같고
+                   img감싸고 있는 span은 그냥 간격맞추려고 넣어놓은거고
+
+                   더 알아보기 버튼은 누르면 팝업창 나오는거고
+                   더 알아보기 버튼(pc, 모바일)이랑 팝업창켰을 때 나오는 닫기 버튼에 들어가있는
+                   onclick="hellopopup1()"이라는 코드는 js쓴건데
+                   팝업창이 떠있는 상태면 닫고
+                   팝업창이 없는 상태면 켜는
+                   그런 의미인 코드야
+
+                   hellopopup 뒤에 숫자 붙여서 어떤 팝업창인지 구분하는거고
+                   그래서 아래쪽에 팝업창 모아놓은거 있는데
+
+                   <div  class="popupChang opctzero" id="info-pop-1">
+                     <a onclick="hellopopup1()" title="Close" class="modal-close opctzero" id="pop-close-1">X</a>
+                     <img src="../image/tip_blk.png" class="pop-img" >
+                     <span class="pop-name no-drag">서울학생과학발명품경진대회</span>
+                     <div class="pop-text no-drag">서울시에서 학생들이 과핟ㄱ으로 발명품만들어서 뚝딱뚝딱</div>
+                     <a onclick="hellopopup1()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-1">뒤로가기</a>
+                   </div>
+
+                   이게 팝업창 코드인데 hellopopup뒤에 있는 숫자랑 info-pop뒤에 있는 숫자랑 pop-close뒤에 있는 숫자랑 pop-close-mob뒤에있는 숫자랑 모두 같은 숫자로 맞춰야함
+
+                   그거말고는 딱히 어려운거 없음
+
+                   그 뭐냐 5월달에 있는 대회중에서 '시화전'처럼 글자가 짧은 대회같은 경우에는 버튼이랑 대회이름이랑 위치가 뒤틀려서
+                   namemargin이라는 클래스 추가했는데
+                   대회는 대부분 이름 길어서 저런 예외가 시화전밖에 없는데
+                   동아리는 이름짧은거 많으니깐
+                   나중에 동아리 이름 짧은것들이 버튼이랑 겹치면 namemargin추가하라고
+
+
+                   정규 자율로 나누고 그 안에서 계열 나눌꺼면
+                   대회페이지 3학년페이지 없애버려
+
+                   이 페이지 css들어간거는 거의다 contest-allgrade.css에 들어가있고
+                   대회페이지만 사용하는 css는 contest-allgrade.css랑 sidemenu-contestpage.css 이렇게 2개 밖에 없고 나머지는 다 공통 css사용중
+                   js는 clickPOPtest.js가 팝업창 js고 gradeselect.js는 학년마다 창 바꾸는 js고 sidemenu-abc는 대회페이지 전용 사이드메뉴바 css임.
+
+                   폴더에 들어가있는 css나 js중에서 안쓰고 있는 것들은 초록버전에서 고칠때 바꿔놨던것들이니깐 알아서 거르고.
+________________________________________________________________________________________________________________-->
+
+
+
+
+      <!--4월-->
+      <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">4월</h1>
+          <!--이게 위에 있는 몇월인지 글씨-->
+          <!--ul은 한 달에 있는 대회들을 묶어줌-->
+          <ul class="contest-name-pc">
+            <!--li 하나가 대회하나-->
+            <li class="contest-name-pc">
+              <!--li한개가 대회 한 칸-->
+
+              <span style="display: block; padding-top: 10px;  ">
+                <!--이미지-->
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+
+              <br class="contest-name-pc">
+              <!--공백(이미지 아래에 한 칸 띄우는 용도)-->
+
+              <span><strong class="contest-name-pc">서울학생과학발명품경진대회</strong></span>
+              <!--대회이름-->
+
+              <a class="infoplus" onclick="hellopopup1()"> 더알아보기 </a>
+
+
+              <a class="infoplus-mob" onclick="hellopopup1()"> + </a>
+
+            </li>
+            <!--------------------->
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+        <!--바디랑 푸터랑 너무 붙어서 빈공간 만들어놓은거-->
+      </div>
+
+
+
+
+      <!--5월-->
+      <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">5월</h1>
+          <ul class="contest-name-pc">
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">과학퀴즈골든벨</strong></span>
+              <a class="infoplus" onclick="hellopopup2()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup2()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">서울시청소년과학탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup3()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup3()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">과학독후감대회</strong></span>
+              <a class="infoplus" onclick="hellopopup4()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup4()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span style="padding-top: 20px;"><strong class="contest-name-pc">천체사진공모전</strong></span>
+              <a class="infoplus" onclick="hellopopup5()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup5()"> + </a>
+
+            </li>
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+
+
+      <!--6월-->
+      <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">6월</h1>
+          <ul class="contest-name-pc">
+
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">한자탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup12()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup12()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">국어탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup13()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup13()"> + </a>
+
+            </li>
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+
+
+      <!--7월-->
+      <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">7월</h1>
+          <ul class="contest-name-pc">
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">영어리딩마스터대회</strong></span>
+              <a class="infoplus" onclick="hellopopup14()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup14()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">인문과학융합독후감대회</strong></span>
+              <a class="infoplus" onclick="hellopopup15()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup15()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">사회논구술대회</strong></span>
+              <a class="infoplus" onclick="hellopopup16()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup16()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">한국사탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup6()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup6()"> + </a>
+
+            </li>
+
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+
+
+      <!--8월-->
+      <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">8월</h1>
+          <ul class="contest-name-pc">
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">인문학심포지엄</strong></span>
+              <a class="infoplus" onclick="hellopopup17()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup17()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">지리데이사진전</strong></span>
+              <a class="infoplus" onclick="hellopopup18()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup18()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">서라벌잔치포스터공모</strong></span>
+              <a class="infoplus" onclick="hellopopup7()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup7()"> + </a>
+
+            </li>
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+
+
+      <!--9월-->
+      <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">9월</h1>
+          <ul class="contest-name-pc">
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">9월 교내대회</strong></span>
+              <a class="infoplus" onclick="hellopopup19()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup19()"> + </a>
+            </li>
+            <!--
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">기악콩쿠르</strong></span>
+                  <a class="infoplus" onclick="hellopopup20()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup20()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수학경시대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup21()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup21()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">영어어휘경시대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup22()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup22()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">창의로봇경진대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup23()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup23()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">인문학심포지엄</strong></span>
+                  <a class="infoplus" onclick="hellopopup24()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup24()"> + </a>
+                </li>
+              -->
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+
+
+      <!--10월-->
+      <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">10월</h1>
+          <ul class="contest-name-pc">
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">10월 교내대회</strong></span>
+              <a class="infoplus" onclick="hellopopup25()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup25()"> + </a>
+            </li>
+            <!--
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">한국사경시대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup26()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup26()"> + </a>
+                </li>
+              -->
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+
+
+      <!--11월-->
+      <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">11월</h1>
+          <ul class="contest-name-pc">
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">11월 교내대회</strong></span>
+              <a class="infoplus" onclick="hellopopup27()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup27()"> + </a>
+            </li>
+            <!--
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">천체사진공모전</strong></span>
+                  <a class="infoplus" onclick="hellopopup28()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup28()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수리과학컨퍼런스</strong></span>
+                  <a class="infoplus" onclick="hellopopup29()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup29()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수학논문발표대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup30()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup30()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학논문발표대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup31()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup31()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">인문사회논문발표대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup32()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup32()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학활동소감문대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup33()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup33()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">이공계강연소감문대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup34()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup34()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">인포그래피대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup35()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup35()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">자율동아리성과물발표대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup36()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup36()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">창의프로젝트발표대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup37()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup37()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">서동요소감문대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup38()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup38()"> + </a>
+                </li>
+              -->
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+
+
+      <!--12월-->
+      <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">12월</h1>
+          <ul class="contest-name-pc">
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">12월 교내대회</strong></span>
+              <a class="infoplus" onclick="hellopopup39()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup39()"> + </a>
+            </li>
+            <!--
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">R&E과학창의력대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup40()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup40()"> + </a>
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">봉사활동체험수기대회</strong></span>
+                  <a class="infoplus" onclick="hellopopup41()"> 더알아보기 </a>
+                  <a class="infoplus-mob" onclick="hellopopup41()"> + </a>
+                </li>
+              -->
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+    </div>
+
+
+    <!-- 1학년 페이지 - 팝업창 부분 __________________________________________________-->
+    <!--학년별 팝업창끼리 모아놓은거-->
+    <!--1-4-->
+    <div class="popupChang opctzero" id="info-pop-1">
+      <a onclick="hellopopup1()" title="Close" class="modal-close opctzero" id="pop-close-1">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">서울학생과학발명품경진대회</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup1()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-1">뒤로가기</a>
+    </div>
+
+    <!--1-5-->
+    <div class="popupChang opctzero" id="info-pop-2">
+      <a onclick="hellopopup2()" title="Close" class="modal-close opctzero" id="pop-close-2">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">과학퀴즈골든벨</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup2()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-2">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-3">
+      <a onclick="hellopopup3()" title="Close" class="modal-close opctzero" id="pop-close-3">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">서울시청소년과학탐구대회</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup3()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-3">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-4">
+      <a onclick="hellopopup4()" title="Close" class="modal-close opctzero" id="pop-close-4">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">과학독후감대회</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup4()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-4">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-5">
+      <a onclick="hellopopup5()" title="Close" class="modal-close opctzero" id="pop-close-5">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">천체사진공모전</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup5()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-5">뒤로가기</a>
+    </div>
+
+
+    <!--1-6-->
+
+    <div class="popupChang opctzero" id="info-pop-12">
+      <a onclick="hellopopup12()" title="Close" class="modal-close opctzero" id="pop-close-12">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">한자탐구대회</span>
+      <div class="pop-text no-drag">전학년/6월29일(월)</div>
+      <a onclick="hellopopup12()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-12">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-13">
+      <a onclick="hellopopup13()" title="Close" class="modal-close opctzero" id="pop-close-13">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">국어탐구대회</span>
+      <div class="pop-text no-drag">전학년/6월30일(화)</div>
+      <a onclick="hellopopup13()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-13">뒤로가기</a>
+    </div>
+
+    <!--1-7-->
+    <div class="popupChang opctzero" id="info-pop-14">
+      <a onclick="hellopopup14()" title="Close" class="modal-close opctzero" id="pop-close-14">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">영어리딩마스터대회</span>
+      <div class="pop-text no-drag">전학년/7월1일(수)</div>
+      <a onclick="hellopopup14()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-14">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-15">
+      <a onclick="hellopopup15()" title="Close" class="modal-close opctzero" id="pop-close-15">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">인문과학융합독후감대회</span>
+      <div class="pop-text no-drag">전학년/7월3일(금)</div>
+      <a onclick="5hellopopup15()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-15">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-16">
+      <a onclick="hellopopup16()" title="Close" class="modal-close opctzero" id="pop-close-16">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">사회논구술대회</span>
+      <div class="pop-text no-drag">전학년/7월6일(월)예선/7월9일(목)본선</div>
+      <a onclick="hellopopup16()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-16">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-6">
+      <a onclick="hellopopup6()" title="Close" class="modal-close opctzero" id="pop-close-6">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">한국사탐구대회</span>
+      <div class="pop-text no-drag">1,2학년/7월7일(화)</div>
+      <a onclick="hellopopup6()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-6">뒤로가기</a>
+    </div>
+
+
+    <!--1-8-->
+    <div class="popupChang opctzero" id="info-pop-17">
+      <a onclick="hellopopup17()" title="Close" class="modal-close opctzero" id="pop-close-17">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">인문학심포지엄</span>
+      <div class="pop-text no-drag">1,2학년/8월중 개최예정</div>
+      <a onclick="hellopopup17()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-17">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-18">
+      <a onclick="hellopopup18()" title="Close" class="modal-close opctzero" id="pop-close-18">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">지리데이사진전</span>
+      <div class="pop-text no-drag">전학년/8월10일(월)</div>
+      <a onclick="hellopopup18()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-18">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-7">
+      <a onclick="hellopopup7()" title="Close" class="modal-close opctzero" id="pop-close-7">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">서라벌잔치포스터공모</span>
+      <div class="pop-text no-drag">전학년/8월31일(월)~9월3일(목)/1등의 경우 대상과 함께 수상작이 서라벌잔치 포스터로 사용됩니다</div>
+      <a onclick="hellopopup7()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-7">뒤로가기</a>
+    </div>
+
+    <!--1-9-->
+    <div class="popupChang opctzero" id="info-pop-19">
+      <a onclick="hellopopup19()" title="Close" class="modal-close opctzero" id="pop-close-19">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">9월 교내대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup19()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-19">뒤로가기</a>
+    </div>
+    <!--
+          <div  class="popupChang opctzero" id="info-pop-20">
+            <a onclick="hellopopup20()" title="Close" class="modal-close opctzero" id="pop-close-20">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">기악콩쿠르</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup20()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-20">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-21">
+            <a onclick="hellopopup21()" title="Close" class="modal-close opctzero" id="pop-close-21">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">수학경시대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup21()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-21">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-22">
+            <a onclick="hellopopup22()" title="Close" class="modal-close opctzero" id="pop-close-22">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">영어어휘경시대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup22()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-22">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-23">
+            <a onclick="hellopopup23()" title="Close" class="modal-close opctzero" id="pop-close-23">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">창의로봇경진대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup23()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-23">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-24">
+            <a onclick="hellopopup24()" title="Close" class="modal-close opctzero" id="pop-close-24">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">인문학심포지엄</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup24()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-24">뒤로가기</a>
+          </div>
+        -->
+    <!--1-10-->
+    <div class="popupChang opctzero" id="info-pop-25">
+      <a onclick="hellopopup25()" title="Close" class="modal-close opctzero" id="pop-close-25">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">10월 교내대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup25()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-25">뒤로가기</a>
+    </div>
+    <!--
+          <div  class="popupChang opctzero" id="info-pop-26">
+            <a onclick="hellopopup26()" title="Close" class="modal-close opctzero" id="pop-close-26">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">한국사경시대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup26()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-26">뒤로가기</a>
+          </div>
+        -->
+
+    <!--1-11-->
+    <div class="popupChang opctzero" id="info-pop-27">
+      <a onclick="hellopopup27()" title="Close" class="modal-close opctzero" id="pop-close-27">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">11월 교내대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup27()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-27">뒤로가기</a>
+    </div>
+    <!--
+          <div  class="popupChang opctzero" id="info-pop-28">
+            <a onclick="hellopopup28()" title="Close" class="modal-close opctzero" id="pop-close-28">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">천체사진공모전</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup28()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-28">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-29">
+            <a onclick="hellopopup29()" title="Close" class="modal-close opctzero" id="pop-close-29">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">수리과학컨퍼런스</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup29()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-29">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-30">
+            <a onclick="hellopopup30()" title="Close" class="modal-close opctzero" id="pop-close-30">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">수학논문발표대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup30()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-30">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-31">
+            <a onclick="hellopopup31()" title="Close" class="modal-close opctzero" id="pop-close-31">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">과학논문발표대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup31()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-31">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-32">
+            <a onclick="hellopopup32()" title="Close" class="modal-close opctzero" id="pop-close-32">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">인문사회논문발표대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup32()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-32">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-33">
+            <a onclick="hellopopup33()" title="Close" class="modal-close opctzero" id="pop-close-33">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">과학활동소감문대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup33()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-33">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-34">
+            <a onclick="hellopopup34()" title="Close" class="modal-close opctzero" id="pop-close-34">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">이공계강연소감문대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup34()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-34">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-35">
+            <a onclick="hellopopup35()" title="Close" class="modal-close opctzero" id="pop-close-35">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">인포그래피대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup35()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-35">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-36">
+            <a onclick="hellopopup36()" title="Close" class="modal-close opctzero" id="pop-close-36">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">자율동아리성과물발표대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup36()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-36">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-37">
+            <a onclick="hellopopup37()" title="Close" class="modal-close opctzero" id="pop-close-37">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">창의프로젝트발표대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup37()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-37">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-38">
+            <a onclick="hellopopup38()" title="Close" class="modal-close opctzero" id="pop-close-38">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">서동요소감문대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup38()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-38">뒤로가기</a>
+          </div>!
+        -->
+
+    <!--1-12-->
+    <div class="popupChang opctzero" id="info-pop-39">
+      <a onclick="hellopopup39()" title="Close" class="modal-close opctzero" id="pop-close-39">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">12월 교내대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup39()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-39">뒤로가기</a>
+    </div>
+    <!--
+          <div  class="popupChang opctzero" id="info-pop-40">
+            <a onclick="hellopopup40()" title="Close" class="modal-close opctzero" id="pop-close-40">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">R&E과학창의력대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup40()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-40">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-41">
+            <a onclick="hellopopup41()" title="Close" class="modal-close opctzero" id="pop-close-41">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">봉사활동체험수기대회</span>
+            <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+            <a onclick="hellopopup41()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-41">뒤로가기</a>
+          </div>
+        -->
+
+
+
+
+
+
+
+
+
+
+    <!-- 2학년 페이지(PC)- 시작부 ____________________________________________________________________________ -->
+    <div class="Grade-page none-display">
+
+      <!--_______모바일 사이드 메뉴_______-->
+      <div class="mobile-side-menu-b">
+        <a class="button" onclick="changeContentB(0)">4월</a>
+        <a class="button" onclick="changeContentB(1)">5월</a>
+        <a class="button" onclick="changeContentB(2)">6월</a>
+        <a class="button" onclick="changeContentB(3)">7월</a>
+        <a class="button" onclick="changeContentB(4)">8월</a>
+        <a class="button" onclick="changeContentB(5)">9월</a>
+        <a class="button" onclick="changeContentB(6)">10월</a>
+        <a class="button" onclick="changeContentB(7)">11월</a>
+        <a class="button" onclick="changeContentB(8)">12월</a>
+      </div>
+
+      <!-- 헤더 하단 설명부 -->
+      <div class="rule-main-box-b">
+        <div class="contest-main-intro-gr">
+          <div class="intro-pic-box">
+            <img src="../image/high-school.png" class="intro-pic-img">
+          </div>
+          <div class="intro-exp-box">
+            <h1 onclick="notice()">대회페이지, 이것만은 알고가자</h1>
+            <br>
+            <p>개최되는 대부분의 대회는 참가인원의 20%가 수상비율입니다. 주로 금,은,동으로 나뉘며 대회별로 상세한 부분은 다를 수 있습니다. </p>
+            <br>
+          </div>
+        </div>
+        <div class="contest-main-intro-wht">
+
+          <div class="intro-exp-box-wht">
+            <h1>참가신청은 지원하지 않습니다!</h1>
+            <br>
+            <p>서라벌길라잡이는 학교에서 공개한 자료를 보기 쉽게 정리한 사이트 입니다. 상세한 대회정보 와 대회신청은 서진솔을 이용해주시기 바랍니다.</p>
+            <br>
+            <a href="https://sorabol.riroschool.kr/" target="_blank" style="color:#000000;">서진솔 바로가기</a>
+          </div>
+          <div class="intro-pic-box-wht">
+            <img src="../image/calendar.png" class="intro-pic-img-wht">
+          </div>
+        </div>
+        <div class="contest-main-intro-gr">
+          <div class="intro-pic-box">
+            <img src="../image/checklist.png" class="intro-pic-img">
+          </div>
+          <div class="intro-exp-box">
+            <h1>업데이트 날짜를 확인해주세요!</h1>
+            <br>
+            <p>서라벌길라잡이에 올라오는 정보는 학교에서 공지한 자료를 학생들이 보기 쉽도록 정리한 것으로, 업데이트 날짜를 항상 확인해주시기 바랍니다.</p>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <!--_______ PC 사이드 메뉴_______-->
+      <div class="side-menu-b">
+        <!--side-opacity => display: none-->
+        <a onclick="changeContentB(0)">4월</a>
+        <a onclick="changeContentB(1)">5월</a>
+        <a onclick="changeContentB(2)">6월</a>
+        <a onclick="changeContentB(3)">7월</a>
+        <a onclick="changeContentB(4)">8월</a>
+        <a onclick="changeContentB(5)">9월</a>
+        <a onclick="changeContentB(6)">10월</a>
+        <a onclick="changeContentB(7)">11월</a>
+        <a onclick="changeContentB(8)">12월</a>
+      </div>
+
+
+      <!-- 2학년 페이지 - 월별 대회목록 __________________________________________________-->
+      <!--4월-->
+      <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">4월</h1>
+          <ul class="contest-name-pc">
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">서울학생과학발명품경진대회</strong></span>
+              <a class="infoplus" onclick="hellopopup42()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup42()"> + </a>
+
+            </li>
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+
+
+      <!--5월-->
+      <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">5월</h1>
+          <ul class="contest-name-pc">
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">과학퀴즈골든벨</strong></span>
+              <a class="infoplus" onclick="hellopopup43()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup43()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">서울시청소년과학탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup44()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup44()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">과학독후감대회</strong></span>
+              <a class="infoplus" onclick="hellopopup45()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup45()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span style="padding-top: 20px;"><strong class="contest-name-pc">천체사진공모전</strong></span>
+              <a class="infoplus" onclick="hellopopup46()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup46()"> + </a>
+
+            </li>
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+
+
+      <!--6월-->
+      <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">6월</h1>
+          <ul class="contest-name-pc">
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">한자탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup53()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup53()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">국어탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup54()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup54()"> + </a>
+
+            </li>
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+
+
+      <!--7월-->
+      <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">7월</h1>
+          <ul class="contest-name-pc">
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">영어리딩마스터대회</strong></span>
+              <a class="infoplus" onclick="hellopopup55()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup55()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">인문과학융합독후감대회</strong></span>
+              <a class="infoplus" onclick="hellopopup56()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup56()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">사회논구술대회</strong></span>
+              <a class="infoplus" onclick="hellopopup57()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup57()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">한국사탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup47()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup47()"> + </a>
+
+            </li>
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+      <!--8월-->
+      <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">8월</h1>
+          <ul class="contest-name-pc">
+            <!--8월-->
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">인문학심포지엄</strong></span>
+              <a class="infoplus" onclick="hellopopup58()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup58()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">지리데이사진전</strong></span>
+              <a class="infoplus" onclick="hellopopup59()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup59()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">서라벌잔치포스터공모</strong></span>
+              <a class="infoplus" onclick="hellopopup48()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup48()"> + </a>
+
+            </li>
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+      <!--9월-->
+      <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">9월</h1>
+          <ul class="contest-name-pc">
+            <!--9월-->
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">9월 교내대회</strong></span>
+              <a class="infoplus" onclick="hellopopup60()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup60()"> + </a>
+              <!--
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">기악콩쿠르</strong></span>
+              <a class="infoplus" onclick="hellopopup61()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup61()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">수학경시대회</strong></span>
+              <a class="infoplus" onclick="hellopopup62()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup62()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">영어어휘경시대회</strong></span>
+              <a class="infoplus" onclick="hellopopup63()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup63()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">창의로봇경진대회</strong></span>
+              <a class="infoplus" onclick="hellopopup64()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup64()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">인문학심포지엄</strong></span>
+              <a class="infoplus" onclick="hellopopup65()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup65()"> + </a>
+
+            </li>
+          -->
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+      <!--10월-->
+      <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">10월</h1>
+          <ul class="contest-name-pc">
+            <!--10월-->
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">10월 교내대회</strong></span>
+              <a class="infoplus" onclick="hellopopup66()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup66()"> + </a>
+
+            </li>
+            <!--
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">한국사경시대회</strong></span>
+              <a class="infoplus" onclick="hellopopup67()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup67()"> + </a>
+
+            </li>
+          -->
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+      <!--11월-->
+      <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">11월</h1>
+          <ul class="contest-name-pc">
+            <!--11월-->
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">11월 교내대회</strong></span>
+              <a class="infoplus" onclick="hellopopup68()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup68()"> + </a>
+
+            </li>
+            <!--
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">천체사진공모전</strong></span>
+              <a class="infoplus" onclick="hellopopup69()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup69()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">수리과학컨퍼런스</strong></span>
+              <a class="infoplus" onclick="hellopopup70()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup70()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">수학논문발표대회</strong></span>
+              <a class="infoplus" onclick="hellopopup71()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup71()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">과학논문발표대회</strong></span>
+              <a class="infoplus" onclick="hellopopup72()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup72()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">인문사회논문발표대회</strong></span>
+              <a class="infoplus" onclick="hellopopup73()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup73()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">과학활동소감문대회</strong></span>
+              <a class="infoplus" onclick="hellopopup74()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup74()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">이공계강연소감문대회</strong></span>
+              <a class="infoplus" onclick="hellopopup75()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup75()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">인포그래피대회</strong></span>
+              <a class="infoplus" onclick="hellopopup76()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup76()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">자율동아리성과물발표대회</strong></span>
+              <a class="infoplus" onclick="hellopopup77()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup77()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">창의프로젝트발표대회</strong></span>
+              <a class="infoplus" onclick="hellopopup78()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup78()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">서동요소감문대회</strong></span>
+              <a class="infoplus" onclick="hellopopup79()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup79()"> + </a>
+
+            </li>
+          -->
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+      <!--12월-->
+      <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">12월</h1>
+          <ul class="contest-name-pc">
+            <!--12월-->
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">12월 교내대회</strong></span>
+              <a class="infoplus" onclick="hellopopup80()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup80()"> + </a>
+
+            </li>
+            <!--
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">R&E과학창의력대회</strong></span>
+              <a class="infoplus" onclick="hellopopup81()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup81()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">봉사활동체험수기대회</strong></span>
+              <a class="infoplus" onclick="hellopopup82()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup82()"> + </a>
+
+            </li>
+          -->
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+    </div>
+
+    <!--pppppppp2학년 팝업창 부분-->
+    <!--2-4-->
+    <div class="popupChang opctzero" id="info-pop-42">
+      <a onclick="hellopopup42()" title="Close" class="modal-close opctzero" id="pop-close-42">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">서울학생과학발명품경진대회</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup42()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-42">뒤로가기</a>
+    </div>
+
+    <!--2-5-->
+    <div class="popupChang opctzero" id="info-pop-43">
+      <a onclick="hellopopup43()" title="Close" class="modal-close opctzero" id="pop-close-43">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">과학퀴즈골든벨</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup43()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-43">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-44">
+      <a onclick="hellopopup44()" title="Close" class="modal-close opctzero" id="pop-close-44">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">서울시청소년과학탐구대회</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup44()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-44">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-45">
+      <a onclick="hellopopup45()" title="Close" class="modal-close opctzero" id="pop-close-45">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">과학독후감대회</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup45()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-45">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-46">
+      <a onclick="hellopopup46()" title="Close" class="modal-close opctzero" id="pop-close-46">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">천체사진공모전</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup46()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-46">뒤로가기</a>
+    </div>
+
+    <!--2-6-->
+    <div class="popupChang opctzero" id="info-pop-53">
+      <a onclick="hellopopup53()" title="Close" class="modal-close opctzero" id="pop-close-53">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">한자탐구대회</span>
+      <div class="pop-text no-drag">전학년/6월29일(월)</div>
+      <a onclick="hellopopup53()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-53">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-54">
+      <a onclick="hellopopup54()" title="Close" class="modal-close opctzero" id="pop-close-54">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">국어탐구대회</span>
+      <div class="pop-text no-drag">전학년/6월30일(화)</div>
+      <a onclick="hellopopup54()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-54">뒤로가기</a>
+    </div>
+
+    <!--2-7-->
+    <div class="popupChang opctzero" id="info-pop-55">
+      <a onclick="hellopopup55()" title="Close" class="modal-close opctzero" id="pop-close-55">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">영어리딩마스터대회</span>
+      <div class="pop-text no-drag">전학년/7월1일(수)</div>
+      <a onclick="hellopopup55()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-55">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-56">
+      <a onclick="hellopopup56()" title="Close" class="modal-close opctzero" id="pop-close-56">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">인문과학융합독후감대회</span>
+      <div class="pop-text no-drag">전학년/7월3일(금)</div>
+      <a onclick="5hellopopup56()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-56">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-57">
+      <a onclick="hellopopup57()" title="Close" class="modal-close opctzero" id="pop-close-57">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">사회논구술대회</span>
+      <div class="pop-text no-drag">전학년/7월6일(월)예선/7월9일(목)본선</div>
+      <a onclick="hellopopup57()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-57">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-47">
+      <a onclick="hellopopup47()" title="Close" class="modal-close opctzero" id="pop-close-47">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">한국사탐구대회</span>
+      <div class="pop-text no-drag">1,2학년/7월7일(화)</div>
+      <a onclick="hellopopup47()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-47">뒤로가기</a>
+    </div>
+    <!--2-8-->
+    <div class="popupChang opctzero" id="info-pop-58">
+      <a onclick="hellopopup58()" title="Close" class="modal-close opctzero" id="pop-close-58">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">인문학심포지엄</span>
+      <div class="pop-text no-drag">1,2학년/8월중 개최예정</div>
+      <a onclick="hellopopup58()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-58">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-59">
+      <a onclick="hellopopup59()" title="Close" class="modal-close opctzero" id="pop-close-59">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">지리데이사진전</span>
+      <div class="pop-text no-drag">전학년/8월10일(월)</div>
+      <a onclick="hellopopup59()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-59">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-48">
+      <a onclick="hellopopup48()" title="Close" class="modal-close opctzero" id="pop-close-48">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">서라벌잔치포스터공모</span>
+      <div class="pop-text no-drag">전학년/8월31일(월)~9월3일(목)/1등의 경우 대상과 함께 수상작이 서라벌잔치 포스터로 사용됩니다</div>
+      <a onclick="hellopopup48()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-48">뒤로가기</a>
+    </div>
+
+
+    <!--2-9-->
+    <div class="popupChang opctzero" id="info-pop-60">
+      <a onclick="hellopopup60()" title="Close" class="modal-close opctzero" id="pop-close-60">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">9월 교내대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup60()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-60">뒤로가기</a>
+    </div>
+    <!--
+    <div class="popupChang opctzero" id="info-pop-61">
+      <a onclick="hellopopup61()" title="Close" class="modal-close opctzero" id="pop-close-61">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">기악콩쿠르</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup61()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-61">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-62">
+      <a onclick="hellopopup62()" title="Close" class="modal-close opctzero" id="pop-close-62">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">수학경시대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup62()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-62">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-63">
+      <a onclick="hellopopup63()" title="Close" class="modal-close opctzero" id="pop-close-63">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">영어어휘경시대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup63()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-63">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-64">
+      <a onclick="hellopopup64()" title="Close" class="modal-close opctzero" id="pop-close-64">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">창의로봇경진대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup64()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-64">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-65">
+      <a onclick="hellopopup65()" title="Close" class="modal-close opctzero" id="pop-close-65">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">인문학심포지엄</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup65()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-65">뒤로가기</a>
+    </div>
+  -->
+
+    <!--2-10-->
+    <div class="popupChang opctzero" id="info-pop-66">
+      <a onclick="hellopopup66()" title="Close" class="modal-close opctzero" id="pop-close-66">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">10월 교내대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup66()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-66">뒤로가기</a>
+    </div>
+    <!--
+    <div class="popupChang opctzero" id="info-pop-67">
+      <a onclick="hellopopup67()" title="Close" class="modal-close opctzero" id="pop-close-67">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">한국사경시대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup67()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-67">뒤로가기</a>
+    </div>
+  -->
+
+    <!--2-11-->
+    <div class="popupChang opctzero" id="info-pop-68">
+      <a onclick="hellopopup68()" title="Close" class="modal-close opctzero" id="pop-close-68">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">11월 교내대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup68()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-68">뒤로가기</a>
+    </div>
+    <!--
+    <div class="popupChang opctzero" id="info-pop-69">
+      <a onclick="hellopopup69()" title="Close" class="modal-close opctzero" id="pop-close-69">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">천체사진공모전</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup69()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-69">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-70">
+      <a onclick="hellopopup70()" title="Close" class="modal-close opctzero" id="pop-close-70">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">수리과학컨퍼런스</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup70()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-70">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-71">
+      <a onclick="hellopopup71()" title="Close" class="modal-close opctzero" id="pop-close-71">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">수학논문발표대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup71()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-71">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-72">
+      <a onclick="hellopopup72()" title="Close" class="modal-close opctzero" id="pop-close-72">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">과학논문발표대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup72()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-72">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-73">
+      <a onclick="hellopopup73()" title="Close" class="modal-close opctzero" id="pop-close-73">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">인문사회논문발표대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup73()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-73">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-74">
+      <a onclick="hellopopup74()" title="Close" class="modal-close opctzero" id="pop-close-74">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">과학활동소감문대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup74()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-74">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-75">
+      <a onclick="hellopopup75()" title="Close" class="modal-close opctzero" id="pop-close-75">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">이공계강연소감문대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup75()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-75">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-76">
+      <a onclick="hellopopup76()" title="Close" class="modal-close opctzero" id="pop-close-76">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">인포그래피대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup76()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-76">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-77">
+      <a onclick="hellopopup77()" title="Close" class="modal-close opctzero" id="pop-close-77">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">자율동아리성과물발표대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup77()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-77">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-78">
+      <a onclick="hellopopup78()" title="Close" class="modal-close opctzero" id="pop-close-78">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">창의프로젝트발표대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup78()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-78">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-79">
+      <a onclick="hellopopup79()" title="Close" class="modal-close opctzero" id="pop-close-79">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">서동요소감문대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup79()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-79">뒤로가기</a>
+    </div>
+  -->
+    <!--2-12-->
+    <div class="popupChang opctzero" id="info-pop-80">
+      <a onclick="hellopopup80()" title="Close" class="modal-close opctzero" id="pop-close-80">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">12월 교내대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup80()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-80">뒤로가기</a>
+    </div>
+    <!--
+    <div class="popupChang opctzero" id="info-pop-81">
+      <a onclick="hellopopup81()" title="Close" class="modal-close opctzero" id="pop-close-81">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">R&E과학창의력대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup81()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-81">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-82">
+      <a onclick="hellopopup82()" title="Close" class="modal-close opctzero" id="pop-close-82">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">봉사활동체험수기대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup82()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-82">뒤로가기</a>
+    </div>
+-->
+
+
+
+
+
+
+
+
+
+    <!-- 3학년 페이지(PC)- 시작부 ____________________________________________________________________________ -->
+    <div class="Grade-page none-display">
+
+      <!--_______모바일 사이드 메뉴_______-->
+      <div class="mobile-side-menu-c">
+        <a class="button" onclick="changeContentC(0)">4월</a>
+        <a class="button" onclick="changeContentC(1)">5월</a>
+        <a class="button" onclick="changeContentC(2)">6월</a>
+        <a class="button" onclick="changeContentC(3)">7월</a>
+        <a class="button" onclick="changeContentC(4)">8월</a>
+        <a class="button" onclick="changeContentC(5)">9월</a>
+        <a class="button" onclick="changeContentC(6)">10월</a>
+        <a class="button" onclick="changeContentC(7)">11월</a>
+        <a class="button" onclick="changeContentC(8)">12월</a>
+      </div>
+
+      <!-- 헤더 하단 설명부 -->
+      <div class="rule-main-box-c">
+        <div class="contest-main-intro-gr">
+          <div class="intro-pic-box">
+            <img src="../image/high-school.png" class="intro-pic-img">
+          </div>
+          <div class="intro-exp-box">
+            <h1 onclick="notice()">대회페이지, 이것만은 알고가자</h1>
+            <br>
+            <p>개최되는 대부분의 대회는 참가인원의 20%가 수상비율입니다. 주로 금,은,동으로 나뉘며 대회별로 상세한 부분은 다를 수 있습니다. </p>
+            <br>
+          </div>
+        </div>
+        <div class="contest-main-intro-wht">
+
+          <div class="intro-exp-box-wht">
+            <h1>참가신청은 지원하지 않습니다!</h1>
+            <br>
+            <p>서라벌길라잡이는 학교에서 공개한 자료를 보기 쉽게 정리한 사이트 입니다. 상세한 대회정보 와 대회신청은 서진솔을 이용해주시기 바랍니다.</p>
+            <br>
+            <a href="https://sorabol.riroschool.kr/" target="_blank" style="color:#000000;">서진솔 바로가기</a>
+          </div>
+          <div class="intro-pic-box-wht">
+            <img src="../image/calendar.png" class="intro-pic-img-wht">
+          </div>
+        </div>
+        <div class="contest-main-intro-gr">
+          <div class="intro-pic-box">
+            <img src="../image/checklist.png" class="intro-pic-img">
+          </div>
+          <div class="intro-exp-box">
+            <h1>업데이트 날짜를 확인해주세요!</h1>
+            <br>
+            <p>서라벌길라잡이에 올라오는 정보는 학교에서 공지한 자료를 학생들이 보기 쉽도록 정리한 것으로, 업데이트 날짜를 항상 확인해주시기 바랍니다.</p>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <!--_______ PC 사이드 메뉴_______-->
+      <div class="side-menu-c">
+        <a onclick="changeContentC(0)">4월</a>
+        <a onclick="changeContentC(1)">5월</a>
+        <a onclick="changeContentC(2)">6월</a>
+        <a onclick="changeContentC(3)">7월</a>
+        <a onclick="changeContentC(4)">8월</a>
+        <a onclick="changeContentC(5)">9월</a>
+        <a onclick="changeContentC(6)">10월</a>
+        <a onclick="changeContentC(7)">11월</a>
+        <a onclick="changeContentC(8)">12월</a>
+      </div>
+
+      <!-- 3학년 페이지 - 월별 대회목록 __________________________________________________-->
+
+      <!--4월-->
+      <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">4월</h1>
+          <ul class="contest-name-pc">
+            <!--4월-->
+
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">서울학생과학발명품경진대회</strong></span>
+              <a class="infoplus" onclick="hellopopup83()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup83()"> + </a>
+
+            </li>
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+
+
+      <!--5월-->
+      <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">5월</h1>
+          <ul class="contest-name-pc">
+
+
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">과학퀴즈골든벨</strong></span>
+              <a class="infoplus" onclick="hellopopup84()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup84()"> + </a>
+
+            </li>
+
+
+
+
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">서울시청소년과학탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup85()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup85()"> + </a>
+
+            </li>
+
+
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">과학독후감대회</strong></span>
+              <a class="infoplus" onclick="hellopopup86()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup86()"> + </a>
+
+            </li>
+
+
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span style="padding-top: 20px;"><strong class="contest-name-pc">천체사진공모전</strong></span>
+              <a class="infoplus" onclick="hellopopup87()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup87()"> + </a>
+            </li>
+
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <!--6월-->
+      <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">6월</h1>
+          <ul class="contest-name-pc">
+            <!--6월-->
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">화학탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup92()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup92()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">수학탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup93()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup93()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">한자탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup94()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup94()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">국어탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup95()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup95()"> + </a>
+
+            </li>
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+      <!--7월-->
+      <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">7월</h1>
+          <ul class="contest-name-pc">
+            <!--7월-->
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">영어리딩마스터대회</strong></span>
+              <a class="infoplus" onclick="hellopopup96()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup96()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">인문과학융합독후감대회</strong></span>
+              <a class="infoplus" onclick="hellopopup97()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup97()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">물리학탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup98()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup98()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">사회논구술대회</strong></span>
+              <a class="infoplus" onclick="hellopopup88()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup88()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">생명과학탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup89()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup89()"> + </a>
+
+            </li>
+
+
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">지구과학탐구대회</strong></span>
+              <a class="infoplus" onclick="hellopopup90()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup90()"> + </a>
+
+            </li>
+
+
+
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+      <!--8월-->
+      <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">8월</h1>
+          <ul class="contest-name-pc">
+            <!--8월-->
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">인문학심포지엄</strong></span>
+              <a class="infoplus" onclick="hellopopup99()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup99()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">지리데이사진전</strong></span>
+              <a class="infoplus" onclick="hellopopup100()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup100()"> + </a>
+
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc" style="margin: 0 20px 0 20px">서라벌잔치포스터공모</strong></span>
+              <a class="infoplus" onclick="hellopopup91()"> 더알아보기 </a>
+
+              <a class="infoplus-mob" onclick="hellopopup91()"> + </a>
+
+            </li>
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+      <!--9월-->
+      <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">9월</h1>
+          <ul class="contest-name-pc">
+            <!--9월-->
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">9월 교내대회</strong></span>
+              <a class="infoplus" onclick="hellopopup101()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup101()"> + </a>
+            </li>
+            <!--
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">기악콩쿠르</strong></span>
+              <a class="infoplus" onclick="hellopopup102()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup102()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">수학경시대회</strong></span>
+              <a class="infoplus" onclick="hellopopup103()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup103()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">영어어휘경시대회</strong></span>
+              <a class="infoplus" onclick="hellopopup104()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup104()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">창의로봇경진대회</strong></span>
+              <a class="infoplus" onclick="hellopopup105()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup105()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">인문학심포지엄</strong></span>
+              <a class="infoplus" onclick="hellopopup106()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup106()"> + </a>
+            </li>
+          -->
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+      <!--10월-->
+      <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">10월</h1>
+          <ul class="contest-name-pc">
+            <!--10월-->
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">10월 교내대회</strong></span>
+              <a class="infoplus" onclick="hellopopup107()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup107()"> + </a>
+            </li>
+            <!--
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">한국사경시대회</strong></span>
+              <a class="infoplus" onclick="hellopopup108()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup108()"> + </a>
+            </li>
+          -->
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+      <!--11월-->
+      <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">11월</h1>
+          <ul class="contest-name-pc">
+            <!--11월-->
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">11월 교내대회</strong></span>
+              <a class="infoplus" onclick="hellopopup109()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup109()"> + </a>
+            </li>
+            <!--
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">천체사진공모전</strong></span>
+              <a class="infoplus" onclick="hellopopup110()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup110()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">수리과학컨퍼런스</strong></span>
+              <a class="infoplus" onclick="hellopopup111()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup111()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">수학논문발표대회</strong></span>
+              <a class="infoplus" onclick="hellopopup112()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup112()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">과학논문발표대회</strong></span>
+              <a class="infoplus" onclick="hellopopup113()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup113()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">인문사회논문발표대회</strong></span>
+              <a class="infoplus" onclick="hellopopup114()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup114()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">과학활동소감문대회</strong></span>
+              <a class="infoplus" onclick="hellopopup115()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup115()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">이공계강연소감문대회</strong></span>
+              <a class="infoplus" onclick="hellopopup116()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup116()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">인포그래피대회</strong></span>
+              <a class="infoplus" onclick="hellopopup117()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup117()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">자율동아리성과물발표대회</strong></span>
+              <a class="infoplus" onclick="hellopopup118()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup118()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">창의프로젝트발표대회</strong></span>
+              <a class="infoplus" onclick="hellopopup119()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup119()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">서동요소감문대회</strong></span>
+              <a class="infoplus" onclick="hellopopup120()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup120()"> + </a>
+            </li>
+          -->
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+      <!--12월-->
+      <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">12월</h1>
+          <ul class="contest-name-pc">
+            <!--12월-->
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">12월 교내대회</strong></span>
+              <a class="infoplus" onclick="hellopopup121()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup121()"> + </a>
+            </li>
+            <!--
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">R&E과학창의력대회</strong></span>
+              <a class="infoplus" onclick="hellopopup122()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup122()"> + </a>
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+                <img src="../image/kyungsi_c.png" class="contest-name-pc">
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">봉사활동체험수기대회</strong></span>
+              <a class="infoplus" onclick="hellopopup123()"> 더알아보기 </a>
+              <a class="infoplus-mob" onclick="hellopopup123()"> + </a>
+            </li>
+          -->
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="null-space"></div>
+      </div>
+    </div>
+
+
+
+    <!--pppppppp3학년 팝업창 부분-->
+    <!--3-4-->
+    <div class="popupChang opctzero" id="info-pop-83">
+      <a onclick="hellopopup83()" title="Close" class="modal-close opctzero" id="pop-close-83">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">서울학생과학발명품경진대회</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup83()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-83">뒤로가기</a>
+    </div>
+
+    <!--3-5-->
+    <div class="popupChang opctzero" id="info-pop-84">
+      <a onclick="hellopopup84()" title="Close" class="modal-close opctzero" id="pop-close-84">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">과학퀴즈골든벨</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup84()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-84">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-85">
+      <a onclick="hellopopup85()" title="Close" class="modal-close opctzero" id="pop-close-85">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">서울시청소년과학탐구대회</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup85()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-85">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-86">
+      <a onclick="hellopopup86()" title="Close" class="modal-close opctzero" id="pop-close-86">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">과학독후감대회</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup86()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-86">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-87">
+      <a onclick="hellopopup87()" title="Close" class="modal-close opctzero" id="pop-close-87">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">천체사진공모전</span>
+      <div class="pop-text no-drag">코로나19로 인하여 시행하지 않습니다</div>
+      <a onclick="hellopopup87()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-87">뒤로가기</a>
+    </div>
+
+
+    <!--3-6-->
+    <div class="popupChang opctzero" id="info-pop-92">
+      <a onclick="hellopopup92()" title="Close" class="modal-close opctzero" id="pop-close-92">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">화학탐구대회</span>
+      <div class="pop-text no-drag">3학년/6월24일(수)</div>
+      <a onclick="hellopopup92()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-92">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-93">
+      <a onclick="hellopopup93()" title="Close" class="modal-close opctzero" id="pop-close-93">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">수학탐구대회</span>
+      <div class="pop-text no-drag">3학년/6월25(목)</div>
+      <a onclick="hellopopup93()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-93">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-94">
+      <a onclick="hellopopup94()" title="Close" class="modal-close opctzero" id="pop-close-94">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">한자탐구대회</span>
+      <div class="pop-text no-drag">전학년/6월29일(월)</div>
+      <a onclick="hellopopup94()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-94">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-95">
+      <a onclick="hellopopup95()" title="Close" class="modal-close opctzero" id="pop-close-95">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">국어탐구대회</span>
+      <div class="pop-text no-drag">전학년/6월30일(화)</div>
+      <a onclick="hellopopup95()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-95">뒤로가기</a>
+    </div>
+
+    <!--3-7-->
+    <div class="popupChang opctzero" id="info-pop-96">
+      <a onclick="hellopopup96()" title="Close" class="modal-close opctzero" id="pop-close-96">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">영어리딩마스터대회</span>
+      <div class="pop-text no-drag">전학년/7월1일(수)</div>
+      <a onclick="hellopopup96()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-96">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-97">
+      <a onclick="hellopopup97()" title="Close" class="modal-close opctzero" id="pop-close-1975">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">인문과학융합독후감대회</span>
+      <div class="pop-text no-drag">전학년/7월3일(금)</div>
+      <a onclick="5hellopopup97()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-97">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-98">
+      <a onclick="hellopopup98()" title="Close" class="modal-close opctzero" id="pop-close-98">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">물리학탐구대회</span>
+      <div class="pop-text no-drag">3학년/7월2일(목)</div>
+      <a onclick="hellopopup98()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-98">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-88">
+      <a onclick="hellopopup88()" title="Close" class="modal-close opctzero" id="pop-close-88">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">사회논구술대회</span>
+      <div class="pop-text no-drag">전학년/7월6일(월)예선/7월9일(목)본선</div>
+      <a onclick="hellopopup88()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-88">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-89">
+      <a onclick="hellopopup89()" title="Close" class="modal-close opctzero" id="pop-close-89">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">생명과학탐구대회</span>
+      <div class="pop-text no-drag">3학년/7월8일(수)</div>
+      <a onclick="hellopopup89()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-89">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-90">
+      <a onclick="hellopopup90()" title="Close" class="modal-close opctzero" id="pop-close-90">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">지구과학탐구대회</span>
+      <div class="pop-text no-drag">3학년/7월9일(목)</div>
+      <a onclick="hellopopup90()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-90">뒤로가기</a>
+    </div>
+
+
+    <!--3-8-->
+    <div class="popupChang opctzero" id="info-pop-99">
+      <a onclick="hellopopup99()" title="Close" class="modal-close opctzero" id="pop-close-99">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">인문학심포지엄</span>
+      <div class="pop-text no-drag">1,2학년/8월중 개최예정</div>
+      <a onclick="hellopopup99()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-99">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-100">
+      <a onclick="hellopopup100()" title="Close" class="modal-close opctzero" id="pop-close-100">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">지리데이사진전</span>
+      <div class="pop-text no-drag">전학년/8월10일(월)</div>
+      <a onclick="hellopopup100()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-100">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-91">
+      <a onclick="hellopopup91()" title="Close" class="modal-close opctzero" id="pop-close-91">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">서라벌잔치포스터공모</span>
+      <div class="pop-text no-drag">전학년/8월31일(월)~9월3일(목)/1등의 경우 대상과 함께 수상작이 서라벌잔치 포스터로 사용됩니다</div>
+      <a onclick="hellopopup91()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-91">뒤로가기</a>
+    </div>
+
+    <!--3-9-->
+    <div class="popupChang opctzero" id="info-pop-101">
+      <a onclick="hellopopup101()" title="Close" class="modal-close opctzero" id="pop-close-101">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">9월 교내대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup101()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-101">뒤로가기</a>
+    </div>
+    <!--
+    <div class="popupChang opctzero" id="info-pop-102">
+      <a onclick="hellopopup102()" title="Close" class="modal-close opctzero" id="pop-close-102">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">기악콩쿠르</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup102()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-102">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-103">
+      <a onclick="hellopopup103()" title="Close" class="modal-close opctzero" id="pop-close-103">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">수학경시대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup103()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-103">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-104">
+      <a onclick="hellopopup104()" title="Close" class="modal-close opctzero" id="pop-close-104">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">영어어휘경시대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup104()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-104">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-105">
+      <a onclick="hellopopup105()" title="Close" class="modal-close opctzero" id="pop-close-105">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">창의로봇경진대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup105()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-105">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-106">
+      <a onclick="hellopopup106()" title="Close" class="modal-close opctzero" id="pop-close-106">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">인문학심포지엄</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup106()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-106">뒤로가기</a>
+    </div>
+  -->
+    <!--3-10-->
+    <div class="popupChang opctzero" id="info-pop-107">
+      <a onclick="hellopopup107()" title="Close" class="modal-close opctzero" id="pop-close-107">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">10월 교내대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup107()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-107">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-108">
+      <a onclick="hellopopup108()" title="Close" class="modal-close opctzero" id="pop-close-108">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">한국사경시대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup108()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-108">뒤로가기</a>
+    </div>
+    <!--3-11-->
+    <div class="popupChang opctzero" id="info-pop-109">
+      <a onclick="hellopopup109()" title="Close" class="modal-close opctzero" id="pop-close-28">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">11월 교내대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup109()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-28">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-110">
+      <a onclick="hellopopup110()" title="Close" class="modal-close opctzero" id="pop-close-110">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">천체사진공모전</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup110()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-110">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-111">
+      <a onclick="hellopopup111()" title="Close" class="modal-close opctzero" id="pop-close-111">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">수리과학컨퍼런스</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup111()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-111">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-112">
+      <a onclick="hellopopup112()" title="Close" class="modal-close opctzero" id="pop-close-112">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">수학논문발표대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup112()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-112">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-113">
+      <a onclick="hellopopup113()" title="Close" class="modal-close opctzero" id="pop-close-113">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">과학논문발표대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup113()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-113">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-114">
+      <a onclick="hellopopup114()" title="Close" class="modal-close opctzero" id="pop-close-114">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">인문사회논문발표대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup114()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-114">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-115">
+      <a onclick="hellopopup115()" title="Close" class="modal-close opctzero" id="pop-close-115">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">과학활동소감문대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup115()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-115">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-116">
+      <a onclick="hellopopup116()" title="Close" class="modal-close opctzero" id="pop-close-116">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" <span class="pop-name no-drag">이공계강연소감문대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup116()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-116">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-117">
+      <a onclick="hellopopup117()" title="Close" class="modal-close opctzero" id="pop-close-117">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">인포그래피대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup117()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-117">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-118">
+      <a onclick="hellopopup118()" title="Close" class="modal-close opctzero" id="pop-close-118">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">자율동아리성과물발표대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup118()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-118">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-119">
+      <a onclick="hellopopup119()" title="Close" class="modal-close opctzero" id="pop-close-119">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">창의프로젝트발표대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup119()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-119">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-120">
+      <a onclick="hellopopup120()" title="Close" class="modal-close opctzero" id="pop-close-120">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">서동요소감문대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup120()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-120">뒤로가기</a>
+    </div>
+    <!--3-12-->
+    <div class="popupChang opctzero" id="info-pop-121">
+      <a onclick="hellopopup121()" title="Close" class="modal-close opctzero" id="pop-close-121">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">12월 교내대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup121()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-121">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-122">
+      <a onclick="hellopopup122()" title="Close" class="modal-close opctzero" id="pop-close-122">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">R&E과학창의력대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup122()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-122">뒤로가기</a>
+    </div>
+    <div class="popupChang opctzero" id="info-pop-123">
+      <a onclick="hellopopup123()" title="Close" class="modal-close opctzero" id="pop-close-123">X</a>
+      <img src="../image/tip_blk.png" class="pop-img">
+      <span class="pop-name no-drag">봉사활동체험수기대회</span>
+      <div class="pop-text no-drag">2020학년도 2학기 대회일정이 공개되지 않았습니다</div>
+      <a onclick="hellopopup123()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-123">뒤로가기</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div style="clear:both"></div>
+    <!--footer-->
+    <div class="footer">
+      <p>SORABOL HIGH SCHOOL - Information Web Page</p><br>
+      <p>문의 : <a href="mailto:2019noisyit@gmail.com" style="text-decoration:none; color: white;">2019noisyit@gmail.com</a></p><br>
+      <p>Copyright (C) 2018. Noisy IT 김규석 & 이다솔 all rights reserved.</p>
+  </div>
+  </div>
+</body>
+
+</html>

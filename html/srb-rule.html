@@ -1,0 +1,281 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head >
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>생활규정</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/keep.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/header.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/footer.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/animation.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/srb-rule.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/sidemenu-contestpage.css"/>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <script src="../js/keep.js"></script>
+    <script src="../js/mobilesidemenu.js"></script>
+    <script src="../js/gradeselect.js"></script>
+    <script src="../js/sidemenu-abc.js"></script>
+    <script src="../js/urlmanage.js"></script>
+    <script src="../js/sidemenu.js"></script>
+    <script src="../js/clickPOPtest.js"></script>
+
+
+</head>
+<!--메뉴&햄버거 _________________________________________________________________________ -->
+<body class="fadeIn">
+
+
+
+
+<!--hamberger (menu side) code-->
+    <div class="menu-side">
+        <a class="menu-side-close" onclick="closeNav()" style="cursor: pointer;">&times;</a>
+        <a href="https://sorabol-info.github.io/hs/">메인</a>
+        <a href="../html/srb-club.html">교내 동아리</a>
+        <a href="../html/srb-contest.html">교내 대회</a>
+        <a href="../html/srb-rule.html">생활 규정</a>
+        <a onclick="url_confirm_road()">로드뷰</a>
+    </div>
+    <div class="menu-side-open" onclick="openNav()">
+        <i class="fas fa-bars menu-side-open-icon" style="font-size: 32pt;"></i>
+    </div>
+
+    <div class="main-container">
+
+
+
+      <!--메뉴 수정-->
+      <div id="menu-wrapper">
+              <div id="menu-top" class="container">
+                <div id="logo">
+                  <a title="서라벌 길라잡이" href="https://sorabol-info.github.io/hs/" >
+                    <img src="sorabol%20logo.png" height="80" alt="서라벌 길라잡이"></a>
+            </div>
+            <div class="top-container">
+                <div id="menu" class="one" style="z-index:2">
+              <ul>
+                <li class="current_page_item"><a href="https://sorabol-info.github.io/hs/" accesskey="1" title="" class="button2">메인</a>
+                </li>
+                <li><a href="../html/srb-club.html" accesskey="2" title="동아리"class="button2">교내 동아리</a>
+                </li>
+                <li><a href="../html/srb-contest.html" accesskey="3" title=""class="button2">교내 대회</a>
+
+                </li>
+                <li><a href="../html/srb-rule.html" accesskey="4" title=""class="button2">생활 규정</a></li>
+                <li><a onclick="yesorno();" class="button2">서라벌 VR</a></li>
+             
+
+              </ul>
+           </div>
+           </div>
+           </div>
+       </div>
+
+<!-- 메뉴 제외 header code_________________________________________________________________________ -->
+       <!--상단 배너-->
+        <div class="header">
+          <div class="header-title">
+            <a href="srb-rule.html" >서라벌 생활규정</a>
+          </div>
+          <div class="header-sub">
+            <p >서라벌 생활 규정</p>
+          </div>
+
+          <div class="gradeselector">
+            <a class="gradebutton" onclick="changeGrade(0)">
+              용의복장
+            </a>
+            <a class="gradebutton" onclick="changeGrade(1)">
+              전자기기
+            </a>
+            <a class="gradebutton" href="http://sorabol.sen.hs.kr/16771/subMenu.do#top" target=_blank>
+              더알아보기
+            </a>
+
+          </div>
+
+        </div>
+
+<!-- 랜딩페이지 하단 설명부_____________________________________________________________ -->
+
+
+        <div class="contest-main-null">
+          <div class="contest-main-intro-gr">
+            <div class="intro-pic-box">
+              <img src="../image/high-school.png" class="intro-pic-img" >
+            </div>
+            <div class="intro-exp-box">
+              <h1 onclick="notice()">규정페이지, 이것만은 알고가자</h1>
+              <br>
+              <p>교내 자치활동으로 생활규정 변동 및 선도규정 변동이 있을 수 있으니, 업데이트 날짜를 항상 확인해주시기 바랍니다. </p>
+              <br>
+            </div>
+          </div>
+          <div class="contest-main-intro-wht">
+
+            <div class="intro-exp-box-wht">
+              <h1 >규정페이지, 이것만은 알고가자</h1>
+              <br>
+              <p>서라벌길라잡이는 학교에서 공개한 자료를 보기 쉽게 정리한 사이트 입니다. 상세한 생활선도 규정은 서진솔을 확인해주시길 바랍니다.</p>
+              <br>
+              <a href="https://sorabol.riroschool.kr/"  target="_blank" style="color:#000000;">서진솔 바로가기</a>
+            </div>
+            <div class="intro-pic-box-wht">
+              <img src="../image/calendar.png" class="intro-pic-img-wht" >
+            </div>
+          </div>
+          <div class="contest-main-intro-gr">
+            <div class="intro-pic-box">
+              <img src="../image/checklist.png" class="intro-pic-img" >
+            </div>
+            <div class="intro-exp-box">
+              <h1 >규정페이지, 이것만은 알고가자</h1>
+              <br>
+              <p>항상 정해진 규정을 준수하며 모두에게 귀감이 되는 자랑스러운 서라벌인이 되시길 바랍니다.</p>
+              <br>
+            </div>
+          </div>
+        </div>
+
+
+<!-- 1학년 페이지(PC)- 시작부 ____________________________________________________________________________ -->
+    <div class="Grade-page none-display">
+
+
+    <!-- 헤더 하단 설명부-->
+
+      <div class="rule-main-box-a">
+
+        <div class="rule-body">
+
+
+          <div class="rule-content">
+            <h1> 두발 규정 </h1>
+            &nbsp; &nbsp;① 두발은 학생의 신분에 맞게 단정하게 유지한다.<br><br>
+                &nbsp; &nbsp;&nbsp; &nbsp;가. 앞머리는 눈썹 아래로 내려오지 않게 한다.<br><br>
+                &nbsp; &nbsp;&nbsp; &nbsp;나. 옆머리는 귀를 덮지 않는다.<br><br>
+                &nbsp; &nbsp;&nbsp; &nbsp;다. 뒷머리는 옷깃에 닿지 않는다.<br>
+            <br><br>
+            &nbsp; &nbsp;② 다음 각 호와 같은 두발 형태는 금지한다.<br><br>
+                &nbsp; &nbsp;&nbsp; &nbsp;가. 스크레치 또는 모히칸, 퍼머, 웨이브, 왁스·젤·스프레이 사용 등<br>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;물리적·기계적 방법으로 두발을 변형하는 형태<br><br>
+                &nbsp; &nbsp;&nbsp; &nbsp;나. 염색, 탈색 등 화학적 방법으로 두발을 변형하는 형태<br>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;(단, 새치나 기타의 이유로 검정색으로  염색하는 경우는 담임교사의 요청 하에 허용)<br><br>
+                &nbsp; &nbsp;&nbsp; &nbsp;다. 가발, 붙임 머리 등 자신의 모발이 아닌 것을 착용하거나 부착하는 형태
+            <br><br><br><br><br><br><br>
+            <h1> 복장 규정 </h1>
+            &nbsp; &nbsp;① 교복은 다음 각 호와 같은 형태로 단정하게 착용한다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;가. 동복 : 상의(교표, 명찰, 단추), 와이셔츠, 넥타이, 조끼(교표, 명찰), 하의 착용<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;나. 춘추복 : 와이셔츠, 넥타이, 조끼(교표, 명찰), 하의 착용<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;다. 하복 : 상의(교표, 명찰), 무늬 없는 티셔츠(흰, 회, 검은색), 흰색 런닝셔츠, 하의 착용<br><br>
+        <br><br>
+            &nbsp; &nbsp;② 다음 각 호와 같은 교복 복장 형태는 금지한다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;가. 상의의 폭이나 길이를 지나치게 줄인 경우<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;나. 바지의 아랫단이나 윗단을 지나치게 줄인 경우<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;다. 기타 교복 규정에 위배되게 교복 형태를 변형한 경우<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;라. 타 학교 교복을 착용하는 경우<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;마. 색상이나 형태가 비슷한 사복을 착용하는 경우(와이셔츠, 하의 등) <br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;바. 춘추복이나 하복 겉에 다른 복장(사복)을 입는 경우<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;(단, 12월부터 익년도 2월에 한하여 춘추복 겉에 외투를 입는 것은 허용한다.)<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;사. 동복 안에 다른 복장(사복)을 겹쳐 입는 경우<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;아. 교복과 체육복을 횬용한 경우<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;자. 교복과 사복을 혼용한 경우(교복 상의와 사복 하의, 사복 상의와 교복 하의)<br><br>
+        <br><br>
+            &nbsp; &nbsp;③ 생활복은 다음 각 호와 같은 형태로 착용할 때, 등·하교 및 일과 시간에 입을 수 있다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;가. 코트  : 교복(동복) 위에 걸쳐 입는다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;나. 후드 집업 : 교복 위에 걸쳐 입는다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;다. 반팔티, 반바지 : 생활복 세트(반팔티와 반바지) 혹은 생활복(반팔티)과<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;교복 하의 혹은 교복(하복) 상의와 생활복(반바지)의 형태로 입는다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;라. 교복 착용 등교를 지정한 날에는 반드시 교복을 입는다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;마. 생활복은 반드시 학교에서 지정한 규격의 생활복을 입는다.<br><br>
+        <br><br>
+            &nbsp; &nbsp;④ 체육복은 다음의 각 호와 같은 형태로 체육 시간에만 입을 수 있다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;가. 동복 상의(교표, 명찰), 동복 하의를 다 갖출 때<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;나. 하복 상의(교표, 명찰), 하복 하의를 다 갖출 때<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;다. 동복 상의(교표, 명찰), 하복 하의를 다 갖츨 때<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;라. 하복 상의(교표, 명찰), 동복 하의를 다 갖출 때<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;마. 사복 형태의 체육복 착용은 금지한다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;바. 체육복은 교복 및 생활복과의 혼용을 금지한다. <br><br>
+        <br><br>
+            &nbsp; &nbsp;⑤ 기타<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;가. 일과 시간에는 지도 교사의 허락 없이는 사복을 입을 수 없다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;나. 등·하교 시 슬리퍼 착용은 금지한다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;다. 교복 및 체육복에는 반드시 해당 학년 색상의 교표와 명찰을 부착한다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;라. 동복 조끼 및 체육복의 명찰은 교표 1cm 밑에 부착한다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;마. 동복 상의 및 하복 상의의 명찰은 왼쪽 주머니 1cm 위에 부착한다. <br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;바. 생활복 안 쪽 태그에는 반드시 이름을 기재하며, 학생증은 반드시 소지한다.<br><br>
+
+          </div>
+        </div>
+      </div>
+
+
+        </div>
+
+
+
+
+
+
+<!-- 2학년 페이지(PC)- 시작부 ____________________________________________________________________________ -->
+    <div class="Grade-page none-display">
+      <div class="rule-main-box-a">
+
+        <div class="rule-body">
+
+
+          <div class="rule-content">
+            <h1> 기기 관리 </h1>
+            &nbsp; &nbsp;&nbsp; &nbsp;교내에서는 다음 각 항의 사항을 준수하여야 한다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;① 일과 시간에는  도난 및 분실 방지, 교사의 수업권 및 학생의 학습권 침해를<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 방지하기 위하여 교사에게 허락받은 경우를 제외하고는 전자기기 및 통신기기를<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 학교에 제출하여 보관한다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;② 수업 중 컴퓨터는 교육 활동을 위해서만 활용한다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;③ 교내 정보통신 기자재를 아끼고 관리를 철저히 한다.
+        <br><br><br><br><br><br>
+            <h1> 소지 및 사용 </h1>
+            &nbsp; &nbsp;&nbsp; &nbsp;① 일과 시간에는 교사의 허락 없이 모든 전자기기및 통신기기의 소지 및 사용을<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 원칙적으로 금지한다.<br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;② 모든 교사는 일과 시간에 학생의 전자기기 및 통신기기의 소지 및 사용을<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 제한할 수 있으며, 이를 위반한 학생을 학생 선도 규정, 학생 상 · 벌점 규정 및<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 학교 폭력 예방과 처리에 관한 규정, 학생자치법정 규정 등에 의해 지도한다.<br><br>
+
+            &nbsp; &nbsp;&nbsp; &nbsp;③ 모든 교사는 일과 시간에 학생이 모든 전자기기 및 통신기기를 소지 혹은 사용할 경우,<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 이를 적발하여 전자기기 및 통신기기를 일정 기간 동안 압수할 수 있다.<br><br>
+
+
+            &nbsp; &nbsp;&nbsp; &nbsp;④ 고사기간에는 모든 전자기기 및 통신기기의 소지를 금지하며,<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 이를 위반한 학생은 학생선도규정, 학생 상 · 벌점 규정 및 학교 폭력 예방과<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 처리에 관한 규정 등에 의해 지도하며, 학업성적관리규정에 따라 해당과목에 대한<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 성적을 부과한다.<br><br>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div style="clear:both"></div>
+<!--footer-->
+<div class="footer">
+  <p>SORABOL HIGH SCHOOL - Information Web Page</p><br>
+  <p>문의 : <a href="mailto:2019noisyit@gmail.com" style="text-decoration:none; color: white;">2019noisyit@gmail.com</a></p><br>
+  <p>Copyright (C) 2018. Noisy IT 김규석 & 이다솔 all rights reserved.</p>
+</div>
+  </div>
+</body>
+</html>
