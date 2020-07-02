@@ -1,0 +1,2310 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head >
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>교내 동아리</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/keep.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/header.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/footer.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/animation.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/srb-club.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/sidemenu-contestpage.css"/>
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <script src="../js/keep.js"></script>                 <!--공통-->
+    <script src="../js/mobilesidemenu.js"></script>
+    <script src="../js/gradeselect.js"></script>
+    <script src="../js/sidemenu-abc.js"></script>
+    <script src="../js/urlmanage.js"></script>
+    <script src="../js/sidemenu.js"></script>
+    <script src="../js/clickPOPtest.js"></script>
+    <!--<script src="../js/notice.js"></script>-->
+
+</head>
+<!--메뉴&햄버거 _________________________________________________________________________ -->
+<body class="fadeIn">
+
+<!--hamberger (menu side) code-->
+    <div class="menu-side">
+        <a class="menu-side-close" onclick="closeNav()" style="cursor: pointer;">&times;</a>
+        <a href="https://sorabol-info.github.io/hs/">메인</a>
+        <a href="../html/srb-club.html">교내 동아리</a>
+        <a href="../html/srb-contest.html">교내 대회</a>
+        <a href="../html/srb-rule.html">생활규정</a>
+        <a onclick="url_confirm_road()">로드뷰</a>
+    </div>
+    <div class="menu-side-open" onclick="openNav()">
+        <i class="fas fa-bars menu-side-open-icon" style="font-size: 32pt;"></i>
+    </div>
+
+    <div class="main-container">
+
+      <!--menu bar (임시 삭제 상단 스티키)
+        <div class="menu-bar wow fadeInDown" data-wow-duration="1s">
+            <a href="index.html">메인</a>
+            <a href="club-index.html">동아리</a>
+            <a href="contest-allgrade.html">대회</a>
+            <a href="intro.html">학교소개</a>
+            <a onclick="url_confirm_road()">로드뷰</a>
+            <a href="tip.html">학교생활 Tip</a>
+        </div>
+      -->
+
+      <!--메뉴 수정-->
+          <div id="menu-wrapper">
+                  <div id="menu-top" class="container">
+                    <div id="logo">
+                      <a title="서라벌 길라잡이" href="https://sorabol-info.github.io/hs/" >
+                        <img src="sorabol%20logo.png" height="80" alt="서라벌 길라잡이"></a>
+                </div>
+                <div class="top-container">
+                    <div id="menu" class="one" style="z-index:2">
+                  <ul>
+                    <li class="current_page_item"><a href="https://sorabol-info.github.io/hs/" accesskey="1" title="" class="button2">메인</a>
+                    </li>
+                    <li><a href="srb-club.html" accesskey="2" title="동아리"class="button2">교내 동아리</a>
+                    </li>
+                    <li><a href="srb-contest.html" accesskey="3" title=""class="button2">교내 대회</a>
+
+                    </li>
+                    <li><a href="srb-rule.html" accesskey="4" title=""class="button2">생활 규정</a></li>
+                    <li><a onclick="yesorno();" class="button2">서라벌 VR</a></li>
+                  </ul>
+               </div>
+               </div>
+               </div>
+           </div>
+
+<!-- 메뉴 제외 header code_________________________________________________________________________ -->
+       <!--상단 배너-->
+        <div class="header">
+          <div class="header-title">
+            <a href="srb-club.html" >서라벌 동아리</a>
+          </div>
+          <div class="header-sub">
+            <p >서라벌 대회 일정</p>
+          </div>
+          <div class="exsentence-title" >
+            <p>학년을 선택해주세요</p>
+          </div>
+          <div class="gradeselector">
+            <a class="gradebutton" onclick="changeGrade(0)">
+              정규동아리 (전학년)
+            </a>
+            <a class="gradebutton" onclick="changeGrade(1)">
+              자율동아리 (1,2학년)
+            </a>
+            <a class="gradebutton" onclick="changeGrade(2)">
+              자율동아리 (3학년)
+            </a>
+          </div>
+          <div class="exsentence" id="exsentence">
+            <p>2020학년도 대회일정은 공개되는 즉시 업데이트 될 예정입니다.</p>
+          </div>
+        </div>
+
+<!-- 랜딩페이지 하단 설명부_____________________________________________________________ -->
+
+
+        <div class="contest-main-null">
+          <div class="contest-main-intro-gr">
+            <div class="intro-pic-box">
+              <img src="../image/high-school.png" class="intro-pic-img" >
+            </div>
+            <div class="intro-exp-box">
+              <h1 onclick="notice()">동아리페이지, 이것만은 알고가자</h1>
+              <br>
+              <p>학교 내부 사정으로 동아리 활동 사항 및 일정이 변경될 수 있으니, 업데이트 날짜를 항상 확인해주시기 바랍니다. </p>
+              <br>
+            </div>
+          </div>
+          <div class="contest-main-intro-wht">
+
+            <div class="intro-exp-box-wht">
+              <h1 >동아리페이지, 이것만은 알고가자</h1>
+              <br>
+              <p>서라벌길라잡이는 학교에서 공개한 자료를 보기 쉽게 정리한 사이트 입니다. 상세한 동아리 대회 안내는 서진솔을 확인해주시길 바랍니다.</p>
+              <br>
+              <a href="https://sorabol.riroschool.kr/"  target="_blank" style="color:#000000;">서진솔 바로가기</a>
+            </div>
+            <div class="intro-pic-box-wht">
+              <img src="../image/calendar.png" class="intro-pic-img-wht" >
+            </div>
+          </div>
+          <div class="contest-main-intro-gr">
+            <div class="intro-pic-box">
+              <img src="../image/checklist.png" class="intro-pic-img" >
+            </div>
+            <div class="intro-exp-box">
+              <h1 >동아리페이지, 이것만은 알고가자</h1>
+              <br>
+              <p>동아리 활동 하기에 앞서, 구체적인 연간 계획과 활동 일정을 정하며 꾸준히 이어나가길 바랍니다.</p>
+              <br>
+            </div>
+          </div>
+        </div>
+
+
+<!-- 1학년 페이지(PC)- 시작부 ____________________________________________________________________________ -->
+    <div class="Grade-page none-display">
+
+      <!--_______모바일 사이드 메뉴_______-->
+      <div class="mobile-side-menu-a">
+          <a class="button" onclick="changeContentA(0)">정규동아리란?</a>
+          <a class="button" onclick="changeContentA(1)">학술(1,2)</a>
+          <a class="button" onclick="changeContentA(2)">독서토론(1,2)</a>
+          <a class="button" onclick="changeContentA(3)">정보기계(1,2)</a>
+          <a class="button" onclick="changeContentA(4)">예체능(1,2)</a>
+          <a class="button" onclick="changeContentA(5)">학술(3)</a>
+          <a class="button" onclick="changeContentA(6)">독서토론(3)</a>
+          <a class="button" onclick="changeContentA(7)">정보기계(3)</a>
+          <a class="button" onclick="changeContentA(8)">예체능(3)</a>
+      </div>
+
+    <!-- 헤더 하단 설명부-->
+
+      <div class="rule-main-box-a">
+
+          <div class="contest-main-intro-gr">
+            <div class="intro-pic-box">
+              <img src="../image/high-school.png" class="intro-pic-img" >
+            </div>
+            <div class="intro-exp-box">
+              <h1 >동아리페이지, 이것만은 알고가자</h1>
+              <br>
+              <p>학교 내부 사정으로 동아리 일정이나 활동 사항이 변경될 수 있으니, 업데이트 날짜를 항상 확인해주시기 바랍니다. </p>
+              <br>
+            </div>
+          </div>
+          <div class="contest-main-intro-wht">
+
+            <div class="intro-exp-box-wht">
+              <h1 >동아리페이지, 이것만은 알고가자</h1>
+              <br>
+              <p>서라벌길라잡이는 학교에서 공개한 자료를 보기 쉽게 정리한 사이트 입니다. 상세한 동아리정보와 대회 일정은 서진솔을 이용해주시기 바랍니다.</p>
+              <br>
+              <a href="https://sorabol.riroschool.kr/"  target="_blank" style="color:#000000;">서진솔 바로가기</a>
+            </div>
+            <div class="intro-pic-box-wht">
+              <img src="../image/calendar.png" class="intro-pic-img-wht" >
+            </div>
+          </div>
+          <div class="contest-main-intro-gr">
+            <div class="intro-pic-box">
+              <img src="../image/checklist.png" class="intro-pic-img" >
+            </div>
+            <div class="intro-exp-box">
+              <h1 >동아리페이지, 이것만은 알고가자</h1>
+              <br>
+              <p>동아리 활동 하기에 앞서, 구체적인 연간 계획과 활동 일정을 정하며 꾸준히 이어나가길 바랍니다.</p>
+              <br>
+            </div>
+
+        </div>
+
+        <!--
+          <div class="intro-title"><1학년 대회일정></div>
+          <p class="sub-title">대회일정 페이지에 오신걸 환영합니다!</p>
+          <p class="sub-title">
+            -월별 대회를 확인해 보세요-<br>(pc는 좌측, 모바일은 상단)
+            <br>
+          </p>
+          <div class="intro-tip-box">
+            <p id="intro-tip-text">TIP!</p>
+            <p id="intro-tip-text">계열구분: 이공, 인문, 공통</p>
+            <p id="intro-tip-text">대회신청: < <a href="https://sorabol.riroschool.kr/" target="_blank" class=intro-hyperlink>서진솔</a> 바로가기 > </p>
+            <p id="intro-tip-text">수상비율: 참가자의 20%</p>
+            <p id="intro-tip-text">※ 계열구분은 참가대상과는 관련이 없습니다</p>
+          </p>
+        </div>
+      -->
+      </div>
+
+    <!--_______ PC 사이드 메뉴_______-->
+      <div class="side-menu-a">
+        <a onclick="changeContentA(0)">학술(1,2)</a>
+        <a onclick="changeContentA(1)">독서토론(1,2)</a>
+        <a onclick="changeContentA(2)">정보기계(1,2)</a>
+        <a onclick="changeContentA(3)">예체능(1,2)</a>
+        <a onclick="changeContentA(4)">학술(3)</a>
+        <a onclick="changeContentA(5)">독서토론(3)</a>
+        <a onclick="changeContentA(6)">정보기계(3)</a>
+        <a onclick="changeContentA(7)">예체능(3)</a>
+      </div>
+
+<!-- 1학년 페이지 - 월별 대회목록 __________________________________________________-->
+
+
+
+
+
+
+<!--________________________________대회페이지 친절하게 설명해드려요___________________________________________
+
+                   바로 아래에 보이는 4월 달 대회를 기준으로 설명
+                   클래스 명은 옛날에 다른거랑 안겹치게 붙인다고 지은거라 난잡한거 이해좀
+
+                   다른건 그냥 보면 될거같고
+                   img감싸고 있는 span은 그냥 간격맞추려고 넣어놓은거고
+
+                   더 알아보기 버튼은 누르면 팝업창 나오는거고
+                   더 알아보기 버튼(pc, 모바일)이랑 팝업창켰을 때 나오는 닫기 버튼에 들어가있는
+                   onclick="hellopopup1()"이라는 코드는 js쓴건데
+                   팝업창이 떠있는 상태면 닫고
+                   팝업창이 없는 상태면 켜는
+                   그런 의미인 코드야
+
+                   hellopopup 뒤에 숫자 붙여서 어떤 팝업창인지 구분하는거고
+                   그래서 아래쪽에 팝업창 모아놓은거 있는데
+
+                   <div  class="popupChang opctzero" id="info-pop-1">
+                     <a onclick="hellopopup1()" title="Close" class="modal-close opctzero" id="pop-close-1">X</a>
+                     <img src="../image/tip_blk.png" class="pop-img" >
+                     <span class="pop-name no-drag">서울학생과학발명품경진대회</span>
+                     <div class="pop-text no-drag">서울시에서 학생들이 과핟ㄱ으로 발명품만들어서 뚝딱뚝딱</div>
+                     <a onclick="hellopopup1()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-1">뒤로가기</a>
+                   </div>
+
+                   이게 팝업창 코드인데 hellopopup뒤에 있는 숫자랑 info-pop뒤에 있는 숫자랑 pop-close뒤에 있는 숫자랑 pop-close-mob뒤에있는 숫자랑 모두 같은 숫자로 맞춰야함
+
+                   그거말고는 딱히 어려운거 없음
+
+                   그 뭐냐 5월달에 있는 대회중에서 '시화전'처럼 글자가 짧은 대회같은 경우에는 버튼이랑 대회이름이랑 위치가 뒤틀려서
+                   namemargin이라는 클래스 추가했는데
+                   대회는 대부분 이름 길어서 저런 예외가 시화전밖에 없는데
+                   동아리는 이름짧은거 많으니깐
+                   나중에 동아리 이름 짧은것들이 버튼이랑 겹치면 namemargin추가하라고
+
+
+                   정규 자율로 나누고 그 안에서 계열 나눌꺼면
+                   대회페이지 3학년페이지 없애버려
+
+                   이 페이지 css들어간거는 거의다 contest-allgrade.css에 들어가있고
+                   대회페이지만 사용하는 css는 contest-allgrade.css랑 sidemenu-contestpage.css 이렇게 2개 밖에 없고 나머지는 다 공통 css사용중
+                   js는 clickPOPtest.js가 팝업창 js고 gradeselect.js는 학년마다 창 바꾸는 js고 sidemenu-abc는 대회페이지 전용 사이드메뉴바 css임.
+
+                   폴더에 들어가있는 css나 js중에서 안쓰고 있는 것들은 초록버전에서 고칠때 바꿔놨던것들이니깐 알아서 거르고.
+________________________________________________________________________________________________________________-->
+
+
+      <!--학술(1,2학년)-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+            <div class="Grade-pc">
+              <h1 class="month-value-pc">학술 - ( 1, 2학년 )</h1>                <!--이게 위에 있는 몇월인지 글씨-->
+              <ul class="contest-name-pc">
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">                    <!--공백(이미지 아래에 한 칸 띄우는 용도)-->
+                  <span><strong class="contest-name-pc">그린라이트</strong></span>
+                  <a class="infoplus" onclick="hellopopup2()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup2()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/toron_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">경영경제동아리(ECON)</strong></span>
+                  <a class="infoplus" onclick="hellopopup3()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup3()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">영자신문반</strong></span>
+                  <a class="infoplus" onclick="hellopopup4()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup4()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/toron_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span style="padding-top: 20px;"><strong class="contest-name-pc">수학토론동아리(DMZ)</strong></span>
+                  <a class="infoplus" onclick="hellopopup5()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup5()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/toron_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">월드뉴스연구반</strong></span>
+                  <a class="infoplus" onclick="hellopopup6()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup6()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">사회환경문제비평반</strong></span>
+                  <a class="infoplus" onclick="hellopopup7()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup7()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">미디어콘텐츠탐구반</strong></span>
+                  <a class="infoplus" onclick="hellopopup8()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup8()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc namemargin">지식생산자반</strong></span>
+                  <a class="infoplus" onclick="hellopopup9()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup9()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc namemargin">물리실험반</strong></span>
+                  <a class="infoplus" onclick="hellopopup10()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup10()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc namemargin">작은과학자들</strong></span>
+                  <a class="infoplus" onclick="hellopopup11()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup11()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc namemargin">생물자원탐구반</strong></span>
+                  <a class="infoplus" onclick="hellopopup12()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup12()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc namemargin">수학멘토반(M.E)</strong></span>
+                  <a class="infoplus" onclick="hellopopup13()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup13()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc namemargin">수학문제퀴즈반</strong></span>
+                  <a class="infoplus" onclick="hellopopup14()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup14()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc namemargin">지리탐구반</strong></span>
+                  <a class="infoplus" onclick="hellopopup15()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup15()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc namemargin">수학저널반</strong></span>
+                  <a class="infoplus" onclick="hellopopup16()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup16()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc namemargin">청소년과학탐구반</strong></span>
+                  <a class="infoplus" onclick="hellopopup17()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup17()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc namemargin">한국어 탐구반</strong></span>
+                  <a class="infoplus" onclick="hellopopup18()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup18()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+
+
+      <!--독서토론 - (1,2학년)-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+            <div class="Grade-pc">
+              <h1 class="month-value-pc">독서토론 - ( 1, 2학년 )</h1>
+              <ul class="contest-name-pc">
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">문헌정보반</strong></span>
+                  <a class="infoplus" onclick="hellopopup19()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup19()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">미디어 비평반</strong></span>
+                  <a class="infoplus" onclick="hellopopup20()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup20()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">독서토론반</strong></span>
+                  <a class="infoplus" onclick="hellopopup21()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup21()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수학영화저널반</strong></span>
+                  <a class="infoplus" onclick="hellopopup22()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup22()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+
+
+      <!--정보기계 - (1,2학년)-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+            <div class="Grade-pc">
+              <h1 class="month-value-pc">정보기계 - ( 1, 2학년 )</h1>
+              <ul class="contest-name-pc">
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc"style="margin: 0 20px 0 20px">Noisy IT</strong></span>
+                  <a class="infoplus" onclick="hellopopup23()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup23()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc"style="margin: 0 20px 0 20px">로보틱스</strong></span>
+                  <a class="infoplus" onclick="hellopopup24()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup24()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+
+
+      <!--예체능 - (1,2학년)-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+            <div class="Grade-pc">
+              <h1 class="month-value-pc">예체능 - ( 1, 2학년 )</h1>
+              <ul class="contest-name-pc">
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">바이블스터디반</strong></span>
+                  <a class="infoplus" onclick="hellopopup25()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup25()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc"style="margin: 0 20px 0 20px">젊음의샘</strong></span>
+                  <a class="infoplus" onclick="hellopopup26()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup26()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">라온오케스트라</strong></span>
+                  <a class="infoplus" onclick="hellopopup27()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup27()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">스포츠과학연구반</strong></span>
+                  <a class="infoplus" onclick="hellopopup28()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup28()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc"style="margin: 0 20px 0 20px">방송반</strong></span>
+                  <a class="infoplus" onclick="hellopopup29()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup29()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc"style="margin: 0 20px 0 20px">농구반</strong></span>
+                  <a class="infoplus" onclick="hellopopup30()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup30()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">스포츠클라이밍반</strong></span>
+                  <a class="infoplus" onclick="hellopopup31()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup31()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">축구반(2학년)</strong></span>
+                  <a class="infoplus" onclick="hellopopup32()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup32()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">영화저널반</strong></span>
+                  <a class="infoplus" onclick="hellopopup33()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup33()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc"style="margin: 0 20px 0 20px">디자인반</strong></span>
+                  <a class="infoplus" onclick="hellopopup34()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup34()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc"style="margin: 0 20px 0 20px">드론반</strong></span>
+                  <a class="infoplus" onclick="hellopopup35()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup35()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">배드민턴반</strong></span>
+                  <a class="infoplus" onclick="hellopopup36()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup36()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">또래상담반</strong></span>
+                  <a class="infoplus" onclick="hellopopup37()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup37()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">축구반(1학년)</strong></span>
+                  <a class="infoplus" onclick="hellopopup38()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup38()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">종이모형반</strong></span>
+                  <a class="infoplus" onclick="hellopopup39()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup39()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">체력단련반</strong></span>
+                  <a class="infoplus" onclick="hellopopup40()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup40()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">대한적십자봉사반(RCY)</strong></span>
+                  <a class="infoplus" onclick="hellopopup41()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup41()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">세계여행반</strong></span>
+                  <a class="infoplus" onclick="hellopopup42()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup42()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">디자인하는남자들The美男</strong></span>
+                  <a class="infoplus" onclick="hellopopup43()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup43()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc"style="margin: 0 20px 0 20px">탁구반</strong></span>
+                  <a class="infoplus" onclick="hellopopup44()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup44()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">자전거동아리</strong></span>
+                  <a class="infoplus" onclick="hellopopu45()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup45()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">씨네마고전문학반</strong></span>
+                  <a class="infoplus" onclick="hellopopup46()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup46()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+
+
+      <!--학술 - (3학년)-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+            <div class="Grade-pc">
+              <h1 class="month-value-pc">학술 - (3학년)</h1>
+              <ul class="contest-name-pc">
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc"style="margin: 0 20px 0 20px">수학사반</strong></span>
+                  <a class="infoplus" onclick="hellopopup47()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup47()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">여행지리탐구반</strong></span>
+                  <a class="infoplus" onclick="hellopopup48()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup48()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">글로벌경영리더반</strong></span>
+                  <a class="infoplus" onclick="hellopopup49()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup49()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">시사과학반</strong></span>
+                  <a class="infoplus" onclick="hellopopup50()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup50()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">시사문제 탐구&해결 증진반</strong></span>
+                  <a class="infoplus" onclick="hellopopup51()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup51()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">인간 사회 현실 읽기반</strong></span>
+                  <a class="infoplus" onclick="hellopopup52()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup52()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">물리 탐구반</strong></span>
+                  <a class="infoplus" onclick="hellopopup53()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup53()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">다큐멘터리 감상반</strong></span>
+                  <a class="infoplus" onclick="hellopopup54()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup54()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">에너지연구반</strong></span>
+                  <a class="infoplus" onclick="hellopopup55()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup55()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+
+
+      <!--독서토론 - (3학년)-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+            <div class="Grade-pc">
+              <h1 class="month-value-pc">독서토론 - (3학년)</h1>
+              <ul class="contest-name-pc">
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">영어토론반</strong></span>
+                  <a class="infoplus" onclick="hellopopup56()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup56()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+
+
+      <!--정보기계 - (3학년)-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+            <div class="Grade-pc">
+              <h1 class="month-value-pc">정보기계 - (3학년)</h1>
+              <ul class="contest-name-pc">
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">코딩수학반</strong></span>
+                  <a class="infoplus" onclick="hellopopup57()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup57()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">직업탐구반</strong></span>
+                  <a class="infoplus" onclick="hellopopup58()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup58()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+
+
+      <!--예체능 - (3학년)-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+            <div class="Grade-pc">
+              <h1 class="month-value-pc">예체능 - (3학년)</h1>
+              <ul class="contest-name-pc">
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">스토리텔링반</strong></span>
+                  <a class="infoplus" onclick="hellopopup59()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup59()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">Social Studies & Science</strong></span>
+                  <a class="infoplus" onclick="hellopopup60()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup60()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">매체융합디자인반</strong></span>
+                  <a class="infoplus" onclick="hellopopup61()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup61()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">방송반(S.B.S)</strong></span>
+                  <a class="infoplus" onclick="hellopopup62()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup62()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+        </div>
+
+
+<!-- 1학년 페이지 - 팝업창 부분 __________________________________________________-->                                    <!--학년별 팝업창끼리 모아놓은거-->
+      <!--1-4-->
+          <div  class="popupChang opctzero" id="info-pop-1">
+            <a onclick="hellopopup1()" title="Close" class="modal-close opctzero" id="pop-close-1">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">정규동아리란</span>
+            <div class="pop-text no-drag">서울시에서 학생들이 과핟ㄱ으로 발명품만들어서 뚝딱뚝딱</div>
+            <a onclick="hellopopup1()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-1">뒤로가기</a>
+          </div>
+
+      <!--학술(1,2학년)팝업-->
+          <div  class="popupChang opctzero" id="info-pop-2">
+            <a onclick="hellopopup2()" title="Close" class="modal-close opctzero" id="pop-close-2">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">그린라이트</span>
+            <div class="pop-text no-drag">[사전 모집]<br>현대 사회에서 발생할 수 있는 윤리적 딜레마, 정치 및 인권을 주제로 토론을 진행하고 이에 대한 결과를 논문으로 작성함. 이 과정에서 연구계획서를 작성하고, 이에 대한 심사, 그리고 논문작성 이후 결과보고서를 발표할 예정. 면접을 거쳐 부원을 선출함.</div>
+            <a onclick="hellopopup2()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-2">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-3">
+            <a onclick="hellopopup3()" title="Close" class="modal-close opctzero" id="pop-close-3">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">경영경제동아리(ECON)</span>
+            <div class="pop-text no-drag">[사전 모집] 토론과 사설 쓰기를 통해 사회적 쟁점에 대한 자신의 의견을 논리적으로 정리함. 사회적 이슈에 대해 자료를 조사하고 우리나라의 경제에 어떤 영향을 미칠지에 대해 여러 각도로 접근해보는 활동을 진행함.</div>
+            <a onclick="hellopopup3()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-3">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-4">
+            <a onclick="hellopopup4()" title="Close" class="modal-close opctzero" id="pop-close-4">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">영자신문반</span>
+            <div class="pop-text no-drag">[사전 모집] 영문 기사 작성법을 숙지하고 진로와 관련된 하위 부서(교내부, 정치부, 시사경제부, 과학부, 스포츠 및 연예부)에서 주기적으로 영문 기사를 작성하며 영작 및 기사 작성에 대한 실력을 쌓고 2학기에 서라벌영자신문을 발간함. 또한 서라벌월보를 발간하며 지역사회 및 교내 행사에 대한 기사를 작성, 게시하며 유익한 경험을 쌓고 재밌는 동아리 활동을 진행함.</div>
+            <a onclick="hellopopup4()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-4">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-5">
+            <a onclick="hellopopup5()" title="Close" class="modal-close opctzero" id="pop-close-5">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">수학토론동아리(DMZ)</span>
+            <div class="pop-text no-drag">[사전 모집] 교육과정 내 미적분, 기하학 등 다양한 주제의 수학적 과제를 탐구하고, 이와 관련된 심화된 문제를 다양한 관점에서 접근하여 해결하며 모둠을 구성하여 여러 가지 해결방법을 비교해보며 토론하고, 자율동아리와 연계하여 팀별로 주제를 정해서 소논문을 작성함.(수학에 대한 많은 관심과 실력이 요구됨)</div>
+            <a onclick="hellopopup5()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-5">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-6">
+            <a onclick="hellopopup6()" title="Close" class="modal-close opctzero" id="pop-close-6">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">월드뉴스연구반</span>
+            <div class="pop-text no-drag">국제문제에 대한 국제시사지(New York Times, CNN, Korea Times)을 구독하여 세계적 토픽을 함께 논의하고 분석해 봄. 자신에게 관심 있는 특정 국제문제를 정하여 지속적으로 정보를 축적해나감으로서 이에 대한 전문성을 갖도록 노력함. 국제문제에 대한 본인의 관심과 의견을 국(영)문보고서로 작성하여 다른 학생들과 함께 토론하고 다양한 의견을 통해 자신의 의견을 더욱 발전시켜나가는 동아리 (문,이과 관계없이 지원 가능).</div>
+            <a onclick="hellopopup6()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-6">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-7">
+            <a onclick="hellopopup7()" title="Close" class="modal-close opctzero" id="pop-close-7">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">사회환경문제비평반</span>
+            <div class="pop-text no-drag">다양한 사회문제의 심각성을 인식하고, 사회문제의 현황과 발생 배경 및 해결방안을 스스로 탐구하고, 생활 속에서 문제해결을 위한 실천 태도를 기를 수 있는 자료를 수집하고 공유하며 토론하는 동아리</div>
+            <a onclick="hellopopup7()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-7">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-8">
+            <a onclick="hellopopup8()" title="Close" class="modal-close opctzero" id="pop-close-8">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">미디어콘텐츠탐구반</span>
+            <div class="pop-text no-drag">사회 속 다양한 양상의 미디어 콘텐츠를 감상함으로써 기본 이론에 대한 이해를 바탕으로 다양한 기기를 통해 미디어 콘텐츠를 제작하며 대중매체를 통해 미디어 콘텐츠를 공유 및 감상함. 미디어 콘텐츠 제작을 체험함으로써 관련 진로를 탐색, 디자인하는 기회를 얻을 수 있음. 아울러 추후 미디어 콘텐츠를 직접 제작하여 온라인 사이트에 투고하거나 청소년 미디어 대전에 출전, 평가받는 과정에서 관련학과 진학에 도움을 얻을 수 있음.</div>
+            <a onclick="hellopopup8()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-8">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-9">
+            <a onclick="hellopopup9()" title="Close" class="modal-close opctzero" id="pop-close-9">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">지식생산자반</span>
+            <div class="pop-text no-drag">우리의 삶과 관련되어 있는 다큐멘터리 또는 영화를 시청한 후, 이 내용에 대해 각자의 의견을 나누고 자신과 친구들의 이야기를 바탕으로 모두가 수필을 작성하고 발표하는 동아리. 이러한 활동이 쌓이면서 자신의 지식을 능동적으로 생산할 수 있을 것임. 글쓰기와 발표에 적극적인 학생의 참여를 바람.</div>
+            <a onclick="hellopopup9()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-9">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-10">
+            <a onclick="hellopopup10()" title="Close" class="modal-close opctzero" id="pop-close-10">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">물리실험반</span>
+            <div class="pop-text no-drag">얼음의 융해열 측정, 열의 일당량 실험, RC회로, RL 회로 만들기 실험 등 다양한 물리 실험을 통해 창의력과 과학적 탐구 능력을 배양함. </div>
+            <a onclick="hellopopup10()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-10">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-11">
+            <a onclick="hellopopup11()" title="Close" class="modal-close opctzero" id="pop-close-11">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">작은과학자들</span>
+            <div class="pop-text no-drag">[사전 모집] 관심 있는 화학실험을 연구하고 학생들에게 나눔 활동을 통해 과학문화를 확산하며 작은 과학자가 되는 기반을 마련함.</div>
+            <a onclick="hellopopup11()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-11">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-12">
+            <a onclick="hellopopup12()" title="Close" class="modal-close opctzero" id="pop-close-12">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">생물자원탐구반</span>
+            <div class="pop-text no-drag">생물을 주제로 한 탐구활동을 수행함으로써 생명과학 분야의 스펙트럼을 확장시킴. 지속가능한 발전에 대해 탐구해보고, 그 결과물을 친구들과 공유함. 환경보호의 중요성을 인지하고 자신이 할 수 있는 환경보호 방법을 찾아 실천함.</div>
+            <a onclick="hellopopup12()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-12">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-13">
+            <a onclick="hellopopup13()" title="Close" class="modal-close opctzero" id="pop-close-13">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">수학멘토반(M.E)</span>
+            <div class="pop-text no-drag">멘토-멘토링 학습을 통해 수학 실력을 증진 시키고 조별 연구 주제를 정하고 발표를 하며 수학을 탐구하는 활동 진행.</div>
+            <a onclick="hellopopup13()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-13">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-14">
+            <a onclick="hellopopup14()" title="Close" class="modal-close opctzero" id="pop-close-14">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">수학문제퀴즈반</span>
+            <div class="pop-text no-drag">기본적인 수학적 개념과 원리를 활용하여 문제풀이 연습 및 문제해결력을 향상시키며 일상 생활속에서 표현되는 수학적인 문제에 대하여 탐구.</div>
+            <a onclick="hellopopup14()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-14">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-15">
+            <a onclick="hellopopup15()" title="Close" class="modal-close opctzero" id="pop-close-15">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">지리탐구반</span>
+            <div class="pop-text no-drag">지리 관련 영화 및 영상 시청, 독서, 토론, 지도 제작 등의 다양한 활동을 통해 지리적 호기심과 탐구력을 향상시키고, 우리 지역 사진 촬영 활동을 통해 교내 지리Day(사진전) 출품에 대비함. </div>
+            <a onclick="hellopopup15()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-15">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-16">
+            <a onclick="hellopopup16()" title="Close" class="modal-close opctzero" id="pop-close-16">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">수학저널반</span>
+            <div class="pop-text no-drag">[1학년만] 수학 관련 책‧영화‧신문을 읽고 분야별로 토의한 후에 개별적으로 보고서 ‧기사를 작성하고 발표하여 결과를 보고서로 출판함. 독서부, 영화부, 신문부의 하위 부서가 있고 부서별 토의가 매우 활성화되어 있음.  인상 깊었던 구절, 책‧영화‧신문을 보고 읽으면서 든 의문과 자신이 생각하는 답 등을 공책에 기록하고 사진을 찍고 보고서를 작성함.</div>
+            <a onclick="hellopopup16()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-16">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-17">
+            <a onclick="hellopopup17()" title="Close" class="modal-close opctzero" id="pop-close-17">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">청소년과학탐구반</span>
+            <div class="pop-text no-drag">[사전 모집] 자연현상에서 관찰되며 인류에 도움이 되는 과학적 원리탐구에 대한 주제에 대한 계획서를 작성하여 제출함. 과학탐구 계획서 심사와 면접을 통해 부원 선출 예정. 팀별 과학탐구 과제 활동과 다양한 과학재능기부 활동 예정.</div>
+            <a onclick="hellopopup17()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-17">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-18">
+            <a onclick="hellopopup18()" title="Close" class="modal-close opctzero" id="pop-close-18">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">한국어 탐구반</span>
+            <div class="pop-text no-drag">인터넷의 발달로 인해 한국어의 오염이 심한 상황에서 원활한 의사소통을 위해 사자성어, 한자어, 속담, 맞춤법, 관용구 등 올바른 한국어에 대해 탐구함.</div>
+            <a onclick="hellopopup18()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-18">뒤로가기</a>
+          </div>
+
+      <!--독서토론(1,2학년)팝업-->
+          <div  class="popupChang opctzero" id="info-pop-19">
+            <a onclick="hellopopup19()" title="Close" class="modal-close opctzero" id="pop-close-19">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">문헌정보반</span>
+            <div class="pop-text no-drag">점심시간 및 방과 후 도서 정리[서가배치] 활동 및 도서 구입 관련 전과정 보조, 라벨링(마크)작업, 도서관 청결 유지, 간혹 도서 대출 및 반납 업무 지원함. 도서관 관련 전활동들을 익히고 배워, 추후 입시 지원에도 도움도 될 수 있는 도서관내 지식들과 경험들을 쌓으며, 업무경험을 익힘. </div>
+            <a onclick="hellopopup19()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-19">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-20">
+            <a onclick="hellopopup20()" title="Close" class="modal-close opctzero" id="pop-close-20">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">미디어 비평반</span>
+            <div class="pop-text no-drag">미디어와 비평에 대한 이해를 바탕으로, 다양한 미디어(책, 영화, 웹툰, 게임 등)와 관련하여 비평 활동을 함. 자신만의 근거를 가지고 비평을 하는 과정을 통해 설득력, 창의력, 자기 주도적 사고 등을 함양할 수 있음. 동아리원들과 비평을 공유함으로써 자연스럽게 해석의 다양성을 느끼고 타인과 사회에 대한 이해의 폭을 넓힘. 비평문을 쓰는 과정에서 논술 실력을 기를 수 있을 뿐 아니라, 비평집(예정)을 출간하며 비평가로서의 경험을 해볼 수 있음.</div>
+            <a onclick="hellopopup20()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-20">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-21">
+            <a onclick="hellopopup21()" title="Close" class="modal-close opctzero" id="pop-close-21">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">독서토론반</span>
+            <div class="pop-text no-drag">인문·예술·사회·문화·과학·기술로 분야를 나누어 각 분야별로 학생들의 진로 탐색에 도움이 될 만한 도서를 토론을 통해 선정하여 동아리 시간에 함께 독서함. 독서 후에는 책의 내용을 가지고 토론 주제를 만들어 토론을 한 후 독서 기록으로 남길 예정임. 평소 책 읽는 시간이 부족하거나 계획을 세워 다양한 분야의 책을 꾸준히 읽고 싶은 학생들에게 권장함. </div>
+            <a onclick="hellopopup21()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-21">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-22">
+            <a onclick="hellopopup22()" title="Close" class="modal-close opctzero" id="pop-close-22">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">수학영화저널반</span>
+            <div class="pop-text no-drag">수학자의 삶과 수학사, 그와 관련된 사회적 이슈 및 감동, 다양한 시사점을 제시하는 영화를 감상하고 영화를 통해 무엇을 얻고 느낄 수 있는지에 대해 깊이 있게 생각해보는 기회를 가짐. 또한 다양한 관점의 영화를 감상함으로써 사회 및 자연현상에 담긴 수학적 사례에 대한 관점을 배우고 자신을 되돌아볼 수 있는 자성적 태도를 기르는 데 그 목적을 둠.</div>
+            <a onclick="hellopopup22()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-22">뒤로가기</a>
+          </div>
+
+      <!--정보기계(1,2학년)팝업-->
+          <div  class="popupChang opctzero" id="info-pop-23">
+            <a onclick="hellopopup23()" title="Close" class="modal-close opctzero" id="pop-close-23">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">Noisy IT</span>
+            <div class="pop-text no-drag">[사전 모집] 프로그래밍을 배우고 프로그래밍 기술을 이용하여 웹 개발, 게임 개발 등 다양한 분야에 경험을 쌓으며 작품을 만들어보고, 여러 IT관련 활동을 통해 대회 및 공모에 참가하는 동아리.</div>
+            <a onclick="hellopopup23()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-23">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-24">
+            <a onclick="hellopopup24()" title="Close" class="modal-close opctzero" id="pop-close-24">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">로보틱스</span>
+            <div class="pop-text no-drag">[사전 모집] 마이크로비트 로봇을 조립하고, 프로그래밍을 통해 로봇의 움직임을 제어함으로써 논리적인 사고력을 키우는 활동을 함으로서 유익하고 재미있는 동아리활동을 함</div>
+            <a onclick="hellopopup24()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-24">뒤로가기</a>
+          </div>
+
+      <!--예체능(1,2학년)팝업-->
+          <div  class="popupChang opctzero" id="info-pop-25">
+            <a onclick="hellopopup25()" title="Close" class="modal-close opctzero" id="pop-close-25">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">바이블스터디반</span>
+            <div class="pop-text no-drag">1. 성경을 올바르게 묵상하는 방법 2. 한 달에 한번은 외부 유명인사 특강(예 고려대 의대교수) 3 맛난 간식과 함께 코이노니아시간운영. 4. 함께 부르는 찬양시간 등 * 공부에 지친 피로를 좋은 말씀과 도전적인 지식전달을 통해 풀어지고 마음이 새로 와져 새로운 각오와 함께 유익한 시간으로 활용함. </div>
+            <a onclick="hellopopup25()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-25">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-26">
+            <a onclick="hellopopup26()" title="Close" class="modal-close opctzero" id="pop-close-26">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">젊음의샘</span>
+            <div class="pop-text no-drag">[사전 모집] 젊음의 끼와 다양한 열정을 밴드, 댄스, 랩 등을 통하여 발산하며 예술을 배우고 본인의 꿈을 키움. 밴드, 댄스, 랩 등에 관한 기본 지식과 꾸준한 연습을 통해서 다양한 교외 대회에 참가하여 예술관련 진로/진학에 관련된 직접적인 활동을 함. 서라벌잔치 발표회에서 공연을 진행.</div>
+            <a onclick="hellopopup26()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-26">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-27">
+            <a onclick="hellopopup27()" title="Close" class="modal-close opctzero" id="pop-close-27">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">라온오케스트라</span>
+            <div class="pop-text no-drag">서라벌 챔버오케스트라로 활동하며, 오케스트라 연주곡의 음악적 표현 심화 연습 및 심미적 경험을 통해 조화로운 인격을 기를 수 있고, 이성과 감성의 조화를 통한 전인교육에 기여하며, 긍정적 자아 역량을 키움. </div>
+            <a onclick="hellopopup27()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-27">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-28">
+            <a onclick="hellopopup28()" title="Close" class="modal-close opctzero" id="pop-close-28">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">스포츠과학연구반</span>
+            <div class="pop-text no-drag">인체 움직임의 생리학적 대사과정, 역학적 과정에 대한 탐구를 통해 운동수행능력을 증진시틸 수 있는 방법을 탐구하고 이를 적용한 트레이닝 프로그램을 수립해 실천함. 체육과 관련된 대학의 진학을 희망하는 학생 및 생명과학 및 물리학의 스포츠 적용에 관심 있는 학생들의 지원을 권장함. </div>
+            <a onclick="hellopopup28()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-28">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-29">
+            <a onclick="hellopopup29()" title="Close" class="modal-close opctzero" id="pop-close-29">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">방송반</span>
+            <div class="pop-text no-drag">[사전 모집] 학교에서 이루어지는 모든 행사에서 방송 송출, 음향 관리 등 방송 관련 업무를 총괄 운영함. 방송 컨텐츠 (UCC) 제작 및 각종 대회에 참가하여 방송과 관련한 진로를 희망하는 학생들이 영상물 기획, 촬영, 편집 등의 활동을 경험할 수 있는 기회를 제공함. 사전 모집으로 방송부원을 모집하며 방송에 관심이 많고 영상물 촬영, 편집이 가능하며 봉사 정신을 가지고 적극적으로 동아리 활동에 참여 가능한 학생을 우선 선발함. </div>
+            <a onclick="hellopopup29()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-29">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-30">
+            <a onclick="hellopopup30()" title="Close" class="modal-close opctzero" id="pop-close-30">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">농구반</span>
+            <div class="pop-text no-drag">[사전 모집] 학교스포츠클럽 활동과 병행하여 운영하며 3학년 포함하여 학교 대표선수 사전 선발하여 편성함. 참가 예정 대회: 1) 서울시교육감배 학교스포츠클럽농구대회, 2) 서울특별시동아리농구연맹회장배 전국中高동아리농구대회</div>
+            <a onclick="hellopopup30()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-30">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-31">
+            <a onclick="hellopopup31()" title="Close" class="modal-close opctzero" id="pop-close-31">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">스포츠클라이밍반</span>
+            <div class="pop-text no-drag">[2학년만 신청 가능] 클라이밍에 대한 기본적인 장비의 사용법에 대하여 습득하고 철저한 안전 및 등반 기술에 대한 교육을 통하여 안전한 장비와 환경 속에서 클라이밍의 기본 기술인 리딩, 빌레이와 같은 등반의 이론과 실기를 배움. 이를 토대로 동아리 발표회에 참가하여 학생들이 클라이밍 체험을 할 수 있도록 발표회를 준비하며 진행함.</div>
+            <a onclick="hellopopup31()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-31">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-32">
+            <a onclick="hellopopup32()" title="Close" class="modal-close opctzero" id="pop-close-32">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">축구반(2학년)</span>
+            <div class="pop-text no-drag">[사전 모집, 10명 선발] 축구 기본기 훈련을 통한 기본 기술 향상 및 전술훈련을 통한 경기력, 기초체력 향상을 목적으로 하며 축구경기의 흐름을 보다 정확하고 예리하게 파악하여 수준 높은 경기력을 유지. 규칙을 준수하고 페어플레이를 통해 상대를 존중, 배려하는 자세를 기본으로 활동함.</div>
+            <a onclick="hellopopup32()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-32">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-33">
+            <a onclick="hellopopup33()" title="Close" class="modal-close opctzero" id="pop-close-33">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">영화저널반</span>
+            <div class="pop-text no-drag">작품성 있는 영화를 선정하여 함께 토론하고 영화적 의미를 찾아 비평문을 작성하여 발표하는 활동을 통해 예술적 감수성과 글쓰기 능력을 함양함.</div>
+            <a onclick="hellopopup33()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-33">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-34">
+            <a onclick="hellopopup34()" title="Close" class="modal-close opctzero" id="pop-close-34">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">디자인반</span>
+            <div class="pop-text no-drag">미술을 통하여 자신이 나타내고자 하는 것을 다양한 미술 재료를 사용하여 시각적으로 표현해보고, 폭 넓은 미술분야를 탐구하고 접해보며 자신의 역량을 강화함. 창의적이고 완성도 높은 미술작품을 제작해보고 자신의 작품을 전시하여 미적 역량 강화와 함께 성취감을 느낄 수 있도록 함. </div>
+            <a onclick="hellopopup34()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-34">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-35">
+            <a onclick="hellopopup35()" title="Close" class="modal-close opctzero" id="pop-close-35">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">드론반</span>
+            <div class="pop-text no-drag">드론 조작 방법에 대하여 숙지한 후 실제로 드론을 작동하여 사진 및 영상을 촬영하고 지속적으로 탐구 일지를 작성함. 드론 자율동아리와는 별개임.</div>
+            <a onclick="hellopopup35()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-35">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-36">
+            <a onclick="hellopopup36()" title="Close" class="modal-close opctzero" id="pop-close-36">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">배드민턴반</span>
+            <div class="pop-text no-drag">[2학년만 신청, 학급 당 1명 지원] 배드민턴의 활동형태가 달리고 치는 동작으로 이루어져 있으므로 정신적인 스트레스를 해소함으로서 맑고 밝은 정서를 유지시켜 줄 수 있음. 많은 인원이 필요하지 않으므로 언제 어디서나 쉽게 행할 수 있어 훌륭한 인간관계를 형성하여 민주시민의 자질함양에 도움이 되므로 체육관에서 짝을 지어 복식 게임을 함. </div>
+            <a onclick="hellopopup36()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-36">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-37">
+            <a onclick="hellopopup37()" title="Close" class="modal-close opctzero" id="pop-close-37">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">또래상담반</span>
+            <div class="pop-text no-drag">전문상담교사에게 또래상담자 양성 프로그램을 교육받고 수료증 취득 후 또래친구의 고민을 상담해주는 역할 수행. 서로 대안을 모색하며 도움을 주고받는 청소년 모두가 성장. 동시에 공감능력, 의사소통능력도 함양함. 심리, 교육, 사회복지 관련 진로에 도움이 되는 동아리임(19년도 또래상담자과정 수료한 학생은 신청 불가).</div>
+            <a onclick="hellopopup37()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-37">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-38">
+            <a onclick="hellopopup38()" title="Close" class="modal-close opctzero" id="pop-close-38">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">축구반(1학년)</span>
+            <div class="pop-text no-drag">[사전 모집, 10명 선발] 규칙을 잘 지키면서 축구를 즐기는 학생이 지원하는 것을 권장하며, 사전 테스트를 거쳐 10명을 선발함. 축구를 통해서 협동심을 기르고 기본기 훈련을 통한 기본 기술 향상, 전술 훈련을 통한 경기력 향상을 목적으로 함.</div>
+            <a onclick="hellopopup38()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-38">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-39">
+            <a onclick="hellopopup39()" title="Close" class="modal-close opctzero" id="pop-close-39">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">종이모형반</span>
+            <div class="pop-text no-drag">종이를 입체적이고 구조적으로 구성하여 단순한 입체 도형부터 복잡하고 아름다운 고전 건축물까지 생각할 수 있는 모든 것들을 작품으로 만듦. 남녀노소 누구나 즐기는 취미이자 집중력, 인내력, 창조력 등을 기르는 교육활동 진행.</div>
+            <a onclick="hellopopup39()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-39">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-40">
+            <a onclick="hellopopup40()" title="Close" class="modal-close opctzero" id="pop-close-40">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">체력단련반</span>
+            <div class="pop-text no-drag">인터벌 트레이닝 등의 유산소 운동을 통한 심폐지구력 향상과 웨이트 트레이닝 등의 근력 운동을 통한 근력 및 근지구력 향상을 통한 비만을 예방하고 심신을 단련함.</div>
+            <a onclick="hellopopup40()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-40">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-41">
+            <a onclick="hellopopup41()" title="Close" class="modal-close opctzero" id="pop-close-41">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">대한적십자봉사반(RCY)</span>
+            <div class="pop-text no-drag">국제 적십자의 유래와 이념을 바탕으로 다양한 봉사활동을 실천하여 건전한 민주시민으로서의 자질을 향상하고 인성발달을 도모함</div>
+            <a onclick="hellopopup41()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-41">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-42">
+            <a onclick="hellopopup42()" title="Close" class="modal-close opctzero" id="pop-close-42">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">세계여행반</span>
+            <div class="pop-text no-drag">세계여행반은 우선 공간적으로 세계에서 제일 여행 해보고 싶은 곳에 대해 탐구하고 여행계획을 세워 친구들에게 소개하는 활동을 하고 이후 심리여행으로 마음과 관련한 도서, 영화, 음악, 유튜브, 심리검사, 종교, 명상 등을 통해 평생 함께 해야 할 친구인 마음에 대해 정확히 이해하여 행복한 인생을 살아가기 위해 만들어진 동아리임.</div>
+            <a onclick="hellopopup42()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-42">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-43">
+            <a onclick="hellopopup43()" title="Close" class="modal-close opctzero" id="pop-close-43">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">디자인하는남자들The美男</span>
+            <div class="pop-text no-drag">1. 미술사 살펴보기, 감상과 비평 등 이론을 바탕으로 자신의 생각을 논리적으로 풀어내는 활동
+              2. 제품 디자인, 패키지 디자인, 홍보물 디자인 등 제작 활동
+              3. 교내 행사 참여 (시화전, 동아리 발표회, 미술종합발표회 등)
+              4. 지역 사회와 연계한 미술 관련 봉사활동 참여</div>
+            <a onclick="hellopopup43()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-63">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-44">
+            <a onclick="hellopopup44()" title="Close" class="modal-close opctzero" id="pop-close-44">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">탁구반</span>
+            <div class="pop-text no-drag">[1학년만, 학급 당 1명만 지원 가능] 탁구를 통해 심신을 기쁨을 누리며 즐겁게 학교생활을 하도록 함. 각 레벨을 선정하여 게임을 하고, 복식조를 편성하여, 리그전을 실시.</div>
+            <a onclick="hellopopup44()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-44">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-45">
+            <a onclick="hellopopup45()" title="Close" class="modal-close opctzero" id="pop-close-45">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">자전거동아리</span>
+            <div class="pop-text no-drag">[학급당 1명만 가능] 자전거 관련 안전교육, 정비교육 및 라이딩 훈련을 통한 지역사회와 함께하는 자전거 문화를 습득하는 동아리 <헬멧, 브레이크 필수/ 주말 라이딩 진행> </div>
+            <a onclick="hellopopup45()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-45">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-46">
+            <a onclick="hellopopup46()" title="Close" class="modal-close opctzero" id="pop-close-46">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">씨네마고전문학반</span>
+            <div class="pop-text no-drag">고전작품을 원작으로 하여 만든 명화를 감상함. 또한 작가와 작품에 대한 이해를 높이기 위하여 소설이 탄생하게 된 정치, 사회, 문화적 배경과 작가의 세계를 구체적으로 분석한 영상물을 시청하여 사고의 폭을 넓히고자 함. </div>
+            <a onclick="hellopopup46()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-46">뒤로가기</a>
+          </div>
+
+      <!--학술(3학년)팝업-->
+          <div  class="popupChang opctzero" id="info-pop-47">
+            <a onclick="hellopopup47()" title="Close" class="modal-close opctzero" id="pop-close-47">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">수학사반</span>
+            <div class="pop-text no-drag">고려시대와 조선시대의 수학의 역사와 수학자들의 흥미 있는 이야기를 알아보는 활동과 고려시대와 조선시대의 수학의 차이와 발전을 조별로 조사하여 발표하는 활동을 함.</div>
+            <a onclick="hellopopup47()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-47">뒤로가기</a>
+          </div>
+
+          <div  class="popupChang opctzero" id="info-pop-48">
+            <a onclick="hellopopup48()" title="Close" class="modal-close opctzero" id="pop-close-48">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">여행지리탐구반</span>
+            <div class="pop-text no-drag">다양한 자연 환경 및 인문 환경적 요소와 지리학적 유의미한 지역들을 중심으로 탐구한 후 여행을 모티브로 지리적 요소와 여행을 결합시켜 자신만의 독특한 지리 여행을 구성할 수 있는 능력을 기를 수 있도록 함. 지리 탐구 과정에서 세상을 바라보는 지리적 안목을 키우는 동시에 스스로 여행 계획을 세우면서 ‘나만의 세계 여행 계획’을 만들어 볼 수 있는 기회를 가질 수 있도록 함.</div>
+            <a onclick="hellopopup48()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-48">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-49">
+            <a onclick="hellopopup49()" title="Close" class="modal-close opctzero" id="pop-close-49">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">글로벌경영리더반</span>
+            <div class="pop-text no-drag">경영학과 진학을 희망하는 고3 학생들을 위한 정규 동아리이며, 경영학과와 관련된 진학 정보를 공유하고, 경영학 관련 독서 토론 활동 및 주제 발표 활동을 통해 전공 적합성을 높임. 또한 SWOT 분석, 모의 투자, 모의 창업, 마케팅 분석 및 전략 수립, 컨설턴트 활동, 이상적인 기업 모델 구상 등을 통해 글로벌 경영 리더가 되기 위해 필요한 여러 자질을 함양함.  </div>
+            <a onclick="hellopopup49()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-49">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-50">
+            <a onclick="hellopopup50()" title="Close" class="modal-close opctzero" id="pop-close-50">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">시사과학반</span>
+            <div class="pop-text no-drag">과학 분야의 시사적인 주제를 정하여 보고서를 제출하고, 동아리활동 시간에 조사하게 된 동기, 주제와 관련된 과학적 원리 및 추후 탐구 계획 등을 요약하여 PPT 및 영상자료로 제작하여 개인별로 발표하고 부원 상호 간 토론 및 질의응답 시간을 가짐. </div>
+            <a onclick="hellopopup50()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-50">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-51">
+            <a onclick="hellopopup51()" title="Close" class="modal-close opctzero" id="pop-close-51">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">시사 문제 탐구&해결 증진반</span>
+            <div class="pop-text no-drag">사회적 이슈에 대한 이해와 이를 바탕으로 토론과 탐구를 통하여 시대의 흐름을 살펴보면서 현대 사회를 보다 잘 이해하기 위해 정치ㆍ경제ㆍ사회ㆍ국제 면에서 논란이 된 사건들의 큰 흐름과 핵심 개념을 파악함. 다양한 시사 문제를 탐구하고 바람직한 시민 의식으로 주제를 통찰하고 해결 방안을 모색하며 시사에 대한 이해도 증진 및 문제 해결 능력을 배양함.</div>
+            <a onclick="hellopopup51()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-51">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-52">
+            <a onclick="hellopopup52()" title="Close" class="modal-close opctzero" id="pop-close-52">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">인간 사회 현실 읽기반</span>
+            <div class="pop-text no-drag">내외 사회 문제를 바르게 인식하고, 이를 바탕으로 구체적인 해결책을 모색하기 위한 의견 수렴 및 토론과 결론 정리. 각 학생들의 적성에 맞는 부분에 집중적인 탐구 과제를 부과하고, 특정 사회 현실에 대한 보고서를 작성하게 하며, 이를 평가함에 있어 동아리 구성원들 각자가 자신의 객관적 기준을 제시하고 평가하는 과정을 거쳐 담당교사가 최종 평가하고 등위에 따라 동아리 내에서 포상함. 우수한 결과물들을 수합하여 단행본을 작성함.</div>
+            <a onclick="hellopopup52()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-52">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-53">
+            <a onclick="hellopopup53()" title="Close" class="modal-close opctzero" id="pop-close-53">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">물리 탐구반</span>
+            <div class="pop-text no-drag">평소 물리에 흥미가 있는 학생들이 모여 수업 시간에 배웠던 내용을 활동을 통해 이론적인 내용과 비교 확인하고 결과 내용에 대해 조별로 분석 및 토의를 통해 다른 조의 결과와 비교 및 토론을 통해 교과지식을 적용시키는 활동을 함.</div>
+            <a onclick="hellopopup53()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-53">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-54">
+            <a onclick="hellopopup54()" title="Close" class="modal-close opctzero" id="pop-close-54">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">다큐멘터리 감상반</span>
+            <div class="pop-text no-drag">사회, 환경, 과학, 심리 등의 다양한 주제의 다큐멘터리를 감상 후 주제에 대한 자신의 생각을 정리하고, 친구들과 의견을 나누며 현안에 대한 비판적인 인식을 함양하는 활동을 진행함. </div>
+            <a onclick="hellopopup54()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-54">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-55">
+            <a onclick="hellopopup55()" title="Close" class="modal-close opctzero" id="pop-close-55">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">에너지연구반</span>
+            <div class="pop-text no-drag">사회, 환경, 과학, 심리 등의 다양한 주제의 다큐멘터리를 감상 후 주제에 대한 자신의 생각을 정리하고, 친구들과 의견을 나누며 현안에 대한 비판적인 인식을 함양하는 활동을 진행함. </div>
+            <a onclick="hellopopup55()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-55">뒤로가기</a>
+          </div>
+
+      <!--독서토론(3학년)팝업-->
+          <div  class="popupChang opctzero" id="info-pop-56">
+            <a onclick="hellopopup56()" title="Close" class="modal-close opctzero" id="pop-close-56">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">영어토론반</span>
+            <div class="pop-text no-drag">‘The Purpose-Driven Life (by Pick Warren)’라는 원서를 일부 읽고 기독교적인 관점으로 살아가는 것에 관해 영어로 토론함. 공부에 지친 피로를 영어 찬양과 기도를 통해 풀고 마음이 새로워져 새로운 각오와 함께 유익한 시간으로 활용함.</div>
+            <a onclick="hellopopup56()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-56">뒤로가기</a>
+          </div>
+
+      <!--정보기계(3학년)팝업-->
+          <div  class="popupChang opctzero" id="info-pop-57">
+            <a onclick="hellopopup57()" title="Close" class="modal-close opctzero" id="pop-close-57">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">코딩수학반</span>
+            <div class="pop-text no-drag">[신청조건]‘정보’과목을 선택하였거나 파이썬 언어 코딩이 가능한 3학년 학생. 오일러 프로젝트를 중심으로 다양한 수학 문제의 해답을 파이썬 언어 코딩으로 풀어가는 수업. IT, 수학, 공학 계열로의 진학을 희망하는 학생들에게 권장함.</div>
+            <a onclick="hellopopup57()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-57">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-58">
+            <a onclick="hellopopup58()" title="Close" class="modal-close opctzero" id="pop-close-58">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">직업탐구반</span>
+            <div class="pop-text no-drag">학생들이 목표를 수립하여 본인의 목표 달성을 위해 자신만의 강약점을 분석하고, 원하는 직업이 요구하는 능력의 수준을 인터넷을 활용하여 자신만의 직업을 탐구함. (직업탐구반 대상)</div>
+            <a onclick="hellopopup58()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-58">뒤로가기</a>
+          </div>
+        <!--예체능(3학년)팝업-->
+          <div  class="popupChang opctzero" id="info-pop-59">
+            <a onclick="hellopopup59()" title="Close" class="modal-close opctzero" id="pop-close-59">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">스토리텔링반</span>
+            <div class="pop-text no-drag">영화와 연극과 같은 극 장르 및 애니메이션과 같은 새로운 장르의 특성을 이해하고 나아가 관심 있는 장르를 창작할 수 있는 기본기를 체계적으로 익히는 시간을 가짐.</div>
+            <a onclick="hellopopup59()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-59">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-60">
+            <a onclick="hellopopup60()" title="Close" class="modal-close opctzero" id="pop-close-60">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">Social Studies & Science</span>
+            <div class="pop-text no-drag">현재 관심 있게 회자되는 사회, 과학 주제들에 대한 영상 시청을 하고 자신의 의견을 정리해봄. 본인의 의견을 학생들 앞에서 발표도 해보고 반대되는 의견이 있는 학생과 자연스러운 토론까지 할 수 있는 동아리(문, 이과 관계없이 지원 가능)</div>
+            <a onclick="hellopopup60()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-60">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-61">
+            <a onclick="hellopopup61()" title="Close" class="modal-close opctzero" id="pop-close-61">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">매체융합디자인반</span>
+            <div class="pop-text no-drag">사물과 공간, 그래픽을 활용한 발상과 표현, 토론 등을 통해 예비 디자이너로서 자질을 함양하고 다양한 분야와 접목을 통해 가능성을 실험함. (미대준비생 대상)</div>
+            <a onclick="hellopopup61()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-61">뒤로가기</a>
+          </div>
+          <div  class="popupChang opctzero" id="info-pop-62">
+            <a onclick="hellopopup62()" title="Close" class="modal-close opctzero" id="pop-close-62">X</a>
+            <img src="../image/tip_blk.png" class="pop-img" >
+            <span class="pop-name no-drag">방송반(S.B.S)</span>
+            <div class="pop-text no-drag">[사전 모집] 기존 2학년 방송반 활동을 하던 3학년 학생을 사전 선발하며, 동아리 편성 때 방송, 영상, 미디어 관련 진로를 희망하는 학생을 추가로 선발할 예정임. 동아리 활동을 하며 3학년 관련 행사에서 방송 지원, 음향시설 관리를 할 예정이고 진로 활동과 관련된 방송 컨텐츠(UCC) 제작 및 대회 참가 등 다양한 분야에서 활동할 예정임.</div>
+            <a onclick="hellopopup62()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-62">뒤로가기</a>
+          </div>
+
+
+
+
+<!-- 2학년 페이지(PC)- 시작부 ____________________________________________________________________________ -->
+    <div class="Grade-page none-display">
+
+      <!--_______모바일 사이드 메뉴_______-->
+      <div class="mobile-side-menu-b">
+        <a class="button" onclick="changeContentB(0)">학술(이공)</a>
+        <a class="button" onclick="changeContentB(1)">학술(인문)</a>
+        <a class="button" onclick="changeContentB(2)">정보기계</a>
+        <a class="button" onclick="changeContentB(3)">예체능</a>
+      </div>
+
+      <!-- 헤더 하단 설명부 -->
+      <div class="rule-main-box-b">
+        <div class="contest-main-intro-gr">
+          <div class="intro-pic-box">
+            <img src="../image/high-school.png" class="intro-pic-img" >
+          </div>
+          <div class="intro-exp-box">
+            <h1 >동아리페이지, 이것만은 알고가자</h1>
+            <br>
+            <p>학교 내부 사정으로 동아리일정 또는 활동사항이 변경될 수 있으니, 업데이트 날짜를 항상 확인해주시기 바랍니다. </p>
+            <br>
+          </div>
+        </div>
+        <div class="contest-main-intro-wht">
+          <div class="intro-exp-box-wht">
+            <h1 >동아리페이지, 이것만은 알고가자</h1>
+            <br>
+            <p>서라벌길라잡이는 학교에서 공개한 자료를 보기 쉽게 정리한 사이트 입니다. 상세한 동아리정보와 대회신청은 서진솔을 이용해주시기 바랍니다.</p>
+            <br>
+            <a href="https://sorabol.riroschool.kr/"  target="_blank" style="color:#000000;">서진솔 바로가기</a>
+          </div>
+          <div class="intro-pic-box-wht">
+            <img src="../image/calendar.png" class="intro-pic-img-wht" >
+          </div>
+        </div>
+        <div class="contest-main-intro-gr">
+          <div class="intro-pic-box">
+            <img src="../image/checklist.png" class="intro-pic-img" >
+          </div>
+          <div class="intro-exp-box">
+            <h1 >동아리페이지, 이것만은 알고가자</h1>
+            <br>
+            <p>동아리 활동 하기에 앞서, 구체적인 연간 계획과 활동 일정을 정하며 꾸준히 이어나가길 바랍니다.</p>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <!--_______ PC 사이드 메뉴_______-->
+      <div class="side-menu-b"> <!--side-opacity => display: none-->
+        <a onclick="changeContentB(0)">학술(이공)</a>
+        <a onclick="changeContentB(1)">학술(인문)</a>
+        <a onclick="changeContentB(2)">정보기계</a>
+        <a onclick="changeContentB(3)">예체능</a>
+      </div>
+
+
+<!-- 2학년 페이지 - 월별 대회목록 __________________________________________________-->
+      <!--학술(이공)-->
+          <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+            <div class="Grade-pc">
+              <h1 class="month-value-pc">학술 - (1,2학년) - 이공계열</h1>
+              <ul class="contest-name-pc">
+                <li class="contest-name-pc">
+                <span style="display: block; padding-top: 10px;  ">
+                  <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                </span>
+                <br class="contest-name-pc">
+                <span><strong class="contest-name-pc">과학지식세미나(S.K.S)</strong></span>
+                <a class="infoplus" onclick="hellopopup63()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                <a class="infoplus-mob" onclick="hellopopup63()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                <span style="display: block; padding-top: 10px;  ">
+                  <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                </span>
+                <br class="contest-name-pc">
+                <span><strong class="contest-name-pc">수학의루트</strong></span>
+                <a class="infoplus" onclick="hellopopup64()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                <a class="infoplus-mob" onclick="hellopopup64()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                <span style="display: block; padding-top: 10px;  ">
+                  <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                </span>
+                <br class="contest-name-pc">
+                <span><strong class="contest-name-pc">과학탐구동아리(SBS)</strong></span>
+                <a class="infoplus" onclick="hellopopup65()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                <a class="infoplus-mob" onclick="hellopopup65()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                <span style="display: block; padding-top: 10px;  ">
+                  <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                </span>
+                <br class="contest-name-pc">
+                <span><strong class="contest-name-pc">환경탐구실험동아리</strong></span>
+                <a class="infoplus" onclick="hellopopup66()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                <a class="infoplus-mob" onclick="hellopopup66()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                <span style="display: block; padding-top: 10px;  ">
+                  <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                </span>
+                <br class="contest-name-pc">
+                <span><strong class="contest-name-pc">화리 생제르망</strong></span>
+                <a class="infoplus" onclick="hellopopup67()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                <a class="infoplus-mob" onclick="hellopopup67()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                <span style="display: block; padding-top: 10px;  ">
+                  <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                </span>
+                <br class="contest-name-pc">
+                <span><strong class="contest-name-pc">약학탐구동아리(REMEDY)</strong></span>
+                <a class="infoplus" onclick="hellopopup68()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                <a class="infoplus-mob" onclick="hellopopup68()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                <span style="display: block; padding-top: 10px;  ">
+                  <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                </span>
+                <br class="contest-name-pc">
+                <span><strong class="contest-name-pc">수학심화연구팀(M.I.T)</strong></span>
+                <a class="infoplus" onclick="hellopopup69()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                <a class="infoplus-mob" onclick="hellopopup69()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                <span style="display: block; padding-top: 10px;  ">
+                  <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                </span>
+                <br class="contest-name-pc">
+                <span><strong class="contest-name-pc">K-MOOC과학토론동아리</strong></span>
+                <a class="infoplus" onclick="hellopopup70()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                <a class="infoplus-mob" onclick="hellopopup70()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                <span style="display: block; padding-top: 10px;  ">
+                  <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                </span>
+                <br class="contest-name-pc">
+                <span><strong class="contest-name-pc">- 유전지도 -</strong></span>
+                <a class="infoplus" onclick="hellopopup71()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                <a class="infoplus-mob" onclick="hellopopup71()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                <span style="display: block; padding-top: 10px;  ">
+                  <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                </span>
+                <br class="contest-name-pc">
+                <span><strong class="contest-name-pc">수리과학논술동아리(SMS)</strong></span>
+                <a class="infoplus" onclick="hellopopup72()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                <a class="infoplus-mob" onclick="hellopopup72()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                <span style="display: block; padding-top: 10px;  ">
+                  <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                </span>
+                <br class="contest-name-pc">
+                <span><strong class="contest-name-pc">화학생명탐구반(C.I.T)</strong></span>
+                <a class="infoplus" onclick="hellopopup73()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                <a class="infoplus-mob" onclick="hellopopup73()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+               </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+
+
+      <!--학술 - (인문) -->
+          <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+            <div class="Grade-pc">
+              <h1 class="month-value-pc">학술 - (1,2학년) - 인문 & 상경계열</h1>
+              <ul class="contest-name-pc">
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">- 이쓔시게 -</strong></span>
+                  <a class="infoplus" onclick="hellopopup74()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup74()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">경영학 연구반(BAB)</strong></span>
+                  <a class="infoplus" onclick="hellopopup75()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup75()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">테샛 동아리</strong></span>
+                  <a class="infoplus" onclick="hellopopup76()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup76()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">사회현상 미디어 탐구반(MASP)</strong></span>
+                  <a class="infoplus" onclick="hellopopup77()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup77()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">스포트라이트(Spot-light)</strong></span>
+                  <a class="infoplus" onclick="hellopopup78()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup78()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+
+
+      <!--정보기계-->
+          <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+            <div class="Grade-pc">
+              <h1 class="month-value-pc">정보기계 - (1,2학년)</h1>
+              <ul class="contest-name-pc">
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">- 매트릭스(IT월드) -</strong></span>
+                  <a class="infoplus" onclick="hellopopup79()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup79()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">- 플라이트 -</strong></span>
+                  <a class="infoplus" onclick="hellopopup80()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup80()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+
+
+      <!--예체능-->
+          <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+            <div class="Grade-pc">
+              <h1 class="month-value-pc">예체능 - (1,2학년)</h1>
+              <ul class="contest-name-pc">
+                <li class="contest-name-pc">
+                <span style="display: block; padding-top: 10px;  ">
+                  <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                </span>
+                <br class="contest-name-pc">
+                <span><strong class="contest-name-pc"> 미술자율동아리 [벗;but]</strong></span>
+                <a class="infoplus" onclick="hellopopup81()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                <a class="infoplus-mob" onclick="hellopopup81()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+              </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">위드유(With you)</strong></span>
+                  <a class="infoplus" onclick="hellopopup82()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup82()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                        </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">사진동아리(픽스타그램)</strong></span>
+                    <a class="infoplus" onclick="hellopopup83()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                    <a class="infoplus-mob" onclick="hellopopup83()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">미술동아리(RGB)</strong></span>
+                    <a class="infoplus" onclick="hellopopup84()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                    <a class="infoplus-mob" onclick="hellopopup84()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">- 스튜디오S -</strong></span>
+                    <a class="infoplus" onclick="hellopopup85()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                    <a class="infoplus-mob" onclick="hellopopup85()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">축구심화연구반(S.S.S)</strong></span>
+                    <a class="infoplus" onclick="hellopopup86()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                    <a class="infoplus-mob" onclick="hellopopup86()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                      </ul>
+                    </div>
+                    <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+          </div>
+    </div>
+
+<!--자율동아리 1,2학년 팝업창 부분-->
+<!--학술 (이공계열)-->
+    <div  class="popupChang opctzero" id="info-pop-63">
+      <a onclick="hellopopup63()" title="Close" class="modal-close opctzero" id="pop-close-63">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">과학지식세미나(S.K.S)</span>
+      <div class="pop-text no-drag">과학(화학 생물 물리) 관련 책과 기사를 조사하여 발표 및 토의를 한다. 각 분야에 세밀하게 접근하여 사회에 대한 견문을 넓히고 관련 진로에 도움을 주는 활동을 할 것이다.</div>
+      <a onclick="hellopopup63()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-63">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-64">
+      <a onclick="hellopopup64()" title="Close" class="modal-close opctzero" id="pop-close-64">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">수학의루트</span>
+      <div class="pop-text no-drag">활동 한 회마다 풀 문제를 2문제에서 3문제를 선정하고 서로 풀이해보는 시간을 가진다. 풀이하기 전 풀 문제의 개념을 구성원이 돌아가며 먼저 설명하는 시간을 가진다.
+        </div>
+      <a onclick="hellopopup64()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-64">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-65">
+      <a onclick="hellopopup65()" title="Close" class="modal-close opctzero" id="pop-close-65">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">과학탐구동아리(SBS)</span>
+      <div class="pop-text no-drag">과학책에 있는 지식에서 배우는 것 이상으로 더욱 흥미롭게 탐구하여 연구하는 방법을 모색해보고 실생활에 어떻게 응용되는지 어떻게 사용할 수 있는지의 관한 활동을 진행함.</div>
+      <a onclick="hellopopup65()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-65">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-66">
+      <a onclick="hellopopup66()" title="Close" class="modal-close opctzero" id="pop-close-66">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">환경탐구실험동아리</span>
+      <div class="pop-text no-drag">화학과 생명과학을 바탕으로 우리 주변의 환경과 유사한 상황을 만들어서 여러 가지 환경의 변화가 우리의 생태계에 어떤 영향을 미치고, 어떻게 하면 그런 악영향들을 해결할 수 있는지 알아본다. </div>
+      <a onclick="hellopopup66()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-66">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-67">
+      <a onclick="hellopopup67()" title="Close" class="modal-close opctzero" id="pop-close-67">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">화리 생제르망 </span>
+      <div class="pop-text no-drag">과학 주제를 정하여 이에 대해 소논문 작성, 토론 실시, 관련 활동 등을 실시하여 단순히 학교에서 배우는 주제를 넘어 과학탐구에 있어 더 깊이 있는 이해를 바탕으로 진로 설정과 자기계발, 개인적 역량 증진 등을 목표로 하고자 합니다.</div>
+      <a onclick="hellopopup67()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-67">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-68">
+      <a onclick="hellopopup68()" title="Close" cla6ss="modal-close opctzero" id="pop-close-68">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">약학탐구동아리(REMEDY)</span>
+      <div class="pop-text no-drag">의학 및 약학, 생명과학 분야로 진학을 희망하는 학생들을 위한 동아리입니다. 이 동아리에서는 이론적 탐구활동뿐만 아니라 정규수업시간에 하기 힘든 실험들을 병행하고, 교육과정 밖의 심화적인 내용을 익힌다.</div>
+      <a onclick="hellopopup68()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-68">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-69">
+      <a onclick="hellopopup69()" title="Close" class="modal-close opctzero" id="pop-close-69">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">수학심화연구팀(M.I.T)</span>
+      <div class="pop-text no-drag"> 자신의 희망 진로와 관련하여 수학과 관련된 논문을 팀별로 작성한다. 동아리의 최종 목표는 자신과 비슷한 분야에 관심 있는 사람들과 함께 의견을 나누어 보다 깊은 이해를 통해 자신의 진로를 이룰 수 있도록 대비한다.</div>
+      <a onclick="hellopopup69()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-69">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-70">
+      <a onclick="hellopopup70()" title="Close" class="modal-close opctzero" id="pop-close-70">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">K-MOOC과학토론동아리</span>
+      <div class="pop-text no-drag">사이버 물리시스템과 사물인터넷의 기술을 융합하여 새로운 가치를 창출해내는 4차 산업혁명에 직면하고 있는 현 시대에 요구 되어지는 5차산업기술을 융합하여 새로운 것을 창조하는 파괴적 기술을 K-MOOC강의를 통해 배경지식을 넓힌다.</div>
+      <a onclick="hellopopup70()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-70">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-71">
+      <a onclick="hellopopup71()" title="Close" class="modal-close opctzero" id="pop-close-71">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">유전지도</span>
+      <div class="pop-text no-drag">유전지도는 유전질환을 공부하기 위해 dna와 연관된 생명과학 교과서 심화 탐구 동아리입니다. 다양한 유전질환들에 대해 공부하고 그것들의 원인에 대해서 이해하고 치료 방법에 대해서 탐구하는 것을 목표로 삼는다.</div>
+      <a onclick="hellopopup71()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-71">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-72">
+      <a onclick="hellopopup72()" title="Close" class="modal-close opctzero" id="pop-close-72">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">수리과학논술동아리(SMS)</span>
+      <div class="pop-text no-drag">수리과학 논술 문제를 해결하기 위해 다 같이 논술/토론을 진행한다. 수학, 과학과 관련된 논술 문제를 풀어보고 부원들끼리의 토론을 통해 그에 관한 지식을 함양하고 지적 능력을 향상시킨다.</div>
+      <a onclick="hellopopup72()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-72">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-73">
+      <a onclick="hellopopup73()" title="Close" class="modal-close opctzero" id="pop-close72">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">화학생명탐구반(C.I.T)</span>
+      <div class="pop-text no-drag">화학 또는 생명과학과 관련된 다양한 탐구 활동들을 통해 과학실험설계 및 탐구수행 능력을 쌓고 그 과정을 보고서 작성 등의 활동을 통해 자신만의 포트폴리오를 만드는 것이 주요 활동 내용, 동아리 부원들과 자료와 결과물 등을 공유하고 발표한다.</div>
+      <a onclick="hellopopup73()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-73">뒤로가기</a>
+    </div>
+
+  <!--학술(인문계열)-->
+    <div  class="popupChang opctzero" id="info-pop-74">
+      <a onclick="hellopopup74()" title="Close" class="modal-close opctzero" id="pop-close-74">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">이쓔시게</span>
+      <div class="pop-text no-drag">인터넷에 알려진 정보들에 대해 관심을 갖고 정확한 정보를 알리고자 구성한 동아리이다. 인터넷 상에 많은 가짜뉴스에 대해 조사하고 우리의 알 권리를 주장하고자 한다.</div>
+      <a onclick="hellopopup74()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-74">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-75">
+      <a onclick="hellopopup75()" title="Close" class="modal-close opctzero" id="pop-close-75">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">경영학 연구반(BAB)</span>
+      <div class="pop-text no-drag">경영의 3가지 의미 (1. 일정한 목적을 달성하기 위하여 인적·물적 자원을 결합한 조직, 또는 그 활동 2. 기업이나 사업 따위를 관리하고 운영함. 3. 기초를 닦고 계획을 세워 어떤 일을 해 나감)를 토대로 넓은 범위로 토론 주제를 펼치며 경영이라는 학문을 탐구한다.</div>
+      <a onclick="hellopopup75()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-75">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-76">
+      <a onclick="hellopopup76()" title="Close" class="modal-close opctzero" id="pop-close-76">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">테샛 동아리</span>
+      <div class="pop-text no-drag"> 테샛 자격증 취득 및 경영, 경제 분야에 대한 심화공부를 함. 한경 테샛에 대한 공부를 크게 두 가지 ( 경제 이론 분야, 시사 경제/경영 분야) 로 나누어 실행한다.</div>
+      <a onclick="hellopopup76()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-76">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-77">
+      <a onclick="hellopopup77()" title="Close" class="modal-close opctzero" id="pop-close-77">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">사회현상 미디어 탐구반(MASP)</span>
+      <div class="pop-text no-drag"> 다양한 사회현상들을 수학적 관점과 경제적 관점에서 살펴봄으로써 사회적 통찰력을 기른다</div>
+      <a onclick="hellopopup77()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-77">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-78">
+      <a onclick="hellopopup78()" title="Close" class="modal-close opctzero" id="pop-close-78">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">스포트라이트(Spot-light)</span>
+      <div class="pop-text no-drag">처음엔 자신의 꿈에 대해 발표하고 그 뒤로부터 토론과 골든벨 등 활동 예정임. 토론을 진행하고 끝에 나온 결론을 학생들과 이야기하고 국민청원을 통해 공론화시키는 것이 우리 동아리의 제일 큰 목표임.</div>
+      <a onclick="hellopopup78()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-78">뒤로가기</a>
+    </div>
+
+    <!--정보기계-->
+    <div  class="popupChang opctzero" id="info-pop-79">
+      <a onclick="hellopopup79()" title="Close" class="modal-close opctzero" id="pop-close-79">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">매트릭스(IT월드)</span>
+      <div class="pop-text no-drag">같은 분야에 관심 있는 학생들끼리 조별로 협동하여 프로그래밍을 배우고 기술적인 탐구를 하여 발표하고, 직접 제작하는 등의 활동을 할 예정입니다. 교내에서 불편한 점을 소프트웨어 개발을 통한 프로젝트를 진행하여 개선하는 것을 중심으로 활동을 해나갈 예정입니다.</div>
+      <a onclick="hellopopup79()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-79">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-80">
+      <a onclick="hellopopup80()" title="Close" class="modal-close opctzero" id="pop-close-80">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">플라이트</span>
+      <div class="pop-text no-drag">항공 관련 이슈에 대해 의견을 나누고, 모형 항공기를 제작하거나 에어쇼 관람 등의 외부 활동을 진행함.</div>
+      <a onclick="hellopopup80()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-80">뒤로가기</a>
+    </div>
+
+    <!--예체능-->
+    <div  class="popupChang opctzero" id="info-pop-81">
+      <a onclick="hellopopup81()" title="Close" class="modal-close opctzero" id="pop-close-81">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">미술자율동아리 [벗;but]</span>
+      <div class="pop-text no-drag">또래 친구들과 다른 예체능을 하는 학생들끼리 모여 각자의 생각을 담은 창작활동을 함으로써 서로의 의견을 공유하고 서로를 도우며 미술에 대한 흥미뿐만 아니라 실력 또한 발전시키는 것을 목표로 한다.</div>
+      <a onclick="hellopopup81()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-81">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-82">
+      <a onclick="hellopopup82()" title="Close" class="modal-close opctzero" id="pop-close-82">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">위드유(With you)</span>
+      <div class="pop-text no-drag"> 사회에서 소외된 계층 아이들의 학업을 도와주는 활동이다. 사회에서 소외되어 학업에 부족함이 있는 아이들을 도와줌으로서 아이들의 학업의 부족함을 도와주는데 목표를 둠.</div>
+      <a onclick="hellopopup82()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-82">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-83">
+      <a onclick="hellopopup83()" title="Close" class="modal-close opctzero" id="pop-close-83">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">사진동아리(픽스타그램)</span>
+      <div class="pop-text no-drag">서사진 찍기 활동을 함으로써 카메라와 사진에 대한 기초나 이론을 이해하고 사진을 찍고 편집하는 능력과 사물을 바라볼 때 어떤 구도로 찍으면 어떤 사진이 나올지에 대해 보는 시각을 높인다.</div>
+      <a onclick="hellopopup83()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-83">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-84">
+      <a onclick="hellopopup84()" title="Close" class="modal-close opctzero" id="pop-close-84">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">미술동아리(RGB)</span>
+      <div class="pop-text no-drag">조형적 시각요소를 활용하여, 일상에서 접하기 어려운 발상과 표현 및 토론 등의 다각적인 예술활동과 다양한 분야와의 접목을 통한 창조활동을 목표로 함.   </div>
+      <a onclick="hellopopup84()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-84">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-85">
+      <a onclick="hellopopup85()" title="Close" class="modal-close opctzero" id="pop-close-85">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">스튜디오 S</span>
+      <div class="pop-text no-drag">학교에서 진행하는 아침방송, 외부강사초청교육 등의 방송을 주도적으로 진행하고 축제 및 중요한 방송활동에서 각자의 맡은 바를 성실히 수행한다.</div>
+      <a onclick="hellopopup85()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-85">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-86">
+      <a onclick="hellopopup86()" title="Close" class="modal-close opctzero" id="pop-close-86">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">축구심화연구반(S.S.S)</span>
+      <div class="pop-text no-drag">축구를 좋아하기에 열심히, 또한 잘하고 싶은 학생들이 모여 축구활동을 진행함.</div>
+      <a onclick="hellopopup86()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-86">뒤로가기</a>
+    </div>
+
+
+
+
+
+
+
+
+<!-- 자율동아리 3학년 페이지(PC)- 시작부 ____________________________________________________________________________ -->
+    <div class="Grade-page none-display">
+
+      <!--_______모바일 사이드 메뉴_______-->
+      <div class="mobile-side-menu-c">
+        <a class="button" onclick="changeContentC(0)">학술(이공)</a>
+        <a class="button" onclick="changeContentC(1)">학술(인문)</a>
+        <a class="button" onclick="changeContentC(2)">정보기계</a>
+        <a class="button" onclick="changeContentC(3)">예체능</a>
+      </div>
+
+      <!-- 헤더 하단 설명부 -->
+      <div class="rule-main-box-c">
+        <div class="contest-main-intro-gr">
+          <div class="intro-pic-box">
+            <img src="../image/high-school.png" class="intro-pic-img" >
+          </div>
+          <div class="intro-exp-box">
+            <h1 >동아리페이지, 이것만은 알고가자</h1>
+            <br>
+            <p>학교 내부 사정으로 동아리일정 또는 활동사항이 변경될 수 있으니, 업데이트 날짜를 항상 확인해주시기 바랍니다. </p>
+            <br>
+          </div>
+        </div>
+        <div class="contest-main-intro-wht">
+          <div class="intro-exp-box-wht">
+            <h1 >동아리페이지, 이것만은 알고가자</h1>
+            <br>
+            <p>서라벌길라잡이는 학교에서 공개한 자료를 보기 쉽게 정리한 사이트 입니다. 상세한 동아라정보 와 대회신청은 서진솔을 이용해주시기 바랍니다.</p>
+            <br>
+            <a href="https://sorabol.riroschool.kr/"  target="_blank" style="color:#000000;" >서진솔 바로가기</a>
+          </div>
+          <div class="intro-pic-box-wht">
+            <img src="../image/calendar.png" class="intro-pic-img-wht" >
+          </div>
+        </div>
+        <div class="contest-main-intro-gr">
+          <div class="intro-pic-box">
+            <img src="../image/checklist.png" class="intro-pic-img" >
+          </div>
+          <div class="intro-exp-box">
+            <h1 >동아리페이지, 이것만은 알고가자</h1>
+            <br>
+            <p>동아리 활동 하기에 앞서, 구체적인 연간 계획과 활동 일정을 정하며 꾸준히 이어나가길 바랍니다.</p>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <!--_______ PC 사이드 메뉴_______-->
+      <div class="side-menu-c">
+        <a onclick="changeContentC(0)">학술(이공)</a>
+        <a onclick="changeContentC(1)">학술(인문)</a>
+        <a onclick="changeContentC(2)">정보기계</a>
+        <a onclick="changeContentC(3)">예체능</a>
+      </div>
+
+<!-- 3학년 페이지 - 월별 대회목록 __________________________________________________-->
+
+      <!--학술(이공)-->
+          <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+            <div class="Grade-pc">
+              <h1 class="month-value-pc">학술 - 3학년 - 이공계열</h1>
+              <ul class="contest-name-pc">
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/toron_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span style="padding-top: 20px;"><strong class="contest-name-pc">책읽는 공대생</strong></span>
+                  <a class="infoplus" onclick="hellopopup87()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup87()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/toron_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">작은 화학자들</strong></span>
+                  <a class="infoplus" onclick="hellopopup88()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup88()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">생명과학논리적글쓰기반</strong></span>
+                  <a class="infoplus" onclick="hellopopup89()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup89()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">SPSG(물리연구반)</strong></span>
+                  <a class="infoplus" onclick="hellopopup90()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup90()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">SPRG(물리탐구반)</strong></span>
+                  <a class="infoplus" onclick="hellopopup91()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup91()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">SIGMA(심화수학탐구반)</strong></span>
+                  <a class="infoplus" onclick="hellopopup92()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup92()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">메카트로닉스&물리</strong></span>
+                  <a class="infoplus" onclick="hellopopup93()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup93()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">MD(수학토론동아리)</strong></span>
+                  <a class="infoplus" onclick="hellopopup94()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+              <a class="infoplus-mob" onclick="hellopopup94()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">Journal of 생명,의학, 융합</strong></span>
+                  <a class="infoplus" onclick="hellopopup95()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                   <a class="infoplus-mob" onclick="hellopopup95()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                    <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학토론반(SAYENCE CLUB)</strong></span>
+                  <a class="infoplus" onclick="hellopopup96()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                   <a class="infoplus-mob" onclick="hellopopup96()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+
+
+      <!--학술(인문)-->
+      <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+        <div class="Grade-pc">
+          <h1 class="month-value-pc">5월</h1>
+          <ul class="contest-name-pc">
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+               <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">진로 소모임회</strong></span>
+              <a class="infoplus" onclick="hellopopup97()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+              <a class="infoplus-mob" onclick="hellopopup97()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+               <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">경제연구소</strong></span>
+              <a class="infoplus" onclick="hellopopup98()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+              <a class="infoplus-mob" onclick="hellopopup98()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+               <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">- 경영 人 -</strong></span>
+              <a class="infoplus" onclick="hellopopup99()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+              <a class="infoplus-mob" onclick="hellopopup99()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+               <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">꿈을 찾는 읽기</strong></span>
+              <a class="infoplus" onclick="hellopopup100()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+              <a class="infoplus-mob" onclick="hellopopup100()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+            </li>
+            <li class="contest-name-pc">
+              <span style="display: block; padding-top: 10px;  ">
+               <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+              </span>
+              <br class="contest-name-pc">
+              <span><strong class="contest-name-pc">- JOB 多 -</strong></span>
+              <a class="infoplus" onclick="hellopopup101()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+              <a class="infoplus-mob" onclick="hellopopup101()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+            </li>
+          </ul>
+        </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+      </div>
+
+      <!--정보기계-->
+        <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+              <div class="Grade-pc">
+                <h1 class="month-value-pc">6월</h1>
+                <ul class="contest-name-pc">
+                  <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">프로그래밍 프로젝트</strong></span>
+                  <a class="infoplus" onclick="hellopopup102()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup102()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+                <li class="contest-name-pc">
+                  <span style="display: block; padding-top: 10px;  ">
+                   <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                  </span>
+                  <br class="contest-name-pc">
+                  <span><strong class="contest-name-pc">공학프로젝트동아리</strong></span>
+                  <a class="infoplus" onclick="hellopopup103()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                  <a class="infoplus-mob" onclick="hellopopup103()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                </li>
+              </ul>
+            </div>
+          <div style="clear:both"></div> <div class="null-space"></div>
+        </div>
+
+      <!--예체능-->
+          <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+                    <div class="Grade-pc">
+                      <h1 class="month-value-pc">7월</h1>
+                      <ul class="contest-name-pc">
+                        <li class="contest-name-pc">
+                          <span style="display: block; padding-top: 10px;  ">
+                           <img src="../image/kyungsi_c.png" class="contest-name-pc" >
+                          </span>
+                          <br class="contest-name-pc">
+                          <span><strong class="contest-name-pc">artchitect(건축&예술 동아리)</strong></span>
+                          <a class="infoplus" onclick="hellopopup104()"> 더알아보기 </a>   <!--pc용 더알아보기 버튼(초록색)-->
+                          <a class="infoplus-mob" onclick="hellopopup104()"> + </a> <!--모바일용 더알아보기 버튼(파란색테두리)-->
+                        </li>
+                      </ul>
+                    </div>
+                    <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+    </div>
+
+
+
+<!--3학년 팝업창 부분-->
+<!--학술(이공)-->
+    <div  class="popupChang opctzero" id="info-pop-87">
+      <a onclick="hellopopup87()" title="Close" class="modal-close opctzero" id="pop-close-87">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">책읽는 공대생</span>
+      <div class="pop-text no-drag">기계/로봇과 관련된 책을 읽고 서로 토론해 보며 자신의 생각을 공유한다.</div>
+      <a onclick="hellopopup87()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-87">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-88">
+      <a onclick="hellopopup88()" title="Close" class="modal-close opctzero" id="pop-close-88">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">작은 화학자들</span>
+      <div class="pop-text no-drag">화학 관련 진로에 대해 탐색하고, 다양한 화학활동을 통해 화학에 대한 흥미를 높인다. 또한, 정보 공유나 토론 등을 통해 화학과 관련해서 더 깊은 생각을 한다.</div>
+      <a onclick="hellopopup88()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-88">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-89">
+      <a onclick="hellopopup89()" title="Close" class="modal-close opctzero" id="pop-close-89">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">생명과학논리적글쓰기반</span>
+      <div class="pop-text no-drag">많은 학생들에게 논리적인 이해를 돕기 위해, 학생들이 평소에 많이 접해 익숙한 독서 비문학 지문의 형식으로 생명과학관련 지식을 논리적인 글의 흐름에 따라 구성하고, 친구들에게 제공한다.</div>
+      <a onclick="hellopopup89()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-89">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-90">
+      <a onclick="hellopopup90()" title="Close" class="modal-close opctzero" id="pop-close-90">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">SPSG(물리연구반)</span>
+      <div class="pop-text no-drag">물리에 흥미가 있고 관심이 있는 학생들이 모여 학습을 하고, 지도교사의 보강을 통해 개념을 다지고 물리에 대한 이해를 향상시키고, Cosmic Ray와 Medical Physics 분야 R&E 실험을 통해서 결과물로 소논문 작성을 목표로 한다.</div>
+      <a onclick="hellopopup90()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-90">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-91">
+      <a onclick="hellopopup91()" title="Close" class="modal-close opctzero" id="pop-close-91">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">SPRG(물리탐구반)</span>
+      <div class="pop-text no-drag">물리에 흥미가 있고 관심이 있는 학생들이 모여 학습을 하고, 지도교사의 보강을 통해 개념을 다지고 물리에 대한 이해를 향상시키고, Cosmic Ray와 Medical Physics 분야 R&E 실험을 통해서 결과물로 소논문 작성을 목표로 한다.</div>
+      <a onclick="hellopopup91()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-91">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-92">
+      <a onclick="hellopopup92()" title="Close" class="modal-close opctzero" id="pop-close-92">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">SIGMA(심화수학탐구반)</span>
+      <div class="pop-text no-drag">수학 관련 책을 읽고 토론하는 동아리이다. 서로에게 멘토 멘티가 되어주어 심화된 수학 문제 풀이를 진행하며 1년 동안 탐구 활동을 통한 결과물로 개인별 또는 팀별 소논문을 작성할 것이다.  </div>
+      <a onclick="hellopopup92()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-92">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-93">
+      <a onclick="hellopopup93()" title="Close" class="modal-close opctzero" id="pop-close-93">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">메카트로닉스&물리</span>
+      <div class="pop-text no-drag">자신 진로와 관련한 물리 관련 활동을 하여 해당 분야의 전문적 지식을 함양한다.</div>
+      <a onclick="hellopopup93()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-93">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-94">
+      <a onclick="hellopopup94()" title="Close" class="modal-close opctzero" id="pop-close-94">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">MD(수학토론동아리)</span>
+      <div class="pop-text no-drag">수학 독서 활동을 통해 수학이 사용되는 실생활의 예시에 대해 알아보고 자신의 진로와 관련하여 어떻게 수학이 쓰이는지 탐구한다.</div>
+      <a onclick="hellopopup94()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-94">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-95">
+      <a onclick="hellopopup95()" title="Close" class="modal-close opctzero" id="pop-close-95">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">Journal of 생명, 의학  그리고 융합</span>
+      <div class="pop-text no-drag">각자 특별히 관심을 갖고 있는 주제( 바이러스, 암 유전자, 노화 등)와 관련한 도서 및 저널(영문 저널 포함)을 탐색하고 읽은 뒤, 토론하여 전공 분야에 관한  학문적 깊이를 넓힌다.</div>
+      <a onclick="hellopopup95()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-95">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-96">
+      <a onclick="hellopopup96()" title="Close" class="modal-close opctzero" id="pop-close-96">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">과학토론반(SAYENCE CLUB)</span>
+      <div class="pop-text no-drag">우리는 동아리를 통해 다양한 분야에 대한 과학적 사고방식을 키우는 수평적 지식과, 자신의 전공에 관련한 지식을 뿌리까지 파고 들어가는 수직적 지식을 결합한 T형 공부를 통해 ‘이상적인 공부’를 시도한다.</div>
+      <a onclick="hellopopup96()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-96">뒤로가기</a>
+    </div>
+
+    <!--학술(인문)-->
+    <div  class="popupChang opctzero" id="info-pop-97">
+      <a onclick="hellopopup97()" title="Close" class="modal-close opctzero" id="pop-close-1975">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">진로 소모임회</span>
+      <div class="pop-text no-drag">자신의 미래 진로에 대하여 탐구하는 과정을 거쳐 미래 계획을 구체화하는 시간을 가지고자 한다. 이를 이루고자 원하는 대학의 원하는 학과를 갈 수 있도록 준비하는 과정을 거친다.</div>
+      <a onclick="hellopopup97()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-97">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-98">
+      <a onclick="hellopopup98()" title="Close" class="modal-close opctzero" id="pop-close-98">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">경제연구소</span>
+      <div class="pop-text no-drag">최근 있었던 굵직한 경제 현상들에 대해 탐구해보고 현재 국제적인 경제/정치적 상황을 이해하고자 동아리를 창설함. 경제 위기나 경제와 관련된 국제적 주요 사건들에 대해 알아봄. </div>
+      <a onclick="hellopopup98()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-98">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-99">
+      <a onclick="hellopopup99()" title="Close" class="modal-close opctzero" id="pop-close-99">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">경영人</span>
+      <div class="pop-text no-drag">여러 친구들과 세부적인 경영학 주제에 대해 공부해보며 이러한 과정을 통해 얻은 결론과 지식들을 온라인에도 공유함으로써 경영학에 대해 누구보다 자세하고 다양하게 알고자 합니다</div>
+      <a onclick="hellopopup99()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-99">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-100">
+      <a onclick="hellopopup100()" title="Close" class="modal-close opctzero" id="pop-close-100">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">꿈을 찾는 읽기</span>
+      <div class="pop-text no-drag">자연계, 이공계 친구들과 과학 및 자신의 진로와 관련된 독서 또는 다양한 매체를 통해 주제를 선정하여 자신의 진로와 연관지어보며 각자의 입장으로 토의·토론 및 발표한다.</div>
+      <a onclick="hellopopup100()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-100">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-101">
+      <a onclick="hellopopup101()" title="Close" class="modal-close opctzero" id="pop-close-101">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">JOB多(창의융합적 코로나19사태 탐구)</span>
+      <div class="pop-text no-drag">서로 다른 관심, 특기 분야를 가진 학생들끼리 모여 토론하고 발표하는 등의 과정을 통하여 최종적으로 통합적인 관점을 이끌어 내는 융합적 사고방식능력을 함양하는 것을 목표로 한다.</div>
+      <a onclick="hellopopup101()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-101">뒤로가기</a>
+    </div>
+
+    <!--정보기계-->
+    <div  class="popupChang opctzero" id="info-pop-102">
+      <a onclick="hellopopup102()" title="Close" class="modal-close opctzero" id="pop-close-102">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">프로그래밍 프로젝트</span>
+      <div class="pop-text no-drag">서라벌고등학교 학생들의 학교생활을 편리하게 할 수 있는 소프트웨어, 웹페이지를 제작하고 보급하여 서라벌 학생들에게 보편화해, 지속된 도움을 제공할 수 있도록 함을 목표로 한다.</div>
+      <a onclick="hellopopup102()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-20">뒤로가기</a>
+    </div>
+    <div  class="popupChang opctzero" id="info-pop-103">
+      <a onclick="hellopopup103()" title="Close" class="modal-close opctzero" id="pop-close-103">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">공학프로젝트동아리</span>
+      <div class="pop-text no-drag">자신의 희망 전공이 연관된 학생들이 모여서 한 학기동안 그에 관한 서적을 읽거나 하나의 프로젝트를 진행하던가 하며 목표를 수행한다</div>
+      <a onclick="hellopopup103()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-103">뒤로가기</a>
+    </div>
+
+    <!--예체능-->
+    <div  class="popupChang opctzero" id="info-pop-103">
+      <a onclick="hellopopup103()" title="Close" class="modal-close opctzero" id="pop-close-103">X</a>
+      <img src="../image/tip_blk.png" class="pop-img" >
+      <span class="pop-name no-drag">artchitect(건축&예술 동아리)</span>
+      <div class="pop-text no-drag">CAD 프로그램에 대하여 학습하고 직접 CAD 프로그램을 통해 건축물을 제작한다. 동아리원들이 고안한 건축물들 중 하나를 정하여 실제 철근과 시멘트 등을 사용하여 실제 조형물을 만들어본다.</div>
+      <a onclick="hellopopup103()" title="Close" class="modal-close-mob opctzero" id="pop-close-mob-103">뒤로가기</a>
+    </div>
+
+
+
+
+  <div style="clear:both"></div>
+
+     <!--footer-->
+     <div class="footer">
+        <p>SORABOL HIGH SCHOOL - Information Web Page</p><br>
+        <p>문의 : <a href="mailto:2019noisyit@gmail.com" style="text-decoration:none; color: white;">2019noisyit@gmail.com</a></p><br>
+        <p>Copyright (C) 2018. Noisy IT 김규석 & 이다솔 all rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>
