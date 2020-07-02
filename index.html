@@ -1,0 +1,241 @@
+<!doctype <!DOCTYPE html>
+<!--본 페이지는 서라벌 고등학교 정규 & 자율동아리 2018~2020 Noisy IT(김규석, 이다솔)에 의해 제작되었으며, 2018년부터 본교의 공식 허락을 받고 운영되고 있습니다.-->
+<!--코드 파일의 구성은 다음과 같습니다. 다음 개발을 이어나갈 후배분들은 참고해주세요.
+body 구성 (순서대로)
+1. pc 상단 메뉴
+2. 모바일 메뉴 - 햄버거
+3. 메인 페이지 이미지 슬라이드
+4. 추가 설명 안내 (급식, 추가 설명 안내)
+5. 개발자 정보
+-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>서라벌 길라잡이</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/keep.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/header.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/footer.css"/>
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="../css/animation.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/animate.css"/> -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <script src="./js/keep.js"></script>
+    <script src="./js/urlmanage.js"></script>
+    <script src="./js/timer.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/mobilesidemenu.js"></script>
+    <script>
+        new WOW().init(); //wow.js 라이브러리 스크롤 애니메이션
+        </script>
+</head>
+
+<!--메뉴&햄버거 _________________________________________________________________________ -->
+<body class="fadeIn">
+
+<!--hamberger (menu side) code-->
+    <div class="menu-side">
+        <a class="menu-side-close" onclick="closeNav()" style="cursor: pointer;">&times;</a>
+        <a href="https://sorabol-info.github.io/hs/">메인</a>
+        <a href="./html/srb-club.html">교내 동아리</a>
+        <a href="./html/srb-contest.html">교내 대회</a>
+        <a href="./html/srb-rule.html">생활규정</a>
+        <a onclick="url_confirm_road()">로드뷰</a>
+    </div>
+    <div class="menu-side-open" onclick="openNav()">
+        <i class="fas fa-bars menu-side-open-icon" style="font-size: 32pt;"></i>
+    </div>
+    <div class="mobile-top-sticky">
+        <a title="서라벌 길라잡이" href="https://sorabol-info.github.io/hs/" >
+            <img src="./html/logo.jpeg" style="max-width:100%; height:auto;">
+    </div>
+
+<!--menu bar (임시 삭제 상단 스티키)
+    <div class="main-container">
+
+        <div class="menu-bar">
+            <a href="index.html">메인</a>
+            <a href="club-index.html">동아리</a>
+            <a href="contest.html">대회</a>
+            <a href="intro.html">학교소개</a>
+            <a onclick="url_confirm_road()">로드뷰</a>
+            <a href="tip.html">학교생활 Tip</a>
+        </div>
+-->
+
+    <!--메뉴 수정-->
+            <div id="menu-wrapper">
+                <div id="menu-top" class="container">
+                <div id="logo">
+                    <a title="서라벌 길라잡이" href="https://sorabol-info.github.io/hs/" >
+                    <img src="./html/sorabol%20logo.png" height="80" alt="서라벌 길라잡이"></a>
+            </div>
+            <div class="top-container">
+                <div id="menu" class="one" style="z-index:2">
+                <ul>
+                <li class="current_page_item"><a href="https://sorabol-info.github.io/hs/" accesskey="1" title="" class="button2">메인</a>
+                </li>
+                <li><a href="./html/srb-club.html" accesskey="2" title="동아리"class="button2">교내 동아리</a>
+                </li>
+                <li><a href="./html/srb-contest.html" accesskey="3" title=""class="button2">교내 대회</a>
+
+                </li>
+                <li><a href="./html/srb-rule.html" accesskey="4" title=""class="button2">생활 규정</a></li>
+                <li><a onclick="yesorno();" class="button2">서라벌 VR</a></li>
+
+                </ul>
+            </div>
+            </div>
+            </div>
+             </div>
+
+<!-- 메뉴 제외 header code_________________________________________________________________________ -->
+
+    <!--header
+        <div class="header">
+            <div class="header-title wow bounceIn" >
+                <a>Sorabol Info</a>
+            </div>
+            <div class="header-sub wow bounceIn">
+                <p>서라벌의 모든 것</p>
+            </div>
+            <div class="header-exam wow bounceIn">
+                <div class="exam-day"></div>
+            </div>
+        </div>
+    *학교 사진 이미지 스크롤을 위해 일단 제외함-->
+    
+        <!--메인 학교 이미지-->
+        <div>
+            <img src="./html/bgimg.jpeg" alt="메인" style="max-width:100%; height:auto;">
+        </div>
+
+        <!--이미지 아래 아이콘 및 설명 파트-->
+        <div id="featured-wrapper">
+                <div id="featured" class="container">
+                  <div class="column1"> 
+                    <div class="main-icon-box">
+                        <i class="fas fa-school"></i>
+                    </div>
+
+                    <div class="title">
+                      <h2>서라벌 고등학교</h2>
+                    </div>
+                    <p>신입생 여러분!<br>본교 입학을<br>진심으로 환영합니다!</p>
+                  </div>
+                  <div class="column2">
+                    <div class="main-icon-box">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="title">
+                      <h2>동아리는 무엇인가요?</h2>
+                    </div>
+                    <p>정규/자율동아리<br>분야별 동아리<br>나의 동아리는?</p>
+                  </div>
+                  <div class="column3"> 
+                    <div class="main-icon-box">
+                        <i class="fas fa-gavel"></i>
+                        </div>
+                    <div class="title">
+                      <h2>학교 규정은?</h2>
+                    </div>
+                    <p>두발/복장/생활<br>서라벌고등학교의<br>중요 규정을 알아보세요!</p>
+                  </div>
+                  <div class="column4">
+                    <div class="main-icon-box">
+                            <i class="far fa-calendar-alt"></i>
+                        </div>
+                    <div class="title">
+                      <h2>주요 일정은?</h2>
+                    </div>
+                    <p>경시대회?<br>공모전?<br>교내 행사를 알아보세요!</p>
+                  </div>
+                </div>
+              </div>
+
+        <!-- 일단 죽여놓은 코드
+        <div class="icon-info"> 
+            <div class="icon-box" >
+                <p>본 페이지는 동아리 [NOISY IT]에서<br>신입생 및 재학생이 학교의 정보를 <br>쉽게 알아볼 수 있도록 하기 위하여 제작하였습니다</p>
+            </div>
+            <div class="icon-box" style="background-color: #dddddd">
+                <p>- Developer -<br>Noisy IT 소속<br>2018~2020 ( 김규석 , 이다솔 )</p>
+            </div>
+            <div class="icon-box" style="background-color: #dddddd">
+                <p>개발 과정</p>
+                <p>2018년 ~ 현재, 어떻게 변화했을까요?<br>
+                    <a class="info-btn" target="_blank" href="Noisy%20IT.html">자세히 알아보기</a>
+                </p>
+            </div>
+        </div>-->
+        
+        <div class="club-info wow bounceInRight">
+            <!--<div class="info-box">
+                <i class="fas fa-users"></i>
+            </div>-->
+            <div class="des-box">
+                <p>[모바일]<br>상단 왼쪽의 = 버튼을 눌러 동아리, 대회 일정 및 안내, 생활 규정 등 다양한 정보를 만나보세요!</p>
+            </div>
+        </div>
+
+        <div class="rule-info wow bounceInLeft">
+            <!--<div class="info-box">
+                <i class="fas fa-calendar-check"></i>
+            </div>-->
+            <div class="des-box">
+                <h3>- Today's 급식 & 일정 -</h3><br>
+                <p>본 서비스는 추후 업데이트 될 예정입니다.<br>많은 기대 부탁드립니다 (ㅡㅡ)
+            </div>
+        </div>
+
+        <div class="club-info wow bounceInRight">
+            <!--<div class="info-box">
+                <i class="fas fa-users"></i>
+            </div>-->
+            <div class="des-box">
+                <p>본 페이지는 동아리 [Noisy IT]에서<br>신입생 및 재학생이 학교의 정보를 <br>쉽게 알아볼 수 있도록 하기 위하여 제작하였습니다<br><br>[ 최근 업데이트 기준일 : 2020. 07.01 ]</p>
+            </div>
+        </div>
+
+        <div class="rule-info wow bounceInLeft">
+            <!--<div class="info-box">
+                <i class="fas fa-calendar-check"></i>
+            </div>-->
+            <div class="des-box">
+                <h3>Developer & Manager</h3><br>
+                <p>교내 정규 동아리 [ Noisy IT ] 소속<br>3학년<br>김규석 , 이다솔</p>
+                <p></p>
+                <br>
+                <a class="info-btn" target="_blank" href="Noisy%20IT.html"> 역대 개발진 알아보기 </a>
+            </div>
+        </div>
+
+        <!--
+        <div class="club-info wow bounceInRight">
+            <div class="des-box">
+                <h3>여분</h3><br>
+                <p>여분</p>
+                <br>
+                <a class="info-btn" onclick="url_confirm_road()">자세히 알아보기</a>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-street-view"></i>
+            </div>
+        </div>-->
+
+        
+
+     <!--footer-->
+        <div class="footer">
+            <p>SORABOL HIGH SCHOOL - Information Web Page</p><br>
+            <p>문의 : <a href="mailto:2019noisyit@gmail.com" style="text-decoration:none; color: white;">2019noisyit@gmail.com</a></p><br>
+            <p>Copyright (C) 2018. Noisy IT 김규석 & 이다솔 all rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+</html>
