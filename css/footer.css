@@ -1,0 +1,43 @@
+
+
+
+.footer
+{
+    background-color: #383838;
+    /* background-color: #F4F4F4; */
+    text-align: center;
+    padding: 40px;
+}
+.footer p
+{
+    font-weight: 500;
+    font-size: 11pt;
+    color: white;
+}
+.footer a
+{ 
+    font-weight: 500;
+    font-size: 11pt;
+    color: white;
+}
+
+@media (max-width: 767px) /* 모바일 */
+{
+    .footer
+{
+    text-align: center;
+    padding: 30px;
+}
+    .footer p
+{
+    font-weight: 500;
+    font-size: 9pt;
+    color: white;
+}
+    footer a
+{ 
+    font-weight: 500;
+    font-size: 9pt;
+    color: white;
+}
+}

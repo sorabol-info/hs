@@ -1,0 +1,30 @@
+
+#featured .container
+{
+	align-items: center;
+	vertical-align: middle;
+	list-style: none;
+	text-align: center;
+}
+
+.column1,  .column2,  .column3,  .column4
+{
+	display: inline-block	;
+	width: auto;
+	width: 150px;
+
+	margin:auto;
+	position: relative;
+}
+
+.column1,  .column2,  .column3,  .column4
+{
+
+	margin: 0 12px 0 12px;
+}
+.side-menu-a
+{
+	margin: 0px auto;
+	width: 1200px;
+	overflow: hidden;
+}

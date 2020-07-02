@@ -1,0 +1,230 @@
+.side-opacity
+{
+    display: none;
+}
+/*======================side-menu-a=================*/
+.side-menu-a
+{
+    /*opacity: 0 !important;*/
+    width: 130px;
+    position: fixed;
+    top: 200px;
+    left: 30px;
+  /*  border: 1px solid #d7d4d5;/*변경사항*/
+    /*radius->변경사항*/
+    overflow-x: hidden;
+    opacity: 1;
+    z-index: 10;
+    transition: all 1s; /*변경사항*/
+    cursor: pointer;
+    text-align: center;/*변경사항*/
+    border-bottom: 1px solid #737171;/*변경사항*/
+}
+.side-menu-a a
+{
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #737171;
+    display: block;
+    transition: all 0.2s;
+  /*  margin: 5px 0 5px 0;*/
+    border: 1px solid #737171;/*변경사항*/
+    border-bottom: none;
+    height: 50px;
+}
+.side-menu-a a:hover
+{
+    color: white;
+    background-color: #005710;
+}
+.side-menu-a a::selection /*변경사항*/
+{
+  background-color: none;
+}
+.side-menu-a a:visited
+{
+  background-color: green;
+}
+
+
+.mobile-side-menu-a
+{
+
+    display: none;
+    text-align: center;
+    background: #55967e;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 20px;
+}
+
+/*======================side-menu-b=================*/
+.side-menu-b
+{
+/*  opacity: 0 !important;*/
+  width: 130px;
+  position: fixed;
+  top: 200px;
+  left: 30px;
+/*  border: 1px solid #d7d4d5;/*변경사항*/
+  /*radius->변경사항*/
+  overflow-x: hidden;
+  opacity: 1;
+  z-index: 10;
+  transition: all 1s; /*변경사항*/
+  cursor: pointer;
+  text-align: center;/*변경사항*/
+  border-bottom: 1px solid #e1e1e1;/*변경사항*/
+}
+.side-menu-b a
+{
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #aaaaaa;
+  display: block;
+  transition: all 0.2s;
+/*  margin: 5px 0 5px 0;*/
+  border: 1px solid #e1e1e1;/*변경사항*/
+  border-bottom: none;
+  height: 50px;
+}
+.side-menu-b a:hover
+{
+    color: white;
+    background-color: #005710;
+}
+.side-menu-b a::selection /*변경사항*/
+{
+  background-color: none;
+}
+.side-menu-b a:visited
+{
+  background-color: green;
+}
+
+/*모바일 사이드메뉴*/
+.mobile-side-menu-b
+{
+  display: none;
+  text-align: center;
+  background: #55967e;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-bottom: 20px;
+}
+/*======================side-menu-c=================*/
+.side-menu-c
+{
+    /*opacity: 0 !important;*/
+    width: 130px;
+    position: fixed;
+    top: 200px;
+    left: 30px;
+  /*  border: 1px solid #d7d4d5;/*변경사항*/
+    /*radius->변경사항*/
+    overflow-x: hidden;
+    opacity: 1;
+    z-index: 10;
+    transition: all 1s; /*변경사항*/
+    cursor: pointer;
+    text-align: center;/*변경사항*/
+    border-bottom: 1px solid #e1e1e1;/*변경사항*/
+}
+.side-menu-c a
+{
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #aaaaaa;
+    display: block;
+    transition: all 0.2s;
+  /*  margin: 5px 0 5px 0;*/
+    border: 1px solid #e1e1e1;/*변경사항*/
+    border-bottom: none;
+    height: 50px;
+}
+.side-menu-c a:hover
+{
+    color: white;
+    background-color:#005710;
+}
+.side-menu-c a::selection /*변경사항*/
+{
+  background-color: none;
+}
+.side-menu-c a:visited
+{
+  background-color: green;
+}
+
+
+.mobile-side-menu-c
+{
+
+    display: none;
+    text-align: center;
+    background: #55967e;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 20px;
+}
+
+/*======================모바일 공통부분=================*/
+.button
+{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 12pt;
+    cursor: pointer;
+    padding: 10px 5px;
+    transition: all .2s;
+    color: white;
+    margin: 10px 15px;
+
+}
+.button:hover
+{
+    color: #a2a2a2;
+    background-color: white;
+    box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 767px) /* 모바일 */
+{
+    /*모바일 사이드메뉴*/
+    .side-menu-a
+    {
+        display: none;
+        height: 500px;
+    }
+    .side-menu-b
+    {
+        display: none;
+    }
+    .side-menu-c
+    {
+        display: none;
+    }
+    .mobile-side-menu-a
+    {
+        display: inline-block;
+        height: auto;
+    }
+    .mobile-side-menu-b
+    {
+        display: inherit;
+
+    }
+    .mobile-side-menu-c
+    {
+        display: inherit;
+
+    }
+}

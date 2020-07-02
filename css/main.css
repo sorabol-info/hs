@@ -1,0 +1,291 @@
+.icon-info
+{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #383838;
+    text-align: center;
+    padding: 0 45px;
+}
+.icon-box
+{
+    display: block;
+    width: 33%;
+    height: auto;
+    margin: 10px;
+    padding: 30px 0px;
+}
+.icon-info p
+{
+    font-size: 16pt;
+    line-height: 50px;
+    color: #000000;
+}
+.info-btn
+{
+    text-decoration: none;
+    color: white;
+    background-color: #53A6E3;
+    font-size: 16pt;
+    padding: 7px 15px;
+    border-radius: 20px;
+    transition: all 0.2s linear;
+}
+.info-btn:hover
+{
+    background-color: rgb(61, 124, 169);
+}
+
+.club-info
+{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48pt;
+    width: 100%;
+    height: auto;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 50 45px;
+}
+.info-box
+{
+    display: block;
+    width: auto;
+}
+.info-box i 
+{
+    font-size: 120pt;
+    color: #53A6E3;
+    width: auto;
+}
+.main-icon-box
+{
+    position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin: 0px auto 20px auto;
+	line-height:  100px;
+	font-size: 150%;
+	text-align: center;
+	color: #FFF;
+}
+.main-icon-box i 
+{
+    position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin: 0px auto 20px auto;
+	line-height:  100px;
+	font-size: 3em;
+	text-align: center;
+	color: #FFF;
+}
+.des-box
+{
+    display: block;
+    width: auto;
+}
+.des-box h3
+{
+    font-size: 20pt;
+}
+.des-box p
+{
+    font-size: 16pt;
+    color: #383838;
+    line-height: 40px;
+    font-weight: 500;
+}
+.rule-info
+{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48pt;
+    width: 100%;
+    height: 350px;
+    background-color: white;
+    text-align: center;
+    padding: 0 45px;
+}
+
+/*********************************************************************************/
+/* Featured                                                                      */
+/*********************************************************************************/
+
+#featured-wrapper
+{
+	overflow: hidden;
+	padding: 6em 0em;
+	background: #383838;
+	text-align: center;
+}
+
+#featured
+{
+	overflow: hidden;
+}
+
+#featured .major
+{
+	overflow: hidden;
+	margin-bottom: 3em;
+	padding-bottom: 2em;
+	border-bottom: 1px solid #E8E8E8;
+}
+
+#featured .major h2
+{
+	font-size: 3em;
+}
+
+#featured .major .byline
+{
+	font-size: 1.3em;
+}
+
+#featured .title
+{
+	margin-bottom: 1.5em;
+	padding-bottom: 1.5em;
+	border-bottom: 1px solid#BDBDBD;
+}
+
+#featured .title h2
+{
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+#featured h2
+{
+	text-align: center;
+	color: #FFF;
+}
+
+#featured .icon
+{
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin: 0px auto 20px auto;
+	line-height:  100px;
+	font-size: 3em;
+	text-align: center;
+	color: #FFF;
+}
+
+.column1,  .column2,  .column3,  .column4
+{
+    display: inline-block;
+    width: 24%;
+    min-width: 180px;
+    color: #BDBDBD;
+    line-height: 30px;
+}
+
+
+@media (min-width: 1025px) /* PC */
+{
+
+}
+@media (min-width: 768px) and (max-width: 1024px) /* 태블릿 */
+{
+}
+@media (max-width: 767px) /* 모바일 */
+{
+    .icon-box i
+    {
+        font-size: 10pt;
+    }
+    .icon-box p
+    {
+        font-size: 10pt;
+    }
+    .icon-box
+    {
+        margin: 0px;
+        width: auto;
+        display: none;
+    }
+
+    .icon-info
+    {
+        display: inline-block;
+        padding: 0px;
+        margin: 30px 0;
+        /* height: 250px; */
+    }
+    .club-info
+    {
+        padding: 30 0px;
+        height: auto;
+    }
+    .rule-info
+    {
+        padding: 0px;
+        height: 250px;
+    }
+
+    .info-box i
+    {
+        display: none;
+    }
+    .info-btn
+    {
+        font-size: 8pt;
+    }
+    .des-box h3
+    {
+        font-size: 12pt;
+    }
+    .des-box
+    {
+        margin: 0 20px;
+        min-width: 215px;
+        width: 100%;
+    }
+    .des-box p
+    {
+        font-size: 10pt;
+    }
+    .info-box
+    {
+        margin: 0 20px;
+    }
+
+    .column1,  .column2,  .column3,  .column4
+    {
+        width: 100%;
+        min-width: 180px;
+    }
+
+    .main-icon-box
+    { 
+        width: 100px;
+        height: 100px;
+        margin: 0px auto 10px auto;
+        line-height:  100px;
+        font-size: 100%;
+        text-align: center;
+        color: #FFF;
+    }
+    .main-icon-box i 
+    {
+        width: 100px;
+        height: 100px;
+        margin: 0px auto 10px auto;
+        line-height:  100px;
+        text-align: center;
+        color: #FFF;
+    }
+    #featured-wrapper{
+        display: none;
+    }
+}

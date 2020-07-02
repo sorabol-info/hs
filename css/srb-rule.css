@@ -1,0 +1,1495 @@
+/*생활규정 페이지*/
+
+body
+{
+    background-color: rgb(245,245,245) ;  /*body 배경색*/
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.bodyAnimation
+{
+  margin: 0px;
+}
+.contest-main-null
+{
+  height: 1050px;
+  width: 100%;
+  background-color: white;
+}
+.header/*header높이 수정*/
+{
+  z-index: 0.1;
+
+
+
+    height: 350px;
+    background: #eeb7b4;
+    padding: 30;
+}
+.header-title
+{
+  text-align: center;
+  height: 140;
+}
+.rule-main-box-a
+{
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  height: auto;
+
+}
+.rule-main-box-b
+{
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  height: 1050px;
+
+}
+.rule-main-box-c
+{
+  text-align: center;
+  height: 1050px;
+  background-color: white;
+  width: 100%;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************규정규정************/
+.rule-body h1{
+  margin: 0em;
+padding: 0em;
+font-weight: 800;
+
+color: #555555;
+margin: 20 0 20 0;
+}
+
+.rule-content{
+  background-color: #EBDBA0;
+  height: auto;
+  margin: 5%;
+  padding: 10 40 40 40;
+  border-radius: 30px;
+}
+
+.rule-content h1{
+  margin-bottom: 40;
+  font-weight: bold;
+  font-size: 3.4em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------*/
+.contest-main-intro-gr{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 350px;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 0 45px;
+}
+.contest-main-intro-wht{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 350px;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 0 45px;
+}
+.intro-pic-box{
+  width: 200px;
+  display: block;
+  margin-right: 50px;
+}
+.intro-pic-img{
+  width: 200px;
+}
+.intro-exp-box{
+  width: 380px;
+  display: block;
+}
+.intro-pic-box-wht{
+  width: 200px;
+  display: block;
+  margin-left: 50px;
+}
+.intro-pic-img-wht{
+  width: 190px;
+}
+.intro-exp-box-wht{
+  width: 380px;
+  display: block;
+}
+.intro-exp-box p{
+  font-size: 17px;
+  font-weight:400;
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+.intro-exp-box-wht p{
+  font-size: 17px;
+  font-weight:400;
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+.intro-exp-box h1{
+  color: #eeb7b4;
+  font-size: 27px;
+}
+.intro-exp-box-wht h1{
+  color: #eeb7b4;
+  font-size: 27px;
+}
+.intro-exp-box-wht a{
+  color: #000000;
+}
+/*-------------------------*/
+
+.intro-title
+{
+  width: 100%;
+  height: 110px;
+  margin: 0 auto;
+  font-size: 50px;
+  font-weight: 100px;
+  color: #70759c;
+  text-align: center;
+  padding-top: 20px;
+}
+.sub-title
+{
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 16pt;
+  text-align: center;
+  line-height: 50px;
+  width: 500px;
+  margin: 30px auto;
+
+}
+.intro-tip-box
+{
+  vertical-align: middle;
+  width: 500px;
+  border-radius: 60px;
+  background-color: rgba(211,211,211,0.6);
+  padding: 10px 0;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+#intro-tip-text
+{
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 16pt;
+  text-align: center;
+  line-height: 50px;
+  width: 500px;
+  margin: 30px auto;
+}
+.intro-hyperlink
+{
+  text-decoration:none;
+  color: #70759c;
+  font-size: 16pt;
+}
+
+
+
+.sidemenu
+{
+  z-index: 300;
+}
+
+.header-sub{
+  display: none;
+}
+
+.exsentence-title
+{
+  text-align: center;
+
+  margin-top: 50px;
+}
+.exsentence-title p
+{
+  font-size: 30px;
+  color: white;
+  margin-top: 90px;
+  display:none;
+}
+.exsentence /*상단배너부분-Tip부분*/
+{
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  font-weight: lighter;
+  margin-top: 60;
+
+}
+.exsentence p
+{
+  font-weight: lighter;
+  display:none;
+}
+div.gradeselector/*학년선택버튼 묶음*/
+{
+  margin-top: 28px;
+  text-align: center;
+}
+/*0000000000000000000000000000000000000000000*/
+input{position: fixed;left: -9999px;}
+
+label{cursor: pointer;}
+.exp_box /*설명박스*/
+{
+    width: 230px;
+    height: 0px;
+    position: relative;
+    top: -92%;
+    left: -4%;
+    background: white;
+    transition: all 0.3s;
+    z-index: 0;
+}
+.toggle_bck /* 뒤로가기버튼의 label*/
+{
+  color: white;
+  position: relative;
+  bottom: -240px;
+  padding: 15px 30px 20px 30px;
+  background: green;
+
+
+/*  display: none;*/
+}
+
+.exp_bck /*뒤로가기버튼의 a*/
+{
+  color:white;
+  font-weight: lighter;
+  font-size: 12px;
+
+
+}
+.exp_bck::selection /*뒤로가기버튼의 a-> 스크롤 색깔x*/
+{
+  background: none;
+  color:white;
+}
+/*00000000000000000000000000000000000000000000000000000*/
+/*000000000000000개별 toggleBtn---------000000000000000000000000*/
+
+
+#toggleBtn-1:checked ~ #toggle-box-1
+{
+    width: 230px;
+    height: 280px;
+    background-color: rgb(0,0,0,0.8);
+    z-index: 0;
+}
+
+#toggleBtn-2:checked ~ #toggle-box-2
+{
+    width: 230px;
+    height: 280px;
+    background-color: rgb(0,0,0,0.8);
+    z-index: 0;
+}
+
+
+/*00000000000000000000000000000000000000000000000000000*/
+a.gradebutton
+{
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s;
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 180px;
+  margin: 10px 25px;
+  padding: 10px 30px;
+  color: white;
+  font-size: 12pt;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-decoration:none;
+}
+a.gradebutton:hover
+{
+  color: #a2a2a2;
+  background-color: white;
+  box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+a.gradebutton::selection
+{
+  background-color: none;
+}
+
+/*상단 학년 선택 바*/
+.grademenu-bar
+{
+  height: 50px;
+  background-color: white;
+  padding: 10px 23px;
+  position: relative;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.menu-gradeselect
+{
+    height: 50px;
+    width: 800px;
+    margin-left: 155px;
+    float: right;
+    text-decoration-color: black;
+    transition: all ease-in-out 0.2s;
+}
+.menu-gradeselect:hover
+{
+    color: #53A6E3;
+}
+.grade-list
+{
+  text-align: center;
+  display: block;
+  width: 70px;
+  height: 30px;
+  margin: auto 14px;
+  text-decoration: none;
+}
+
+#grade-list-1
+{
+  float: right;
+  color: #53A6E3;
+}
+#grade-list-1:hover
+{
+  transition: 0.1s;
+  border-bottom: 3px solid rgba(88, 179, 244, 1);
+}
+#grade-list-2
+{
+    color: black;
+    float: right;
+    margin-right: 21px;
+    margin-left: 31px;
+}
+#grade-list-2:hover
+{
+  color: rgba(88, 179, 244, 1);
+  transition: 0.1s;
+  border-bottom: 3px solid rgba(88, 179, 244, 1);
+}
+#grade-list-3
+{
+  color: black;
+  float: right;
+  margin-right: 27px;
+  margin-left: 10px;
+
+}
+#grade-list-3:hover
+{
+
+  color: rgba(88, 179, 244, 1);
+  transition: 0.1s;
+  border-bottom: 3px solid rgba(88, 179, 244, 1);
+}
+
+
+
+
+
+/*----위로가기 버튼----*/
+a.top-button
+{
+        width: 43px;
+        height: 43px;
+        position: fixed;
+        right: 2%;
+        bottom: 2%;
+        text-decoration: none;
+        border-radius: 100px;
+        border: 2px #969696 solid;
+        text-align: center;
+        display: inline-block;
+}
+
+
+
+/*----위치이동 바----*/
+
+.navbar/*위치이동바 전체컨트롤*/
+{
+  right: 50px;
+  position: fixed;
+  top: 30%;
+  margin: 30 auto;
+  z-index: 100;
+  width: 50px;
+}
+#choosing/*위치이동 바-블럭한칸*/
+{
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: lighter;
+  color: white;
+  list-style-type: none;
+  list-style-position: inside;
+  display: inline-block;
+  border: 0.1px black solid;
+  border-radius: 100% ;
+  background-color: white;
+  height: 40px;
+  width: 40px;
+}
+
+
+div.Grade-pc
+{
+  height: 1px;
+}
+/*----월별 대회목록----*/
+h1.month-value-pc
+{
+  font-size: 50px;
+  text-align: center;
+  display: block;
+  width: 100px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  margin-left: 220px;
+  font-weight: 300;
+}
+
+h1.month-value-pc::selection
+{
+  background: none;
+}
+
+ul.contest-name-pc/*칸 전체*/
+{
+  list-style: none;
+
+  background-color: green;
+  margin-left: 200px;
+  padding: 0px;
+  /*border-radius: 70px;
+  border: 2px gray solid;*/
+}
+
+li.contest-name-pc/*대회칸*/
+{
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  float: left;
+  cursor: inherit;
+  width: 230px;
+  height: 280px;
+  text-align: center;
+  margin: 20px 30px;
+  background-color: white;
+  z-index: 3;
+
+}
+li.contest-name-pc:hover
+{
+    box-shadow: 10px 10px 15px #ddd;
+    transition: 0.1s;
+}
+
+li.contest-name-pc::selection
+{
+  background: none;
+}
+
+img.contest-name-pc /*이미지*/
+{
+  height: 90px;
+}
+
+img.contest-name-pc::selection
+{
+  background: none;
+}
+.pop-img /*이미지*/
+{
+  display: none;
+}
+br.contest-name-pc::selection
+{
+  background: none;
+}
+
+strong.contest-name-pc/*대회 명*/
+{
+  height: inherit;
+  text-align: center;
+  width: 150px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  /*margin: 0px auto;*//*이거 쓰면 namemargin이 막힘.*/
+  font-size: 16px;
+}
+
+strong.contest-name-pc::selection
+{
+  background: none;
+}
+
+
+/*0000000000000000000000000000000000000000000000000000*/
+/*                  시화전 별도 css                    */
+/*      3글자라서 버튼이랑 겹치는 문제때문에 마진 필요    */
+/* --->글자수가 적어서 더알아보기 버튼이랑 pc에서 겹치는 경우 적용*/
+
+.namemargin
+{
+  margin: 0 20px 0 20px;
+}
+
+/*00000000000000000000000000000000000000000000000000000*/
+
+a.infoplus
+{
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+/*  transition: all .01s;*/
+  transition: .3s ease-out;
+
+  color: white;
+  font-size: 8pt;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-decoration:none;
+
+  background: #a7dea2;
+  border-radius:5px;
+
+  top: 70%;
+  height: 40px;
+  width: 140px;
+  margin-top: 20%;
+  padding: 10px 30px;
+  z-index: 300;
+
+  overflow: hidden;
+
+}
+
+
+
+a.infoplus:hover
+{
+  /*color: #696969;
+  background-color: #9cd39787;
+  box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.8);
+  width:145px;*/
+  background-color: #4c614a;
+  cursor: pointer;
+}
+a.infoplus::selection
+{
+  background: none;
+}
+
+a.infoplus-mob
+{
+  display: none;
+}
+
+/*ㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜ 팝업창 ㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜ*/
+
+.opctzero{
+  display: none!important;
+}
+
+
+
+.popupChang{
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+  margin-left:-250px;     /*width의 절반*/
+  margin-top: -200px;     /*height 절반*/
+  opacity: 1;
+  background-color: #ffffff;
+  z-index: 999;
+
+  height: 400px;
+  width: 500px;
+
+  transition: all 0.3s;
+
+  word-break: keep-all;
+  text-align: center;
+  border-radius: 38px;
+  box-shadow: 0px 13px 46px -15px #a3a3a3;
+}
+
+.pop-name{
+  position: relative;
+
+  font-size: 20pt;
+  display: block;
+  word-break: keep-all;
+  /*background-image: linear-gradient(to top, #d5adf5 0%, #e9d6fb 100%);*//*보라색*/
+  /*border-radius: 0 0 60px 60px;*/
+  padding: 50;
+
+  height: 150;
+  background-image: linear-gradient(to right, #cc9ffc 0%, #f196e6 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.pop-text{
+  font-size: 14pt;
+  height: 214px;
+  padding:40px;
+  border-radius: 0px 0px 38px 38px;
+  /*background-image: linear-gradient(0deg, #a83bba 0%, #ffffff 100%);*/
+  font-weight: 200;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 30px;
+  font-weight: lighter;
+  position: relative;
+  display: block;
+  left: 218px;
+  text-decoration: none;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+
+.modal-close-mob {
+  display: none;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+
+.no-drag{-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+}
+/*ㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗ*/
+
+
+
+.null-space
+{
+  height: 300px;
+  background-color: #f3f3f3;
+}
+
+
+
+  @media (min-width: 1025px) /* PC */
+  {
+
+  }
+  @media (min-width: 768px) and (max-width: 1024px) /* 태블릿 */
+  {
+    .contest-main-null
+    {
+      height: 900px;
+    }
+
+    .contest-main-intro-gr{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      ;
+      width: 100%;
+      height: 300px;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 0 45px;
+    }
+    .contest-main-intro-wht{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      height: 300px;
+      background-color: #ffffff;
+      text-align: center;
+      padding: 0 45px;
+    }
+    .intro-pic-box{
+      width: 130px;
+      display: block;
+      margin-right: 30px;
+    }
+    .intro-pic-img{
+      width: 130;
+    }
+    .intro-exp-box{
+      width: 300px;
+      display: block;
+    }
+    .intro-pic-box-wht{
+      width: 130px;
+      display: block;
+      margin-left: 30px;
+    }
+    .intro-pic-img-wht{
+      width: 130px;
+    }
+    .intro-exp-box-wht{
+      width: 300px;
+      display: block;
+    }
+    .intro-exp-box p{
+      font-size: 14px;
+      font-weight:400;
+      word-wrap: break-word;
+      word-break: keep-all;
+    }
+    .intro-exp-box-wht p{
+      font-size: 14px;
+      font-weight:400;
+      word-wrap: break-word;
+      word-break: keep-all;
+    }
+    .intro-exp-box h1{
+      color: #eeb7b4;
+      font-size: 20px;
+    }
+    .intro-exp-box-wht h1{
+      color: #eeb7b4;
+      font-size: 20px;
+    }
+    .intro-exp-box-wht a{
+      color: #000000;
+      font-size: 14px;
+    }
+
+
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+    /*모바일*/
+    @media (max-width: 767px)
+    {
+
+
+
+
+
+
+
+
+
+
+      /**********************규정규정************/
+
+      .rule-body h1{
+        margin: 0em;
+      padding: 0em;
+      font-weight: 800;
+
+      color: #555555;
+      margin: 20 0 20 0;
+      }
+
+      .rule-content{
+        background-color: #EBDBA0;
+        height: auto;
+
+        padding: 10 40 40 40;
+        border-radius: 30px;
+        font-size: 12px;
+      }
+
+
+      .rule-content h1{
+        margin-bottom: 40;
+        font-weight: bold;
+        font-size: 2.4em;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      .header
+      {
+        height: auto;
+        padding-bottom: 0;/******************2월27일 추가****************/
+      }
+      .contest-main-null
+      {
+        text-align: center;
+        background-color: white;
+
+        width: 100%;
+        height: 600px;
+
+      }
+      .rule-main-box-a
+      {
+          text-align: center;
+          background-color: white;
+
+          width: 100%;
+
+      }
+      .rule-main-box-b
+      {
+          text-align: center;
+          background-color: white;
+
+          width: 100%;
+          height: 600px;
+
+      }
+      .rule-main-box-c
+      {
+          text-align: center;
+          background-color: white;
+
+          width: 100%;
+          height: 600px;
+
+      }
+      .exsentence
+      {
+        position: relative;
+        bottom: 80px;
+      }
+      .exsentence p
+      {
+        font-weight: lighter;
+        font-size: 8pt;
+      }
+      .exsentence-title
+      {
+        text-align: center;
+        margin-top: 50px;
+      }
+      .exsentence-title p
+      {
+        font-size: 20px;
+        color: white;
+        margin-top: 90px;
+      }
+      .intro-title
+      {
+          width: 100%;
+          height: 60px;
+          margin: 0 auto;
+          font-size: 30px;
+          font-weight: 100px;
+          color: #53A6E3;
+         text-align: center;
+         word-break: keep-all;
+      }
+      .sub-title
+      {
+          padding: 10px;
+          font-size: 9pt;
+          text-align: center;
+          line-height: 50px;
+          width: 100%;
+          margin: 0 auto;
+          margin-top: 30px;
+          word-break: keep-all;
+
+      }
+      #intro-tip-text
+      {
+          padding: 5px;
+          font-size: 9pt;
+          text-align: center;
+          line-height: 50px;
+          width: 100%;
+          margin: 0 auto;
+          margin-top: 10px;
+          word-break: keep-all;
+      }
+      .intro-tip-box
+      {
+        display: inline-block;
+        width: 250px;
+        vertical-align: middle;
+        font-size: 9pt;
+        border-radius: 60px;
+        background-color: rgba(211,211,211,0.6);
+        margin: 0 auto;
+        padding: 5px 10px;
+      }
+      .intro-hyperlink
+      {
+        text-decoration:none;
+        color: #53A6E3;
+        font-size: 9pt;
+      }
+
+
+
+
+/*=============================================*/
+      .contest-main-intro-gr{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 0 30px;
+      }
+      .contest-main-intro-wht{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        background-color: #ffffff;
+        text-align: center;
+        padding: 0 30px;
+      }
+      .intro-pic-box{
+        width: 100px;
+        display: block;
+        margin-right: 15px;
+      }
+      .intro-pic-img{
+        width: 100;
+      }
+      .intro-exp-box{
+        width: 300px;
+        display: block;
+      }
+      .intro-pic-box-wht{
+        width: 100px;
+        display: block;
+        margin-left: 15px;
+      }
+      .intro-pic-img-wht{
+        width: 100px;
+      }
+      .intro-exp-box-wht{
+        width: 300px;
+        display: block;
+      }
+      .intro-exp-box p{
+        font-size: 13px;
+        font-weight:400;
+        word-wrap: break-word;
+        word-break: keep-all;
+      }
+      .intro-exp-box-wht p{
+        font-size: 13px;
+        font-weight:400;
+        word-wrap: break-word;
+        word-break: keep-all;
+      }
+      .intro-exp-box h1{
+        color: #eeb7b4;
+        font-size: 16px;
+      }
+      .intro-exp-box-wht h1{
+        color: #eeb7b4;
+        font-size: 16px;
+      }
+      .intro-exp-box-wht a{
+        color: #000000;
+        font-size: 13px;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /*----월별 대회목록----*/
+      div.Grade-pc
+      {
+        height: 1px;
+      }
+      h1.month-value-pc/*월-m*/
+      {
+        font-size: 30px;
+        text-align: left;
+        display: block;
+        width: 100px;
+        padding-top: 30px;
+        margin-left: 40px;
+        /*margin-left: 126px;*/
+
+      }
+      ul.contest-name-pc/*칸 전체-m*/
+      {
+        list-style: none;
+        text-align: center;
+        /*margin-left: 200px;*/
+        padding: 0px;
+        /*ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+        /*ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+        /*ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+        /*ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+        /*ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+        margin: 0;
+        width: 90%;
+
+        /*                     여기에 width: 90% 넣으면 대회 개별 칸의 길이가 정상으로 돌아온다
+                                하지만 팝업창 위치가 틀어진다
+
+                                -> margin 0 넣어서 pc버전에 있던 margin 200무효화 시켜주니 해결
+                                  대회 개별 칸의 위치는 li에서 margin 10% 추가로 해결
+
+        /*ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+        /*ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+        /*ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+        /*ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+        /*ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+        /*ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+      }
+      li.contest-name-pc/*대회칸-m*/
+      {
+        display: block;
+        position: relative;
+
+        padding: 10px;
+        width: 94%;
+        height: 60px;
+
+        text-align: left;
+        background-color: white;
+        border-left: #a8dba8  5px solid;
+
+        margin: 7px 0;
+        margin-left: 10%;
+      }
+      li.contest-name-pc:hover{
+
+            box-shadow: none;
+
+
+      }
+      img.contest-name-pc /*이미지*/
+      {
+        height: 20px;
+        /* 임시로 안보이게 해놓은거어어어어ㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓ나중에 풀기ㅣㅣㅣㅣㅣㅣㅣ*/
+        /**************************************************************************************/
+        /*ㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓ*/
+        /*ㅇㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ*/display: none;/*ㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ*/
+        /*ㄹㄹㄹㄹ ㄹㄹㄹㄹㄹㄹㄹ ㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ 풀기ㅣㅣㅣㅣㅣㅣㅣ*/
+        /*임시로 ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅓㅓㅇㅇㅇㅇㅇㅇㅇㅇ기ㅣㅣㅣㅣㅣㅣㅣ*/
+        /*임시로 안보이ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅣㅣㅣ*/
+      }
+
+
+
+      strong.contest-name-pc/*대회 명-m*/
+      {
+        font-weight: bold;
+        font-size: 11px;
+        cursor: default;
+        width: 200px;
+        display: block;
+        text-align: left;
+        float: left;
+        position: absolute;
+        top: 8%;
+      }
+      div br
+      {
+        display: none;
+      }
+      .title
+      {
+        position: relative;
+        top: -100px;
+      }
+
+      div.gradeselector/*학년선택버튼 묶음*/
+      {
+        text-align: center;
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+      a.gradebutton
+      {
+        display: inline-flex;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+        transition: all .2s;
+        border: 2px solid white;
+        border-radius: 20px;
+        width: 180px;
+        margin: 10px 30px;
+        margin-bottom: 30px;
+        padding: 10px 30px;
+        color: white;
+        font-size: 12pt;
+        letter-spacing: 4px;
+        font-weight: 700;
+        text-decoration:none;
+      }
+      .null-space
+      {
+        height: 200px;
+
+      }
+
+
+
+
+
+
+      .namemargin
+      {
+        margin: 0;
+      }
+
+
+
+
+
+
+
+      /*신규내용 추가*/
+
+    a.infoplus
+    {
+      display: none;
+    }
+    /*
+    a.infoplus-mob
+    { display: inline-flex;
+      vertical-align: middle;
+      align-items: center;
+      justify-content: center;
+      transition: .3s ease-out;
+      color: white;      font-size: 20px;      font-weight: 700;
+      text-decoration:none;      background: #a7dea2;      border-radius:100px;
+      top: 70%;      height: 45;      width: 45;      line-height: 45;      margin-top: 20%;
+      z-index: 300;
+      overflow: hidden;
+    }*/
+    a.infoplus-mob
+    {
+      display: inline-flex;
+      vertical-align: middle;
+      align-items: center;
+      justify-content: center;
+      transition: .3s ease-out;
+
+      color: #eb9f9f  ;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration:none;
+      background: #ffffff;
+      border: #eb9f9f   solid 2px;
+      border-radius: 18px;
+
+      height: 40;
+      width: 45;
+      line-height: 45;
+
+      position: relative;
+      left: 78%;
+      top: -11px;
+      z-index: 300;
+      overflow: hidden;
+
+      padding: 6px 35px;
+    }
+
+
+      .popupChang{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-left:-150px;     /*width의 절반*/
+        margin-top: -250px;     /*height 절반*/
+        opacity: 1;
+        background-color: #ffffff;
+        z-index: 999;
+
+        height: 500px;
+        width: 300px;
+
+        transition: all 0.3s;
+
+        word-break: keep-all;
+        text-align: center;
+        border-radius: 38px;
+        box-shadow: 0px 13px 46px -15px #a3a3a3;
+      /*  background-image: linear-gradient(to top, #ffffff 62%, #dec3f9 17%);*//*보라*/
+      /*  background-image: linear-gradient(to top, #ffffff 62%, #C7C9FF 17%);*//*파랑*/
+        /*background-image: linear-gradient(to top, #ffffff 62%, #abd0ce 17%);*//******추천******/
+        background-image: linear-gradient(to top, #ffffff 62%, #FFE58C  17%);
+      }
+    .modal-close{
+      display: none;
+    }
+    .pop-img /*이미지*/
+    {
+      height: 100px;
+      padding-top: 15;
+      margin-top: 10;
+      display: inline-flex;
+    }
+    .pop-img::selection
+    {
+      background: none;
+    }
+
+    .pop-name{
+      font-size: 18px;
+      font-weight: 900;
+      color: #000000;
+      width: 300px;
+      height: 120px;
+      word-break: break-all;
+      padding: 20 30;
+      /*background-image: linear-gradient(to top, #d5adf5 0%, #e9d6fb 100%);*/
+      background-image: none;
+      border-radius: 0px 0px 26px  26px;
+
+
+    }
+    .pop-text{
+      font-size: 23px;
+      height: 200px;
+      padding: 30 10 5 10;
+      border-radius: 0px;
+      background-image: none;
+      color: black;
+    }
+
+    .modal-close-mob{
+      color: #ff5555 ;
+      line-height: 50px;
+      font-weight: 100;
+      font-size: 23px;
+      position: relative;
+      display: inline-flex;
+      text-decoration: none;
+      z-index: 1000;
+      cursor: pointer;
+      background: #ffffff;
+      justify-content: center;
+      align-items: center;
+      vertical-align: middle;
+      width: 248px;
+    /*  margin-top:55px;*/
+      border-radius: 121px;
+      border: 2px #ff5555  solid;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

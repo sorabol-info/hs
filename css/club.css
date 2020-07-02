@@ -1,0 +1,370 @@
+/*동아리 메인 & 리스트 링크*/
+.club-main{ 
+    background: linear-gradient(90deg, #6CE3D9, #647AE2);
+    padding: 20px;
+    width: 100%;
+    height: 800px;
+}
+.club-rg-main{ 
+    background: linear-gradient(90deg, #6CE3D9, #647AE2);
+    padding: 20px;
+    width: 100%;
+    height: 1000px;
+}
+.club-sub{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.club-sub p{
+    color: white;
+    font-size: 24pt;
+    text-align: center;
+    line-height: 70px;
+}
+.club-title{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+.club-title a{
+    font-size: 60pt;
+    color: white;
+}
+.club-link{
+    text-align: center;
+    margin-top: 70px;
+}
+a{text-decoration: none;}
+.button-text
+{
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    margin: 15px;
+}
+.button
+{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    border: 5px solid white;
+    border-radius: 20px;
+    font-size: 15pt;
+    cursor: pointer;
+    padding: 20px 30px;
+    transition: all .2s;
+    color: white;
+    font-weight: 700;
+}
+.button:hover
+{
+    color: #a2a2a2;
+    background-color: white;
+}
+.club-list{
+    margin-top: 70px;
+    text-align: center;
+}
+.club-list-box{
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 80px;
+    border: 5px white solid;
+    border-radius: 50px;
+}
+.club-list-box a{
+    font-size: 20px;
+    color: white;
+    text-decoration:none;
+}
+.TIP{
+    text-align: center; 
+    font-size: 18px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: 3px solid #a2a2a2;
+    border-radius: 20px;
+    margin: 20px;
+    margin-top: 50px;
+}
+/*동아리 설명*/
+.club-box1{
+    padding: 20px;
+    width: 100%;
+    height: 500px;
+}
+.club-box1 p{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 40px;
+    line-height: 50px;
+}
+.club-box1 h1{
+    text-align: center; 
+    padding-top: 100px; 
+    font-size: 45px;
+}
+.club-box1 h2{
+    text-align: center; 
+    padding-top: 40px; 
+    font-size: 45px;
+    color: #53A6E3;
+}
+.club-box2{
+    padding: 20px;
+    width: 100%;
+    height: 700px;
+    background-color: #f4f4f4;
+}
+.club-box2 p{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+    line-height: 60px;
+}
+.club-box2 h1{
+    text-align: center; 
+    padding-top: 100px; 
+    font-size: 45px;
+}
+.club-box2 h2{
+    text-align: center; 
+    padding-top: 40px; 
+    font-size: 45px;
+    padding-bottom: 30px;
+    color: #53A6E3;
+}
+.club-box3{
+    padding: 20px;
+    width: 100%;
+    height: 500px;
+}
+.club-box3 p{
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+.club-box3 h1{
+    text-align: center; 
+    padding-top: 100px; 
+    font-size: 45px;
+}
+
+/*
+계열별 동아리 리스트
+    line-1은 흰색 배경
+    line-2는 회색 배경
+*/
+.line-1{
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.line-1 p{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+    line-height: 50px;
+}
+.line-2{
+    padding: 20px;
+    width: 100%;
+    height: 650px;
+    background-color: #f4f4f4;
+}
+.line-2 p{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+    line-height: 60px;
+}
+.list{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border: #404144 10px solid;
+    border-radius: 10%;
+    margin-top: 30px;
+    height: 1200px;
+}
+.list-box{
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+.list-box-2{
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-color: #cccccc;
+}
+.club-name{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 30px;
+    height: 50px;
+    font-size: 30px;
+}
+.club-contents{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+@media (max-width: 767px) /* 모바일 */
+{
+    .club-main
+    {
+        height: 500px;
+    }
+    .club-title
+    {
+        height: 150px;
+    }
+    .club-title a
+    {
+        font-size: 32pt;
+    }
+    .club-sub p
+    {
+        font-size: 14pt;
+    }
+    .club-link
+    {
+        margin-top: 10px;
+    }
+    .club-box1{
+        padding: 20px;
+        width: 100%;
+        height: 250px;
+    }
+    .club-box1 h1{
+        font-size: 22px;
+        padding-top: 30px;
+    }
+    .club-box1 h2{
+        font-size: 22px;
+        padding-top: 30px;
+    }
+    .club-box1 p{
+        font-size: 18px;
+        text-align: center;
+        padding-top: 30px;
+        line-height: 50px;
+    }
+    .club-box2{
+        padding: 20px;
+        width: 100%;
+        height: 400px;
+    }
+    .club-box2 h1{
+        font-size: 22px;
+        padding-top: 30px;
+    }
+    .club-box2 h2{
+        font-size: 22px;
+        padding-top: 30px;
+    }
+    .club-box2 p{
+        font-size: 18px;
+        text-align: center;
+        padding-top: 30px;
+        line-height: 50px;
+    }
+    .club-box3{
+        padding: 20px;
+        width: 100%;
+        height: 550px;
+    }
+    .club-box3 h1{
+        font-size: 30px;
+        padding-top: 30px;
+        line-height: 50px;
+    }
+    .club-box3 p{
+        font-size: 15px;
+        text-align: center;
+        line-height: 50px;
+    }
+    
+    .line-1{
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .line-1 p{
+        font-size: 30px;
+        text-align: center;
+        padding-top: 30px;
+        line-height: 50px;
+    }
+    .line-2{
+        padding: 20px;
+        width: 100%;
+        height: 650px;
+        background-color: #f4f4f4;
+    }
+    .line-2 p{
+        font-size: 30px;
+        text-align: center;
+        padding-top: 30px;
+        line-height: 60px;
+    }
+    .list{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        border: #404144 10px solid;
+        border-radius: 10%;
+        margin-top: 30px;
+        height: 1200px;
+    }
+    .list-box{
+        display: inline-block;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+    }
+    .list-box-2{
+        display: inline-block;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        background-color: #cccccc;
+    }
+    .club-name{
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 30px;
+        height: 50px;
+        font-size: 30px;
+    }
+    .club-contents{
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        font-size: 20px;
+        line-height: 50px;
+    }
+}
