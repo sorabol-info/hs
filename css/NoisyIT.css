@@ -1,0 +1,25 @@
+div #extra {
+  width: 90%;
+}
+
+#logo {
+  width: 90%;
+}
+
+#footer {
+  width: 90%;
+}
+
+#header {
+  width: 90%;
+}
+
+#return {
+  text-decoration: none;
+  color: white;
+  background-color: #53A6E3;
+  font-size: 18px;
+  padding: 14px 14px;
+  border-radius: 48px;
+  transition: all 0.2s linear;
+}
